@@ -12,7 +12,7 @@ window.onload = function(){
 	
 	});
 	
-	document.querySelector("footer div.ui_box div.left>button#send").addEventListener("click", (e) => {
+	document.querySelector("footer div.ui_box div.contacts__left>button#send").addEventListener("click", (e) => {
 	
 		document.querySelector("div.pop_up_box").style.display = "flex";
 		document.querySelector("div.sky_black").style.display = "initial";
@@ -20,7 +20,7 @@ window.onload = function(){
 	
 	});
 	
-	document.querySelector("div.pop_up_box div.pop_up div.close").addEventListener("click", (e) => {
+	document.querySelector("div.pop_up_box div.pop_up__window div.pop_up__close").addEventListener("click", (e) => {
 	
 		document.querySelector("div.pop_up_box").style.display = "none";
 		document.querySelector("div.sky_black").style.display = "none";
@@ -28,7 +28,7 @@ window.onload = function(){
 	
 	});
 	
-	document.querySelector("header div.nav_box div.mobile_icon").addEventListener("click", (e) => {
+	document.querySelector("header div.header__nav_box div.header__mobile_icon").addEventListener("click", (e) => {
 	
 		document.querySelector("div.mobile_menu").style.visibility = "visible";
 		document.querySelector("div.mobile_menu").style.left = "0px" ;
@@ -36,7 +36,7 @@ window.onload = function(){
 	
 	});
 	
-	document.querySelector("div.mobile_menu div.header_section img").addEventListener("click", (e) => {
+	document.querySelector("div.mobile_menu div.mobile_menu__header_section img").addEventListener("click", (e) => {
 	
 		document.querySelector("div.mobile_menu").style.visibility = "hidden";
 		document.querySelector("div.mobile_menu").style.left = "100vw" ;
@@ -44,7 +44,7 @@ window.onload = function(){
 	
 	});
 	
-	document.querySelector("div.mobile_menu div.list").addEventListener("click", (e) => {
+	document.querySelector("div.mobile_menu div.mobile_menu__list").addEventListener("click", (e) => {
 	
 		document.querySelector("div.mobile_menu").style.visibility = "hidden";
 		document.querySelector("div.mobile_menu").style.left = "100vw" ;
@@ -137,48 +137,48 @@ window.onload = function(){
 		"delivery_by_any_transport_company_throughout_Russia_and_beyond": "src/image/dostavka.jpg"
 	};
 	
-	let buttons = document.querySelectorAll("main section.services div.list_services div.box_compete div.left_box div.plb p");
+	let buttons = document.querySelectorAll("main section.services div.services__list_services div.services__box_compete div.services__box_left div.services__services_name p");
 	
 	buttons.forEach(button => {
 	  button.addEventListener('mouseenter', (e) => {
 	  
 		let getNeedIdName = e.target.getAttribute("name");
 		
-		document.querySelector("main section.services div.list_services div.box_compete div.left_box div.plb p#active").setAttribute("id", "");
+		document.querySelector("main section.services div.services__list_services div.services__box_compete div.services__box_left div.services__services_name p#active").setAttribute("id", "");
 		e.target.setAttribute("id", "active");
 		
-		document.querySelector("main section.services div.list_services div.box_compete div.right_box img").setAttribute("src", listServices[getNeedIdName]);
+		document.querySelector("main section.services div.services__list_services div.services__box_compete div.services__box_right img").setAttribute("src", listServices[getNeedIdName]);
 		
 	  });
 	});
 	
 	//IMAGES SLIDER
 	
-	let img_slider = document.querySelectorAll("div.images div.swiper-wrapper img");
+	let img_slider = document.querySelectorAll("div.cans__images div.swiper-wrapper img");
 	
 	let startSliderImages = () => {
 		
 		img_slider[0].classList.add("swiper-slide-active");
 		
 		if(img_slider.length <= 1){
-			document.querySelector("main section.cans div.ui_element div.gallery_module div.controls > div.left").style.display = "none";
-			document.querySelector("main section.cans div.ui_element div.gallery_module div.controls > div.right").style.display = "none";
-			document.querySelector("main section.cans div.ui_element div.gallery_module div.controls").style.justifyContent = "center";
+			document.querySelector("main section.cans div.ui_element div.cans__module_gallery div.controls > div.left").style.display = "none";
+			document.querySelector("main section.cans div.ui_element div.cans__module_gallery div.controls > div.right").style.display = "none";
+			document.querySelector("main section.cans div.ui_element div.cans__module_gallery div.controls").style.justifyContent = "center";
 		}
 
-		document.querySelector("main section.cans div.ui_element div.gallery_module div.controls div.name_image").innerText = img_slider[0].getAttribute("alt");
+		document.querySelector("main section.cans div.ui_element div.cans__module_gallery div.controls div.cans__image_name").innerText = img_slider[0].getAttribute("alt");
 		
 		if(img_slider.length > 1){
-			if (document.querySelector('.images')) {
-				swiper = new Swiper('.images', {
+			if (document.querySelector('.cans__images')) {
+				swiper = new Swiper('.cans__images', {
 				  speed: 1000,
 				  // Optional parameters
 				  loop: true,
 
 				  // Navigation arrows
 				  navigation: {
-					nextEl: 'main section.cans div.ui_element div.gallery_module div.controls > div.right',
-					prevEl: 'main section.cans div.ui_element div.gallery_module div.controls > div.left',
+					nextEl: 'main section.cans div.ui_element div.cans__module_gallery div.controls > div.right',
+					prevEl: 'main section.cans div.ui_element div.cans__module_gallery div.controls > div.left',
 				  }
 				});
 			}else{
@@ -194,7 +194,7 @@ window.onload = function(){
 	let position_slider = 0;
 	let block_slider = 0;
 	
-	document.querySelector("main section.cans div.ui_element div.gallery_module div.controls > div.right").addEventListener("click", () => {
+	document.querySelector("main section.cans div.ui_element div.cans__module_gallery div.controls > div.right").addEventListener("click", () => {
 		
 		if(block_slider == 0){
 			
@@ -206,7 +206,7 @@ window.onload = function(){
 				position_slider = 0;
 			}
 			
-			document.querySelector("div.name_image").innerText = img_slider[position_slider].getAttribute("alt");
+			document.querySelector("div.cans__image_name").innerText = img_slider[position_slider].getAttribute("alt");
 			
 			setTimeout(function(){
 				block_slider = 0;
@@ -216,7 +216,7 @@ window.onload = function(){
 		
 	});
 	
-	document.querySelector("main section.cans div.ui_element div.gallery_module div.controls > div.left").addEventListener("click", () => {
+	document.querySelector("main section.cans div.ui_element div.cans__module_gallery div.controls > div.left").addEventListener("click", () => {
 		
 		if(block_slider == 0){
 			
@@ -228,7 +228,7 @@ window.onload = function(){
 				position_slider = img_slider.length - 1;
 			}
 			
-			document.querySelector("div.name_image").innerText = img_slider[position_slider].getAttribute("alt");
+			document.querySelector("div.cans__image_name").innerText = img_slider[position_slider].getAttribute("alt");
 			
 			setTimeout(function(){
 				block_slider = 0;
@@ -240,7 +240,7 @@ window.onload = function(){
 	
 	//REVIEWS SLIDER
 	
-	let reviews_slider = document.querySelectorAll("main section.reviews div.ui_element div.list_reviews div div.review");
+	let reviews_slider = document.querySelectorAll("main section.reviews div.ui_element div.reviews__list div div.reviews__review");
 	
 	let startSliderReviews = () => {
 		
@@ -268,9 +268,9 @@ window.onload = function(){
 		}
 		
 		
-		if (document.querySelector('main section.reviews div.ui_element div.list_reviews')) {
+		if (document.querySelector('main section.reviews div.ui_element div.reviews__list')) {
 			
-			swiper = new Swiper('main section.reviews div.ui_element div.list_reviews', {
+			swiper = new Swiper('main section.reviews div.ui_element div.reviews__list', {
 			  speed: 1000,
 			  // Optional parameters
 			  loop: true,
