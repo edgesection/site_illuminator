@@ -72,6 +72,10 @@
 			transition: all 0.3s;
 		}
 		
+		svg > path{
+			transition: all 0.3s;
+		}
+		
 		.scroll-item {
 		  opacity: 0;
 		  transform: translateY(30px);
@@ -81,6 +85,17 @@
 		.scroll-item.active {
 		  opacity: 1;
 		  transform: translateY(0);
+		}
+		
+		.swiper-wrapper{
+			align-items: stretch;
+		}
+		.swiper-slide {
+		  height: auto !important;
+		}
+		/* Скрываем неактивные слайды */
+		img.swiper-slide:not(.swiper-slide-active) {
+		  height: 0 !important;
 		}
 		
 		div.pop_up_box{
@@ -299,7 +314,7 @@
 			align-items: center;
 			justify-content: space-between;
 			width: 1240px;
-			height: 55px;
+			height: auto;
 			margin: 25px 0px 0px 0px;
 			flex-direction: row;
 			flex-wrap: wrap;
@@ -326,6 +341,7 @@
 			width: 30px;
 			height: 1px;
 			background: white;
+			flex-shrink: 0;
 		}
 		header nav.menu{
 			/* background: red; */
@@ -550,7 +566,7 @@
 			line-height: 135%;
 		}
 		
-		main section.services, main section.cans div.ui_element, main section.video_preview, main section.top div.ui_element, main section.form, main section.reviews div.ui_element{
+		main .fix_box{
 			position: relative;
 			padding: 70px 0px;
 			width: 1240px;
@@ -631,8 +647,12 @@
 			flex-direction: row;
 			gap: 20px;
 		}
+		main section.services div.list_services div.box_compete{
+			align-items: stretch;
+		}
 		main section.form div.form{
 			justify-content: space-between;
+			align-items: stretch;
 		}
 		
 		main section.services div.list_services a{
@@ -641,7 +661,7 @@
 			justify-content: center;
 			text-decoration: none;
 		}
-		main section.services div.list_services a button, main section.cans div.ui_element div.button_all a button, main section.form div.form div.left div.bottom button#back, main section.form div.form div.left div.bottom button#next, footer div.ui_box div.left>button#send{
+		button.act_button{
 			padding: 21px 51px;
 			position: relative;
 			color: white;
@@ -653,10 +673,13 @@
 			font-weight: 600;
 			cursor: pointer;
 		}
-		main section.services div.list_services a button:hover, main section.form div.form div.left div.bottom button#back:hover, main section.form div.form div.left div.bottom button#next:hover, main section.cans div.ui_element div.button_all a button:hover, div.pop_up_box div.pop_up > button:hover{
-			color: var(--color_vinous);
+		button.act_button:hover, div.pop_up_box div.pop_up > button:hover{
+			color: var(--color_vinous) !important;
 			border: 1px solid var(--color_vinous);
-			background: initial;
+			background: initial !important;
+		}
+		button#send:hover{
+			color: white !important;
 		}
 		main section.form div.form div.left div.bottom button#back, main section.form div.form div.left div.bottom button#next{
 			margin: 0px;
@@ -672,20 +695,24 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-end;
-			height: 630px;
+			gap: 40px;
+		}
+		main section.services div.list_services div.box_compete div.left_box div.plb{
+			position: relative;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
 		}
 		main section.services div.list_services div.box_compete div.left_box h3{
-			height: 100%;
 			position: relative;
 			display: block;
-			border-bottom: 1px solid #dddddd;
 			font-size: 45px;
 			font-family: 'Mont', sans-serif;
 			font-weight: 600;
 		}
 		main section.services div.list_services div.box_compete div.left_box div.plb p{
 			font-size: 21px;
-			height: 100px;
+			height: auto;
 			position: relative;
 			border-bottom: 1px solid #dddddd;
 			display: flex;
@@ -693,6 +720,10 @@
 			align-items: center;
 			gap: 20px;
 			cursor: pointer;
+			flex-grow: 1;
+		}
+		main section.services div.list_services div.box_compete div.left_box div.plb p:first-child{
+			border-top: 1px solid #dddddd;
 		}
 		main section.services div.list_services div.box_compete div.left_box div.plb p span{
 			display: none;
@@ -726,16 +757,16 @@
 			object-fit: cover;	
 		}
 		
-		main section.cans, main section.top, main section.reviews{
+		main section.full_box{
 			position: relative;
 			background: var(--color_gray);
 		}
 		
-		main section.cans div.ui_element, main section.top div.ui_element, main section.reviews div.ui_element{
+		main section.full_box div.ui_element{
 			align-items: stretch;
 		}
 		
-		main section.cans div.ui_element div.desc_box, main section.video_preview div.desc_box, main section.top div.ui_element div.desc_box, main section.form div.desc_box, main section.reviews div.ui_element div.desc_box{
+		main section div.desc_box{
 			position: relative;
 			display: flex;
 			flex-direction: row;
@@ -743,13 +774,14 @@
 			justify-content: space-between;
 			margin: 0px 0px 40px 0px;
 		}
-		main section.cans div.ui_element div.desc_box div.left, main section.video_preview div.desc_box div.left, main section.top div.ui_element div.desc_box div.left, main section.form div.desc_box div.left, main section.reviews div.ui_element div.desc_box div.left h3{
+		main section div.desc_box div.left, 
+		main section.reviews div.ui_element div.desc_box div.left h3{
 			position: relative;
 			font-size: 45px;
 			font-weight: 600;
 			line-height: 107%;
 		}
-		main section.cans div.ui_element div.desc_box div.right, main section.video_preview div.desc_box div.right, main section.form div.desc_box div.right{
+		main section.right_image_box div.desc_box div.right{
 			position: relative;
 			width: 610px;
 			font-size: 16px;
@@ -767,16 +799,20 @@
 		main section.cans div.ui_element div.gallery_module div.images{
 			position: relative;
 			width: 100%;
+			display: flex;
+			flex-direction: row;
+			overflow: hidden;
+			align-items: center;
 		}
 		main section.cans div.ui_element div.gallery_module div.images img{
 			position: relative;
 			width: 100%;
+			height: 100%;
 		}
 		
 		main section.cans div.ui_element div.gallery_module div.controls{
 			position: relative;
 			width: 400px;
-			height: 60px;
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
@@ -788,10 +824,8 @@
 			transform: rotate(180deg);
 		}
 		
-		main section.cans div.ui_element div.gallery_module div.controls div.left, 
-		main section.cans div.ui_element div.gallery_module div.controls div.right,
-		main section.reviews div.ui_element div.controls div.left, 
-		main section.reviews div.ui_element div.controls div.right{
+		main section.cans div.ui_element div.gallery_module div.controls > div.controls__button,
+		main section.reviews div.ui_element div.controls > div{
 			position: relative;
 			width: 60px;
 			height: 60px;
@@ -801,8 +835,11 @@
 			border: 1px solid#D0D0D0;
 			border-radius: 100%;
 			cursor: pointer;
+			flex-shrink: 0;
+			user-select: none;
 		}
-		main section.cans div.ui_element div.gallery_module div.controls div.name_image, main section.form div.form div.left div.top div.head_form span#last{
+		main section.cans div.ui_element div.gallery_module div.controls div.name_image, 
+		main section.form div.form div.left div.top div.head_form span#last{
 			font-size: 21px;
 			font-weight: 600;
 			line-height: 133%;
@@ -917,7 +954,7 @@
 			box-sizing: border-box;
 			width: 400px;
 			border: 1px solid #d0d0d0;
-			height: 305px;
+			min-height: 250px;
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
@@ -927,6 +964,9 @@
 			position: absolute;
 			top: 0px;
 			left: 0px;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
 		}
 		main section.top div.ui_element div.list_top div div.desc{
 			position: relative;
@@ -942,6 +982,9 @@
 			font-size: 21px;
 			font-weight: 600;
 			line-height: 115%;
+		}
+		main section.top div.ui_element div.list_top div:first-child div.desc h3{
+			margin: 40px 0px 0px 0px;
 		}
 		main section.top div.ui_element div.list_top div div.desc p{
 			font-size: 16px;
@@ -977,8 +1020,10 @@
 		}
 		main section.top div.ui_element div.list_top div.top_six div.desc{
 			text-align: center;
+			margin: 20px 0px 0px 0px;
 		}
-		main section.top div.ui_element div.list_top div.top_six div.desc h3, main section.top div.ui_element div.list_top div.top_six div.desc p{
+		main section.top div.ui_element div.list_top div.top_six div.desc h3, 
+		main section.top div.ui_element div.list_top div.top_six div.desc p{
 			color: white !important;
 		}
 		main section.form div.desc_box>div{
@@ -987,10 +1032,11 @@
 		
 		main section.form div.form div.left{
 			width: 100%;
-			height: 534px;
+			height: auto;
 			position: relative;
 			display: flex;
 			flex-direction: column;
+			flex-grow: 1;
 			justify-content: space-between;
 		}
 		
@@ -1044,7 +1090,8 @@
 			gap: 20px;
 		}
 		
-		main section.form div.form div.left div.top div.input_name_product, main section.form div.form div.left div.top div.input_size{
+		main section.form div.form div.left div.top div.input_name_product, 
+		main section.form div.form div.left div.top div.input_size{
 			position: relative;
 			display: flex;
 			flex-direction: column;
@@ -1052,19 +1099,24 @@
 			margin: 0px 0px 25px 0px;
 			width: 100%;
 		}
-		main section.form div.form div.left div.top div.input_name_product>span, main section.form div.form div.left div.top div.input_size>span, main section.reviews div.ui_element div.desc_box div.left p{
+		main section.form div.form div.left div.top div > span,
+		main section.reviews div.ui_element div.desc_box div.left p{
 			font-size: 16px;
 		}
+		main section.reviews div.ui_element div.desc_box div.left p{
+			line-height: 150%;
+		}
 		
-		main section.form div.form div.left div.top div.input_name_product input, main section.form div.form div.left div.top div.input_size input{
+		main section.form div.form div.left div.top div.input_name_product input, 
+		main section.form div.form div.left div.top div.input_size input{
 			padding: 22px 26px;
 			border: 1px solid #dddddd;
 			font-size: 16px;
 		}
-		main section.form div.form div.left div.top div.input_name_product input:focus, main section.form div.form div.left div.top div.input_size input:focus{
+		main section.form div.form div.left div.top div > input:focus{
 			border: 1px solid var(--color_vinous);
 		}
-		main section.form div.form div.left div.top div.input_name_product input::placeholder, main section.form div.form div.left div.top div.input_size input::placeholder{
+		main section.form div.form div.left div.top div > input::placeholder{
 			font-size: 16px;
 			color: rgba(51, 51, 51, 0.55);
 		}
@@ -1082,6 +1134,7 @@
 			flex-direction: row;
 			align-items: stretch;
 			gap: 20px;
+			overflow: hidden;
 		}
 		main section.reviews div.ui_element div.list_reviews div.review{
 			position: relative;
@@ -1090,10 +1143,12 @@
 			border: 1px solid #D0D0D0;
 			padding: 40px;
 			box-sizing: border-box;
-			/*height: 400px;*/
+			/* height: 400px; */
 			justify-content: space-between;
-			flex: 1;
+			/* flex: 1; */
 			gap: 40px;
+			width: calc(50% - 10px);
+			flex-shrink: 0;
 		}
 		main section.reviews div.ui_element div.list_reviews div.review div.head{
 			position: relative;
@@ -1137,10 +1192,12 @@
 			margin: 30px 0px 0px 0px;
 		} 
 		
-		div.controls > div.left:hover, div.controls > div.right:hover{
+		div.controls > div.left:hover, 
+		div.controls > div.right:hover{
 		    background: var(--color_vinous);
 		}
-		div.controls > div.left:hover img, div.controls > div.right:hover img{
+		div.controls > div.left:hover img, 
+		div.controls > div.right:hover img{
 			filter: invert(1);
 		}
 		
@@ -1177,7 +1234,7 @@
 			position: relative;
 			display: flex;
 			justify-content: flex-start;
-			align-items: center;
+			align-items: stretch;
 			width: 100%;
 			border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 			padding: 28px 0px;
@@ -1199,7 +1256,6 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
-			height: 58px;
 		}
 		
 		footer div.ui_box div.left>div>div>div:last-child>h4{
@@ -1209,7 +1265,8 @@
 			line-height: 130%;
 			opacity: 0.9;
 		}
-		footer div.ui_box div.left>div>div>div:last-child>a, footer div.ui_box div.left>div>div>div:last-child>p{
+		footer div.ui_box div.left>div>div>div:last-child>a, 
+		footer div.ui_box div.left>div>div>div:last-child>p{
 			font-size: 21px;
 			color: white;
 			font-weight: 600;
@@ -1287,7 +1344,7 @@
 				left: -220px;
 			}
 			
-			main section.services, main section.cans div.ui_element, main section.video_preview, main section.top div.ui_element, main section.form, main section.reviews div.ui_element, footer div.ui_box{
+			main .fix_box, footer div.ui_box{
 				width: 100%;
 				left: 0px;
 				padding: 70px 20px;
@@ -1300,14 +1357,15 @@
 				padding: 0px 20px 40px 20px;
 			}
 			
-			main section.cans div.ui_element div.desc_box, main section.video_preview div.desc_box, main section.form div.desc_box{
+			main section.right_image_box div.desc_box{
 				gap: 20px;
 			}
-			main section.services div.list_services div.box_compete > div, main section.cans div.ui_element div.desc_box > div, main section.video_preview div.desc_box > div, main section.form div.form > div, footer div.ui_box > div{
+			main section div.div_devide > div, 
+			footer div.ui_box > div{
 				width: 50% !important;
 			}
-			main section.services div.list_services div.box_compete div.right_box img, main section.form div.form div.right img, footer div.ui_box div.right img{
-				width: 100%;
+			div.full_width > img{
+				width: 100% !important;
 			}
 			footer div.ui_box div.right img{
 				width: 100%;
@@ -1378,11 +1436,25 @@
 				gap: 15px;
 			}
 			
-			main section.services div.list_services div.box_compete, main section.cans div.ui_element div.desc_box, main section.video_preview div.desc_box, main section.form div.desc_box, main section.form div.form, footer div.ui_box, main section.reviews div.ui_element div.desc_box{
-				flex-direction: column;
+			div.flex-direction_column{
+				flex-direction: column !important;
 			}
-			main section.services div.list_services div.box_compete > div, main section.services div.list_services div.box_compete > div, main section.cans div.ui_element div.desc_box > div, main section.video_preview div.desc_box > div, main section.video_preview div.comment div.ui_box div.text, main section.top div.ui_element div.desc_box div.left, main section.form div.desc_box > div, main section.form div.form > div, footer div.ui_box > div, main section.services div.about_us, main section.reviews div.ui_element div.desc_box > div{
+			
+			main section.services div.list_services div.box_compete > div, 
+			main section.cans div.ui_element div.desc_box > div, 
+			main section.video_preview div.desc_box > div, 
+			main section.video_preview div.comment div.ui_box div.text, 
+			main section.top div.ui_element div.desc_box div.left, 
+			main section.form div.desc_box > div, 
+			main section.form div.form > div, 
+			footer div.ui_box > div, 
+			main section.services div.about_us, 
+			main section.reviews div.ui_element div.desc_box > div{
 				width: 100% !important;
+			}
+			
+			main section.services div.list_services div.box_compete div.left_box div.plb p{
+				padding: 30px 0px;
 			}
 			
 			main section.top div.ui_element div.list_top>div{
@@ -1401,6 +1473,10 @@
 			
 			main div.box_main{
 				min-height: 600px;
+			}
+			
+			main section.reviews div.ui_element div.list_reviews div.review{
+				width: 100%;
 			}
 			
 		}
@@ -1489,10 +1565,6 @@
 			    flex: 1;
 			}
 			
-			main section.reviews div.ui_element div.list_reviews{
-				flex-direction: column;
-			}
-			
 			footer div.ui_box div.left>button#send{
 				margin: 20px 0px 0px 0px;
 			}
@@ -1570,8 +1642,8 @@
 				font-size: 8vw;
 			}*/
 			
-			main section.cans div.ui_element div.desc_box div.left, main section.video_preview div.desc_box div.left, main section.top div.ui_element div.desc_box div.left, main section.form div.desc_box div.left, main section.reviews div.ui_element div.desc_box div.left h3, footer div.ui_box div.left h2, main section.services div.list_services div.box_compete div.left_box h3{
-				font-size: 10vw;
+			.font-size_10vw{
+				font-size: 10vw !important;
 			}
 			main section.cans div.ui_element div.gallery_module div.controls{
 				width: 100%;
@@ -1663,7 +1735,8 @@
 			footer div.ui_box div.left>div>div>div:last-child>h4{
 			    font-size: 5vw;
 			}
-			footer div.ui_box div.left>div>div>div:last-child>a, footer div.ui_box div.left>div>div>div:last-child>p{
+			footer div.ui_box div.left>div>div>div:last-child>a, 
+			footer div.ui_box div.left>div>div>div:last-child>p{
 				font-size: 6vw;
 			}
 			
@@ -1691,7 +1764,9 @@
 				font-size: 7vw;
 			}
 			
-			footer div.ui_box div.left>button#send, main section.services div.list_services a button, main section.cans div.ui_element div.button_all a button, header a#send{
+			footer div.ui_box div.left>button#send, 
+			main section.services div.list_services a button, 
+			main section.cans div.ui_element div.button_all a button, header a#send{
 				font-size: 6vw;
 				width: 100%;
 				text-align: center;
@@ -1707,7 +1782,8 @@
 				padding: 0px;
 			}
 			
-			main section.form div.form div.left div.bottom button#back, main section.form div.form div.left div.bottom button#next{
+			main section.form div.form div.left div.bottom button#back, 
+			main section.form div.form div.left div.bottom button#next{
 				width: 100%;
 				padding: 21px 0px;
 			}
@@ -1745,10 +1821,12 @@
 				padding: 20px;
 			}
 			
-			main section.reviews div.ui_element div.list_reviews div.review div.head div.user_data span#faln, main section.top div.ui_element div.list_top div div.desc h3{
+			main section.reviews div.ui_element div.list_reviews div.review div.head div.user_data span#faln, 
+			main section.top div.ui_element div.list_top div div.desc h3{
 				font-size: 8vw;
 			}
-			main section.reviews div.ui_element div.list_reviews div.review div.head div.user_data span#date, main section.reviews div.ui_element div.list_reviews div.review div.desc{
+			main section.reviews div.ui_element div.list_reviews div.review div.head div.user_data span#date, 
+			main section.reviews div.ui_element div.list_reviews div.review div.desc{
 				font-size: 7vw;
 			}
 			
@@ -1771,7 +1849,8 @@
 			main section.video_preview div.comment div.ui_box div.text p{
 				font-size: 8vw;
 			}
-			main section.cans div.ui_element div.desc_box div.right, main section.video_preview div.desc_box div.right{
+			main section.cans div.ui_element div.desc_box div.right, 
+			main section.video_preview div.desc_box div.right{
 				font-size: 7vw;
 			}
 			
