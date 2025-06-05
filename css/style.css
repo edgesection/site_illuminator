@@ -111,7 +111,7 @@
 			top: 0px;
 			left: 0px;
 		}
-		div.pop_up_box div.pop_up{
+		div.pop_up_box div.pop_up__window{
 			position: relative;
 			background: white;
 			padding: 60px 50px;
@@ -120,7 +120,7 @@
 			flex-direction: column;
 			/* align-items: flex-start; */		
 		}
-		div.pop_up_box div.pop_up div.close{
+		div.pop_up_box div.pop_up__window div.pop_up__close{
 			position: absolute;
 			display: flex;
 			align-items: center;
@@ -130,7 +130,7 @@
 			right: 24px;
 			cursor: pointer;
 		}
-		div.pop_up_box div.pop_up span#name{
+		div.pop_up_box div.pop_up__window span#name{
 			font-size: 37px;
 			font-weight: 600;
 			line-height: 110%;
@@ -138,7 +138,7 @@
 			text-align: center;
 			color: #2B0514;
 		}
-		div.pop_up_box div.pop_up span#desc{
+		div.pop_up_box div.pop_up__window span#desc{
 			font-size: 16px;
 			line-height: 125%;
 			text-align: center;
@@ -146,24 +146,24 @@
 			margin: 0px 0px 30px 0px;
 			width: 381px;
 		}
-		div.pop_up_box div.pop_up > div{
+		div.pop_up_box div.pop_up__window > div{
 			position: relative;
 			display: flex;
 			flex-direction: column;
 			gap: 10px;
 			margin: 0px 0px 25px 0px;		
 		}
-		div.pop_up_box div.pop_up > div.el_email{
+		div.pop_up_box div.pop_up__window > div.el_email{
 		    margin: 0px 0px 17px 0px;
 		}
-		div.pop_up_box div.pop_up > div.box_success{
+		div.pop_up_box div.pop_up__window > div.pop_up__box_success{
 			flex-direction: row;
 			/* gap: 10px; */
 			align-items: center;
 			justify-content: center;
 		    margin: 0px 0px 35px 0px;
 		}
-		div.pop_up_box div.pop_up > div.box_success input#success{
+		div.pop_up_box div.pop_up__window > div.pop_up__box_success input#success{
 			width: 20px;
 			height: 20px;
 			padding: 0px;
@@ -186,23 +186,23 @@
 			visibility: hidden;
 			transition: all 1s ease-in-out;
 		}
-		div.mobile_menu div.header_section{
+		div.mobile_menu div.mobile_menu__header_section{
 			position: relative;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
 		}
-		div.mobile_menu div.header_section span{
+		div.mobile_menu div.mobile_menu__header_section span{
 			font-size: 37px;
 			font-weight: 600;
 			line-height: 110%;
 			text-align: center;
 			color: #2B0514;
 		}
-		div.mobile_menu div.header_section img{
+		div.mobile_menu div.mobile_menu__header_section img{
 			cursor: pointer;
 		}
-		div.mobile_menu div.list{
+		div.mobile_menu div.mobile_menu__list{
 			position: relative;
 			display: flex;
 			flex-direction: column;
@@ -210,7 +210,7 @@
 			/* gap: 20px; */
 		    margin: 20px 0px 0px 0px;
 		}
-		div.mobile_menu div.list a{
+		div.mobile_menu div.mobile_menu__list a{
 			position: relative;
 			text-decoration: none;
 			font-size: 16px;
@@ -220,7 +220,7 @@
 			padding: 20px 0px;
 			border-bottom: 1px solid #dddddd;		
 		}
-		div.mobile_menu div.list a:last-child{
+		div.mobile_menu div.mobile_menu__list a:last-child{
 			border: none;
 		}
 		
@@ -255,19 +255,19 @@
 		/*label input:checked ~ span {
 		  background-color: var(--color_vinous);
 		}*/
-		div.pop_up_box div.pop_up > div.box_success label{
+		div.pop_up_box div.pop_up__window > div.pop_up__box_success label{
 			position: relative;
 			display: flex;
 			align-items: center;
 			gap: 10px;
 			cursor: pointer;
 		}
-		div.pop_up_box div.pop_up > div.box_success label span{
+		div.pop_up_box div.pop_up__window > div.pop_up__box_success label span{
 			font-size: 14px;
 			/* line-height: 20%; */
 			color: #666666;
 		}
-		div.pop_up_box div.pop_up > button{
+		div.pop_up_box div.pop_up__window > button{
 			font-size: 15px;
 			font-weight: 600;
 			width: fit-content;
@@ -280,12 +280,12 @@
 			cursor: pointer;
 			border: 1px solid transparent;
 		}
-		div.pop_up_box div.pop_up > div > span:first-child{
+		div.pop_up_box div.pop_up__window > div > span:first-child{
 			font-size: 15px;
 			font-weight: 600;
 			color: #2B0514;
 		}
-		div.pop_up_box div.pop_up > div > input{
+		div.pop_up_box div.pop_up__window > div > input{
 			position: relative;
 			height: 58px;
 			padding: 0px 25px;
@@ -320,10 +320,10 @@
 			flex-wrap: wrap;
 			gap: 20px;
 		}
-		header div.nav_box{
+		header div.header__nav_box{
 			flex-grow: 1;
 		}
-		header div.nav_box div.mobile_icon{
+		header div.header__nav_box div.header__mobile_icon{
 			position: relative;
 			padding: 19px 20px;
 			border-radius: 66px;
@@ -336,20 +336,20 @@
 			display: none;
 			cursor: pointer;
 		}
-		header div.nav_box div.mobile_icon div{
+		header div.header__nav_box div.header__mobile_icon div{
 			position: relative;
 			width: 30px;
 			height: 1px;
 			background: white;
 			flex-shrink: 0;
 		}
-		header nav.menu{
+		header nav.header__menu{
 			/* background: red; */
 			padding: 20px 31px;
 			border-radius: 66px;
 			border: 1px solid rgb(255 255 255 / 25%);
 		}
-		header nav.menu ul{
+		header nav.header__menu ul{
 			position: relative;
 			display: flex;
 			flex-direction: row;
@@ -360,15 +360,15 @@
 			justify-content: space-between;
 			width: 100%;
 		}
-		header nav.menu ul li {
+		header nav.header__menu ul li {
 		  list-style-type: none; /* Убирает кружки для всех элементов <li> */
 		}
-		header nav.menu ul li a{
+		header nav.header__menu ul li a{
 			text-decoration: none;
 			color: white;
 			font-size: 15px;
 		}
-		header nav.menu ul li a:hover{
+		header nav.header__menu ul li a:hover{
 			color: var(--color_vinous);
 		}
 		header a#send{
@@ -383,10 +383,10 @@
 			box-sizing: border-box;
 			flex-grow: 1;
 		}
-		header a#send:hover, header div.nav_box div.mobile_icon:hover{
+		header a#send:hover, header div.header__nav_box div.header__mobile_icon:hover{
 			background: var(--color_vinous);
 		}
-		header div.contacts{
+		header div.header__contacts{
 			/* color: white; */
 			position: relative;
 			display: flex;
@@ -394,7 +394,7 @@
 			gap: 5px;
 			font-weight: 600;
 		}
-		header div.contacts a{
+		header div.header__contacts a{
 			color: white;
 			text-decoration: none;
 			gap: 8px;
@@ -403,20 +403,20 @@
 			justify-content: flex-start;
 			font-size: 17px;
 		}
-		header div.contacts a:hover svg path{
+		header div.header__contacts a:hover svg path{
 			fill: var(--color_vinous);
 		}
-		header div.contacts a:hover{
+		header div.header__contacts a:hover{
 			color: var(--color_vinous);
 		}
-		header div.socialnetworks{
+		header div.header__socialnetworks{
 			position: relative;
 			display: flex;
 			flex-direction: row;
 			align-items: center;
 			gap: 20px;
 		}
-		header div.socialnetworks a{
+		header div.header__socialnetworks a{
 			position: relative;
 			background: var(--color_vinous);
 			height: 55px;
@@ -428,10 +428,10 @@
 			justify-content: center;
 			border-radius: 100%;
 		}
-		header div.socialnetworks a#tg:hover{
+		header div.header__socialnetworks a#tg:hover{
 			background: #46A3DD;
 		}
-		header div.socialnetworks a#wa:hover{
+		header div.header__socialnetworks a#wa:hover{
 			background: #2ABA3B;
 		}
 		
@@ -445,7 +445,7 @@
 			/* display: flex; */
 			/* align-items: flex-end; */
 		}
-		main div.box_main{
+		main div.main_box{
 			position: relative;
 			width: 100%;
 			height: 100vh;
@@ -455,7 +455,7 @@
 			left: 0px;
 			min-height: 500px;
 		}
-		main div.box_main>div.bottom{
+		main div.main_box>div.main_box__bottom{
 			position: relative;
 			z-index: 2;
 			width: 1240px;
@@ -466,7 +466,7 @@
 			align-items: flex-end;
 			justify-content: space-between;		
 		}
-		main div.box_main>div.black_box{
+		main div.main_box>div.main_box__box_black{
 			position: absolute;
 			background: linear-gradient(360deg, #000000 7%,  rgba(0, 0, 0, 0.7) 42%,  rgba(0, 0, 0, 0) 66%,  rgba(0, 0, 0, 0) 82%,  rgba(0, 0, 0, 0.9) 100% );
 			z-index: 1;
@@ -478,7 +478,7 @@
 			opacity: 0.5;
 			min-height: 500px;
 		}
-		main div.box_main>img{
+		main div.main_box>img{
 			position: absolute;
 			top: 0px;
 			left: 0px;
@@ -488,10 +488,10 @@
 			min-height: 500px;
 		}
 		
-		main div.box_main>div.bottom div.left{
+		main div.main_box>div.main_box__bottom div.main_box__left{
 			
 		}
-		main div.box_main>div.bottom div.left h1.top{
+		main div.main_box>div.main_box__bottom div.main_box__left h1.main_box__top{
 			position: relative;
 			width: 400px;
 			color: white;
@@ -501,26 +501,26 @@
 			border-bottom: 1px solid rgb(255 255 255 / 25%);
 			margin: 0px 0px 32px 0px;
 		}
-		main div.box_main>div.bottom div.left div.bottom{
+		main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box{
 			position: relative;
 		}
-		main div.box_main>div.bottom div.left div.bottom div.logo_dom_html{
+		main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box div.main_box__logo{
 			position: absolute;
 			bottom: 0px;
 			left: -280px;
 			height: auto;
 		}
-		main div.box_main>div.bottom div.left div.bottom div.logo_dom_html div{
+		main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box div.main_box__logo div{
 			width: 130px;
 			height: 130px;
 		}
-		main div.box_main>div.bottom div.left div.bottom h2{
+		main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box h2{
 			position: relative;
 			color: white;
 			font-size: 28px;
 			font-weight: 400;
 		}
-		main div.box_main>div.bottom div.left div.bottom h2.name_company{
+		main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box h2.main_box__name_company{
 			position: relative;
 			color: var(--color_vinous);
 			font-weight: 900;
@@ -534,14 +534,14 @@
 			margin: 18px 0px 0px 0px;
 		}
 		
-		main div.box_main>div.bottom div.right{
+		main div.main_box>div.main_box__bottom div.main_box__right{
 			position: relative;
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
 			gap: 20px;
 		}
-		main div.box_main>div.bottom div.right div{
+		main div.main_box>div.main_box__bottom div.main_box__right div{
 			position: relative;
 			color: white;
 			display: flex;
@@ -551,7 +551,7 @@
 			gap: 20px;
 			font-size: 19px;
 		}
-		main div.box_main>div.bottom div.right div div.ux{
+		main div.main_box>div.main_box__bottom div.main_box__right div div.main_box__image{
 			position: relative;
 			width: 55px;
 			height: 55px;
@@ -562,7 +562,7 @@
 			border-radius: 100%;
 			flex-shrink: 0;
 		}
-		main div.box_main>div.bottom div.right div span{
+		main div.main_box>div.main_box__bottom div.main_box__right div span{
 			line-height: 135%;
 		}
 		
@@ -575,7 +575,7 @@
 			flex-direction: column;
 			align-items: center;
 		}
-		main section.services div.about_us{
+		main section.services div.services__about_us{
 			position: relative;
 			display: flex;
 			flex-direction: column;
@@ -587,13 +587,13 @@
 			gap: 10px;
 			box-sizing: border-box;
 		}
-		main section.services div.about_us h3{
+		main section.services div.services__about_us h3{
 			font-size: 18px;
 			font-weight: 400;
 			line-height: 135%;
 			text-align: center;
 		}
-		main section.services div.about_us p{
+		main section.services div.services__about_us p{
 			font-family: 'Mont', sans-serif;
 			font-size: 20px;
 			font-style: italic;
@@ -601,7 +601,7 @@
 			text-align: center;
 			line-height: 128%;
 		}
-		div.logo_dom_html{
+		div.logo{
 			position: relative;
 			height: 26px;
 			display: flex;
@@ -611,25 +611,25 @@
 		div.ldh_white{
 			z-index: 2;
 		}
-		div.logo_dom_html div:first-child{
+		div.logo div:first-child{
 			position: relative;
 			background: var(--color_vinous);
 			width: 29px;
 			height: 100%;
 			border-radius: 0% 100% 100% 0%;
 		}
-		div.logo_dom_html div:last-child{
+		div.logo div:last-child{
 			position: relative;
 			height: 100%;
 			width: 26px;
 			background: var(--color_vinous);
 			border-radius: 100%;
 		}
-		div.ldh_white div:first-child, div.ldh_white div:last-child{
-			background: #F3F2F0;
+		div.ldh_white div{
+			background: #F3F2F0 !important;
 		}
 		
-		main section.services div.list_services{
+		main section.services div.services__list_services{
 			position: relative;
 			width: 100%;
 			display: flex;
@@ -638,7 +638,7 @@
 			justify-content: flex-start;
 			margin: 70px 0px 0px 0px;
 		}
-		main section.services div.list_services div.box_compete, main section.form div.form{
+		main section.services div.services__list_services div.services__box_compete, main section.form div.form__box_form{
 			position: relative;
 			width: 100%;
 			display: flex;
@@ -647,21 +647,21 @@
 			flex-direction: row;
 			gap: 20px;
 		}
-		main section.services div.list_services div.box_compete{
+		main section.services div.services__list_services div.services__box_compete{
 			align-items: stretch;
 		}
-		main section.form div.form{
+		main section.form div.form__box_form{
 			justify-content: space-between;
 			align-items: stretch;
 		}
 		
-		main section.services div.list_services a{
+		main section.services div.services__list_services a{
 			width: 100%;
 			display: flex;
 			justify-content: center;
 			text-decoration: none;
 		}
-		button.act_button{
+		button.button_act{
 			padding: 21px 51px;
 			position: relative;
 			color: white;
@@ -673,7 +673,7 @@
 			font-weight: 600;
 			cursor: pointer;
 		}
-		button.act_button:hover, div.pop_up_box div.pop_up > button:hover{
+		button.button_act:hover, div.pop_up_box div.pop_up__window > button:hover{
 			color: var(--color_vinous) !important;
 			border: 1px solid var(--color_vinous);
 			background: initial !important;
@@ -681,36 +681,36 @@
 		button#send:hover{
 			color: white !important;
 		}
-		main section.form div.form div.left div.bottom button#back, main section.form div.form div.left div.bottom button#next{
+		main section.form div.form__box_form div.form__box_form_left div.form__controls button#back, main section.form div.form__box_form div.form__box_form_left div.form__controls button#next{
 			margin: 0px;
 			flex: 1;
 		}
-		main section.form div.form div.left div.bottom button#back{
+		main section.form div.form__box_form div.form__box_form_left div.form__controls button#back{
 		    background: var(--color_gray);
 			color: black;
 		}
 		
-		main section.services div.list_services div.box_compete div.left_box{
+		main section.services div.services__list_services div.services__box_compete div.services__box_left{
 			position: relative;
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-end;
 			gap: 40px;
 		}
-		main section.services div.list_services div.box_compete div.left_box div.plb{
+		main section.services div.services__list_services div.services__box_compete div.services__box_left div.services__services_name{
 			position: relative;
 			height: 100%;
 			display: flex;
 			flex-direction: column;
 		}
-		main section.services div.list_services div.box_compete div.left_box h3{
+		main section.services div.services__list_services div.services__box_compete div.services__box_left h3{
 			position: relative;
 			display: block;
 			font-size: 45px;
 			font-family: 'Mont', sans-serif;
 			font-weight: 600;
 		}
-		main section.services div.list_services div.box_compete div.left_box div.plb p{
+		main section.services div.services__list_services div.services__box_compete div.services__box_left div.services__services_name p{
 			font-size: 21px;
 			height: auto;
 			position: relative;
@@ -722,16 +722,16 @@
 			cursor: pointer;
 			flex-grow: 1;
 		}
-		main section.services div.list_services div.box_compete div.left_box div.plb p:first-child{
+		main section.services div.services__list_services div.services__box_compete div.services__box_left div.services__services_name p:first-child{
 			border-top: 1px solid #dddddd;
 		}
-		main section.services div.list_services div.box_compete div.left_box div.plb p span{
+		main section.services div.services__list_services div.services__box_compete div.services__box_left div.services__services_name p span{
 			display: none;
 		}
-		main section.services div.list_services div.box_compete div.left_box div.plb p#active{
+		main section.services div.services__list_services div.services__box_compete div.services__box_left div.services__services_name p#active{
 			color: var(--color_vinous);
 		}
-		main section.services div.list_services div.box_compete div.left_box div.plb p#active span{
+		main section.services div.services__list_services div.services__box_compete div.services__box_left div.services__services_name p#active span{
 			position: relative;
 			background: var(--color_vinous);
 			width: 30px;
@@ -740,7 +740,7 @@
 			display: initial;
 			flex-shrink: 0;
 		}
-		main section.services div.list_services div.box_compete div.right_box{
+		main section.services div.services__list_services div.services__box_compete div.services__box_right{
 			position: relative;
 			width: 610px;
 			height: 630px;
@@ -750,7 +750,7 @@
 			flex-direction: row;
 			box-sizing: border-box;
 		}
-		main section.services div.list_services div.box_compete div.right_box img, main section.form div.form div.right img{
+		main section.services div.services__list_services div.services__box_compete div.services__box_right img, main section.form div.form__box_form div.form__box_form_right img{
 			position: relative;
 			width: 610px;
 			height: 100%;
@@ -788,7 +788,7 @@
 			line-height: 170%;
 		}
 		
-		main section.cans div.ui_element div.gallery_module{
+		main section.cans div.ui_element div.cans__module_gallery{
 			position: relative;
 			width: 100%;
 			display: flex;
@@ -796,7 +796,7 @@
 			align-items: center;
 			gap: 20px;
 		}
-		main section.cans div.ui_element div.gallery_module div.images{
+		main section.cans div.ui_element div.cans__module_gallery div.cans__images{
 			position: relative;
 			width: 100%;
 			display: flex;
@@ -804,13 +804,13 @@
 			overflow: hidden;
 			align-items: center;
 		}
-		main section.cans div.ui_element div.gallery_module div.images img{
+		main section.cans div.ui_element div.cans__module_gallery div.cans__images img{
 			position: relative;
 			width: 100%;
 			height: 100%;
 		}
 		
-		main section.cans div.ui_element div.gallery_module div.controls{
+		main section.cans div.ui_element div.cans__module_gallery div.controls{
 			position: relative;
 			width: 400px;
 			display: flex;
@@ -819,12 +819,12 @@
 			align-items: center;
 			margin: 0px 0px 20px 0px;
 		}
-		main section.cans div.ui_element div.gallery_module div.controls div.right img, main section.reviews div.ui_element div.controls div.right img{
+		main section.cans div.ui_element div.cans__module_gallery div.controls div.right img, main section.reviews div.ui_element div.controls div.right img{
 			position: relative;
 			transform: rotate(180deg);
 		}
 		
-		main section.cans div.ui_element div.gallery_module div.controls > div.controls__button,
+		main section.cans div.ui_element div.cans__module_gallery div.controls > div.controls__button,
 		main section.reviews div.ui_element div.controls > div{
 			position: relative;
 			width: 60px;
@@ -838,14 +838,14 @@
 			flex-shrink: 0;
 			user-select: none;
 		}
-		main section.cans div.ui_element div.gallery_module div.controls div.name_image, 
-		main section.form div.form div.left div.top div.head_form span#last{
+		main section.cans div.ui_element div.cans__module_gallery div.controls div.cans__image_name, 
+		main section.form div.form__box_form div.form__box_form_left div.form__top div.form__form_desc span#last{
 			font-size: 21px;
 			font-weight: 600;
 			line-height: 133%;
 		}
 		
-		main section.cans div.ui_element div.button_all{
+		main section.cans div.ui_element div.cans__button_show_all{
 			border-top: 1px solid #dddddd;
 			display: flex;
 			align-items: center;
@@ -856,19 +856,19 @@
 		main section.video_preview{
 			align-items: stretch;
 		}
-		main section.video_preview div.video_module{
+		main section.video_preview div.video_preview__module_video{
 			position: relative;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 		}
-		main section.video_preview div.video_module div.play{
+		main section.video_preview div.video_preview__module_video div.video_preview__play{
 			position: absolute;
 			padding: 40px;
 			border: 1px solid #d0d0d0;
 			border-radius: 100%;
 		}
-		main section.video_preview div.video_module div.play div{
+		main section.video_preview div.video_preview__module_video div.video_preview__play div{
 			position: relative;
 			display: flex;
 			width: 100px;
@@ -881,7 +881,7 @@
 			z-index: 2;
 		}
 		
-		main section.video_preview div.comment{
+		main section.video_preview div.video_preview__comment{
 			position: relative;
 			width: 100%;
 			display: flex;
@@ -889,7 +889,7 @@
 			justify-content: center;
 			align-items: center;
 		}
-		main section.video_preview div.comment div.ui_box{
+		main section.video_preview div.video_preview__comment div.ui_box{
 			position: relative;
 			display: flex;
 			justify-content: center;
@@ -897,7 +897,7 @@
 			margin: 50px 0px 0px 0px;
 			gap: 20px;
 		}
-		main section.video_preview div.comment div.ui_box div.text{
+		main section.video_preview div.video_preview__comment div.ui_box div.video_preview__text{
 			position: relative;
 			background: var(--color_gray);
 			border-radius: 170px;
@@ -909,27 +909,27 @@
 			width: 820px;
 			box-sizing: border-box;
 		}
-		main section.video_preview div.comment div.ui_box div.text p{
+		main section.video_preview div.video_preview__comment div.ui_box div.video_preview__text p{
 			font-size: 17px;
 			line-height: 160%;
 		}
-		main section.video_preview div.comment div.ui_box div.text div.bottom{
+		main section.video_preview div.video_preview__comment div.ui_box div.video_preview__text div.video_preview__icon_quat_bottom{
 			position: relative;
 			display: flex;
 			flex-direction: row;
 			justify-content: flex-end;
 		}
-		main section.video_preview div.comment div.ui_box div.text div.bottom img{
+		main section.video_preview div.video_preview__comment div.ui_box div.video_preview__text div.video_preview__icon_quat_bottom img{
 		    transform: rotate(180deg);
 		}
-		main section.video_preview div.comment div.ui_box div.author{
+		main section.video_preview div.video_preview__comment div.ui_box div.video_preview__author{
 			position: relative;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			gap: 14px;
 		}
-		main section.video_preview div.comment div.ui_box div.author span{
+		main section.video_preview div.video_preview__comment div.ui_box div.video_preview__author span{
 			text-align: center;
 			font-size: 14px;
 			font-style: italic;
@@ -937,18 +937,18 @@
 			line-height: 135%;
 		}
 		
-		main section.top div.ui_element div.desc_box div.left, main section.reviews div.ui_element div.desc_box div.left{
+		main section.top div.ui_element div.top__desc div.left, main section.reviews div.ui_element div.desc_box div.left{
 			width: 50%;
 		}
 		
-		main section.top div.ui_element div.list_top{
+		main section.top div.ui_element div.top__list{
 			position: relative;
 			display: flex;
 			flex-direction: row;
 			flex-wrap: wrap;
 			gap: 20px;
 		}
-		main section.top div.ui_element div.list_top>div{
+		main section.top div.ui_element div.top__list>div{
 			position: relative;
 			padding: 30px;
 			box-sizing: border-box;
@@ -960,7 +960,7 @@
 			justify-content: space-between;
 			overflow: hidden;
 		}
-		main section.top div.ui_element div.list_top>div img#back{
+		main section.top div.ui_element div.top__list>div img#back{
 			position: absolute;
 			top: 0px;
 			left: 0px;
@@ -968,30 +968,30 @@
 			height: 100%;
 			object-fit: cover;
 		}
-		main section.top div.ui_element div.list_top div div.desc{
+		main section.top div.ui_element div.top__list div div.top__desc{
 			position: relative;
 			display: flex;
 			gap: 15px;
 			flex-direction: column;
 		}
-		main section.top div.ui_element div.list_top div div.w{
+		main section.top div.ui_element div.top__list div div.w{
 			z-index: 2;
 			color: white;
 		}
-		main section.top div.ui_element div.list_top div div.desc h3{
+		main section.top div.ui_element div.top__list div div.top__desc h3{
 			font-size: 21px;
 			font-weight: 600;
 			line-height: 115%;
 		}
-		main section.top div.ui_element div.list_top div:first-child div.desc h3{
+		main section.top div.ui_element div.top__list div:first-child div.top__desc h3{
 			margin: 40px 0px 0px 0px;
 		}
-		main section.top div.ui_element div.list_top div div.desc p{
+		main section.top div.ui_element div.top__list div div.top__desc p{
 			font-size: 16px;
 			line-height: 150%;
 		}
 		
-		main section.top div.ui_element div.list_top div div.black_image{
+		main section.top div.ui_element div.top__list div div.top__box_black{
 			background: linear-gradient(-180deg, rgba(0, 0, 0, 35%) 2%, rgba(0, 0, 0, 3%) 31%, rgba(0, 0, 0, 7%) 58%, rgba(0, 0, 0, 35%) 100%);
 			position: absolute;
 			top: 0px;
@@ -1001,12 +1001,12 @@
 			z-index: 1;
 		}
 		
-		main section.top div.ui_element div.list_top>div.top_six{
+		main section.top div.ui_element div.top__list>div.top_six{
 		    background: var(--color_vinous);
 			align-items: center;
 			justify-content: space-around;
 		}
-		main section.top div.ui_element div.list_top>div.top_six div.surprise{
+		main section.top div.ui_element div.top__list>div.top_six div.top__icon_surprise{
 			position: relative;
 			width: 80px;
 			height: 80px;
@@ -1018,19 +1018,19 @@
 			border-radius: 100%;
 			flex-shrink: 0;
 		}
-		main section.top div.ui_element div.list_top div.top_six div.desc{
+		main section.top div.ui_element div.top__list div.top_six div.top__desc{
 			text-align: center;
 			margin: 20px 0px 0px 0px;
 		}
-		main section.top div.ui_element div.list_top div.top_six div.desc h3, 
-		main section.top div.ui_element div.list_top div.top_six div.desc p{
+		main section.top div.ui_element div.top__list div.top_six div.top__desc h3, 
+		main section.top div.ui_element div.top__list div.top_six div.top__desc p{
 			color: white !important;
 		}
 		main section.form div.desc_box>div{
 			width: calc(100%/2);
 		}
 		
-		main section.form div.form div.left{
+		main section.form div.form__box_form div.form__box_form_left{
 			width: 100%;
 			height: auto;
 			position: relative;
@@ -1040,14 +1040,14 @@
 			justify-content: space-between;
 		}
 		
-		main section.form div.form div.left div.top{
+		main section.form div.form__box_form div.form__box_form_left div.form__top{
 			position: relative;
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-start;
 			align-items: flex-start;
 		}
-		main section.form div.form div.left div.top div.head_form{
+		main section.form div.form__box_form div.form__box_form_left div.form__top div.form__form_desc{
 			position: relative;
 			display: flex;
 			flex-direction: row;
@@ -1057,7 +1057,7 @@
 			padding: 30px 0px;
 			border-top: 1px solid #DDDDDD;
 		}
-		main section.form div.form div.left div.top div.head_form span#first{
+		main section.form div.form__box_form div.form__box_form_left div.form__top div.form__form_desc span#first{
 			position: relative;
 			background: var(--color_vinous);
 			color: white;
@@ -1067,7 +1067,7 @@
 			font-size: 21px;
 		}
 		
-		main section.form div.form div.left div.bottom{
+		main section.form div.form__box_form div.form__box_form_left div.form__controls{
 			position: relative;
 			display: flex;
 			justify-content: flex-start;
@@ -1078,11 +1078,11 @@
 			border-left: none;
 			border-right: none;
 		}
-		main section.form div.form div.left div.bottom>span{
+		main section.form div.form__box_form div.form__box_form_left div.form__controls>span{
 			font-size: 17px;
 			flex: 1 1 110px;
 		}
-		main section.form div.form div.left div.bottom div.ui_box{
+		main section.form div.form__box_form div.form__box_form_left div.form__controls div.form__buttons_control{
 			position: relative;
 			width: 100%;
 			display: flex;
@@ -1090,8 +1090,8 @@
 			gap: 20px;
 		}
 		
-		main section.form div.form div.left div.top div.input_name_product, 
-		main section.form div.form div.left div.top div.input_size{
+		main section.form div.form__box_form div.form__box_form_left div.form__top div.form__input_name_product, 
+		main section.form div.form__box_form div.form__box_form_left div.form__top div.form__input_size{
 			position: relative;
 			display: flex;
 			flex-direction: column;
@@ -1099,7 +1099,7 @@
 			margin: 0px 0px 25px 0px;
 			width: 100%;
 		}
-		main section.form div.form div.left div.top div > span,
+		main section.form div.form__box_form div.form__box_form_left div.form__top div > span,
 		main section.reviews div.ui_element div.desc_box div.left p{
 			font-size: 16px;
 		}
@@ -1107,16 +1107,16 @@
 			line-height: 150%;
 		}
 		
-		main section.form div.form div.left div.top div.input_name_product input, 
-		main section.form div.form div.left div.top div.input_size input{
+		main section.form div.form__box_form div.form__box_form_left div.form__top div.form__input_name_product input, 
+		main section.form div.form__box_form div.form__box_form_left div.form__top div.form__input_size input{
 			padding: 22px 26px;
 			border: 1px solid #dddddd;
 			font-size: 16px;
 		}
-		main section.form div.form div.left div.top div > input:focus{
+		main section.form div.form__box_form div.form__box_form_left div.form__top div > input:focus{
 			border: 1px solid var(--color_vinous);
 		}
-		main section.form div.form div.left div.top div > input::placeholder{
+		main section.form div.form__box_form div.form__box_form_left div.form__top div > input::placeholder{
 			font-size: 16px;
 			color: rgba(51, 51, 51, 0.55);
 		}
@@ -1128,7 +1128,7 @@
 			align-items: flex-start;
 		}
 		
-		main section.reviews div.ui_element div.list_reviews{
+		main section.reviews div.ui_element div.reviews__list{
 			position: relative;
 			display: flex;
 			flex-direction: row;
@@ -1136,7 +1136,7 @@
 			gap: 20px;
 			overflow: hidden;
 		}
-		main section.reviews div.ui_element div.list_reviews div.review{
+		main section.reviews div.ui_element div.reviews__list div.reviews__review{
 			position: relative;
 			display: flex;
 			flex-direction: column;
@@ -1150,33 +1150,33 @@
 			width: calc(50% - 10px);
 			flex-shrink: 0;
 		}
-		main section.reviews div.ui_element div.list_reviews div.review div.head{
+		main section.reviews div.ui_element div.reviews__list div.reviews__review div.reviews__user_info{
 			position: relative;
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
 		}
-		main section.reviews div.ui_element div.list_reviews div.review div.head div.user_data{
+		main section.reviews div.ui_element div.reviews__list div.reviews__review div.reviews__user_info div.reviews__user_data{
 			position: relative;
 			display: flex;
 			flex-direction: column;
 			gap: 7px;
 			margin: 0px 0px 25px 0px;
 		}
-		main section.reviews div.ui_element div.list_reviews div.review div.head div.user_data span#faln{
+		main section.reviews div.ui_element div.reviews__list div.reviews__review div.reviews__user_info div.reviews__user_data span#faln{
 			font-size: 21px;
 			font-weight: 600;
 			line-height: 120%;
 		}
-		main section.reviews div.ui_element div.list_reviews div.review div.head div.user_data span#date{
+		main section.reviews div.ui_element div.reviews__list div.reviews__review div.reviews__user_info div.reviews__user_data span#date{
 			font-size: 16px;
 			color: #999999;
 		}
 		
-		main section.reviews div.ui_element div.list_reviews div.review div.desc{
+		main section.reviews div.ui_element div.reviews__list div.reviews__review div.reviews__description{
 			line-height: 160%;
 		}
-		main section.reviews div.ui_element div.list_reviews div.review > a{
+		main section.reviews div.ui_element div.reviews__list div.reviews__review > a{
 			font-size: 15px;
 			color: #2B0514;
 			font-weight: 600;
@@ -1222,7 +1222,7 @@
 			justify-content: space-between;
 			gap: 20px;
 		}
-		footer div.ui_box div.left{
+		footer div.ui_box div.contacts__left{
 			position: relative;
 			width: 100%;
 			display: flex;
@@ -1230,7 +1230,7 @@
 			align-items: stretch;
 			justify-content: space-between;
 		}
-		footer div.ui_box div.left>div>div{
+		footer div.ui_box div.contacts__left>div>div{
 			position: relative;
 			display: flex;
 			justify-content: flex-start;
@@ -1240,7 +1240,7 @@
 			padding: 28px 0px;
 			gap: 20px;
 		}
-		footer div.ui_box div.left>div>div>div:first-child{
+		footer div.ui_box div.contacts__left>div>div>div:first-child{
 			position: relative;
 			display: flex;
 			align-items: center;
@@ -1251,22 +1251,22 @@
 			border-radius: 100%;
 			flex-shrink: 0;
 		}
-		footer div.ui_box div.left>div>div>div:last-child{
+		footer div.ui_box div.contacts__left>div>div>div:last-child{
 			position: relative;
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
 		}
 		
-		footer div.ui_box div.left>div>div>div:last-child>h4{
+		footer div.ui_box div.contacts__left>div>div>div:last-child>h4{
 			font-size: 16px;
 			color: white;
 			font-weight: 400;
 			line-height: 130%;
 			opacity: 0.9;
 		}
-		footer div.ui_box div.left>div>div>div:last-child>a, 
-		footer div.ui_box div.left>div>div>div:last-child>p{
+		footer div.ui_box div.contacts__left>div>div>div:last-child>a, 
+		footer div.ui_box div.contacts__left>div>div>div:last-child>p{
 			font-size: 21px;
 			color: white;
 			font-weight: 600;
@@ -1274,34 +1274,34 @@
 			text-decoration: none;
 		}
 		
-		footer div.ui_box div.left h2{
+		footer div.ui_box div.contacts__left h2{
 			color: white;
 			font-size: 55px;
 		}
 		
-		footer div.ui_box div.left>button#send{
+		footer div.ui_box div.contacts__left>button#send{
 			padding: 21px 71px;
 			color: #2B0514;
 			background: white;
 			width: fit-content;
 			margin: 0px;
 		}
-		footer div.ui_box div.left>button#send:hover{
+		footer div.ui_box div.contacts__left>button#send:hover{
 			background: initial;
 			color: white;
 			border: 1px solid rgba(255, 255, 255, 0.5);
 		}
-		footer div.ui_box div.right{
+		footer div.ui_box div.contacts__right{
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			height: 636px;
 		}
-		footer div.ui_box div.right img{
+		footer div.ui_box div.contacts__right img{
 			flex: 1;
 		}
 		
-		footer div.list_links{
+		footer div.contacts__links{
 			position: relative;
 			width: 1240px;
 			left: calc((100% - 1240px) / 2);
@@ -1311,7 +1311,7 @@
 			justify-content: space-between;
 			padding: 0px 0px 40px 0px;
 		}
-		footer div.list_links a{
+		footer div.contacts__links a{
 			font-size: 16px;
 			text-decoration: none;
 			color: white;
@@ -1332,15 +1332,15 @@
 				box-sizing: border-box;
 			}
 			
-			main div.box_main>div.bottom{
+			main div.main_box>div.main_box__bottom{
 				width: 100%;
 				left: 0px;
 				padding: 0px 20px;	
 			}			
-			main div.box_main>div.bottom div.left div.bottom div.ui_box{
+			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box div.main_box__about_company{
 				margin: 0px 0px 0px 60px;
 			}
-			main div.box_main>div.bottom div.left div.bottom div.logo_dom_html{
+			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box div.main_box__logo{
 				left: -220px;
 			}
 			
@@ -1350,7 +1350,7 @@
 				padding: 70px 20px;
 				box-sizing: border-box;
 			}
-			footer div.list_links{
+			footer div.contacts__links{
 				width: 100%;
 				left: 0px;
 				box-sizing: border-box;
@@ -1367,23 +1367,23 @@
 			div.full_width > img{
 				width: 100% !important;
 			}
-			footer div.ui_box div.right img{
+			footer div.ui_box div.contacts__right img{
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
 			}
 			
-			main section.video_preview div.video_module video{
+			main section.video_preview div.video_preview__module_video video{
 				width: 100%;
 			}
 			
-			main section.top div.ui_element div.list_top>div{
+			main section.top div.ui_element div.top__list>div{
 				flex: 1 1 calc(100%/4);
 			}
 			main section.form div.desc_box div.right{
 				width: calc(100% / 2);
 			}
-			main section.form div.form div.right img{
+			main section.form div.form__box_form div.form__box_form_right img{
 				height: 534px;
 			}
 			
@@ -1391,7 +1391,7 @@
 		
 		@media all and (max-width: 1230px){
 			
-			main div.box_main{
+			main div.main_box{
 				min-height: 560px;
 			}
 			
@@ -1399,7 +1399,7 @@
 		
 		@media all and (max-width: 1080px){
 			
-			main section.video_preview div.comment div.ui_box{
+			main section.video_preview div.video_preview__comment div.ui_box{
 				flex-direction: column;
 			}
 			
@@ -1410,21 +1410,21 @@
 			header{
 				justify-content: space-between;
 			}
-			header div.nav_box{
+			header div.header__nav_box{
 				order: 3;
 				flex-grow: 0;
 			}
 			header a#send{
 				order: 4;
 			}
-			header div.nav_box div.mobile_icon{
+			header div.header__nav_box div.header__mobile_icon{
 				display: flex;
 			}
-			header nav.menu{
+			header nav.header__menu{
 				display: none;
 			}
 			
-			main div.box_main>div.bottom{
+			main div.main_box>div.main_box__bottom{
 				flex-direction: column;
 				align-items: flex-start;
 				margin: 0px 0px 30px 0px;
@@ -1432,7 +1432,7 @@
 				box-sizing: border-box;
 			}
 			
-			main div.box_main>div.bottom div.right{
+			main div.main_box>div.main_box__bottom div.main_box__right{
 				gap: 15px;
 			}
 			
@@ -1440,24 +1440,24 @@
 				flex-direction: column !important;
 			}
 			
-			main section.services div.list_services div.box_compete > div, 
+			main section.services div.services__list_services div.services__box_compete > div, 
 			main section.cans div.ui_element div.desc_box > div, 
 			main section.video_preview div.desc_box > div, 
-			main section.video_preview div.comment div.ui_box div.text, 
-			main section.top div.ui_element div.desc_box div.left, 
+			main section.video_preview div.video_preview__comment div.ui_box div.video_preview__text, 
+			main section.top div.ui_element div.top__desc div.left, 
 			main section.form div.desc_box > div, 
-			main section.form div.form > div, 
+			main section.form div.form__box_form > div, 
 			footer div.ui_box > div, 
-			main section.services div.about_us, 
+			main section.services div.services__about_us, 
 			main section.reviews div.ui_element div.desc_box > div{
 				width: 100% !important;
 			}
 			
-			main section.services div.list_services div.box_compete div.left_box div.plb p{
+			main section.services div.services__list_services div.services__box_compete div.services__box_left div.services__services_name p{
 				padding: 30px 0px;
 			}
 			
-			main section.top div.ui_element div.list_top>div{
+			main section.top div.ui_element div.top__list>div{
 				flex: 1 1 calc(100% / 3);
 			}
 			
@@ -1465,17 +1465,17 @@
 				margin: 20px 0px 0px 0px;
 			}
 			
-			footer div.list_links{
+			footer div.contacts__links{
 				flex-direction: column;
 				gap: 20px;
 				text-align: center;
 			}
 			
-			main div.box_main{
+			main div.main_box{
 				min-height: 600px;
 			}
 			
-			main section.reviews div.ui_element div.list_reviews div.review{
+			main section.reviews div.ui_element div.reviews__list div.reviews__review{
 				width: 100%;
 			}
 			
@@ -1494,29 +1494,29 @@
 		
 		@media all and (max-width: 660px){
 			
-			main section.top div.ui_element div.list_top>div{
+			main section.top div.ui_element div.top__list>div{
 		        flex: 1 1 100%;
 			}
-			main section.top div.ui_element div.list_top>div img#back{
+			main section.top div.ui_element div.top__list>div img#back{
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
 			}
-			main section.top div.ui_element div.list_top>div{
+			main section.top div.ui_element div.top__list>div{
 				flex: 1 1 100%;
 				height: auto;
 			}
-			main section.top div.ui_element div.list_top>div{
+			main section.top div.ui_element div.top__list>div{
 				flex: 1 1 100%;
 				height: auto;
 			}
-			main section.top div.ui_element div.list_top>div div.logo_dom_html{
+			main section.top div.ui_element div.top__list>div div.logo{
 				padding: 0px 0px 80px 0px;
 			}
-			main section.top div.ui_element div.list_top>div:first-child div.logo_dom_html{
+			main section.top div.ui_element div.top__list>div:first-child div.logo{
 				padding: 0px 0px 20px 0px;
 			}
-			main section.top div.ui_element div.list_top>div.top_six div.surprise{
+			main section.top div.ui_element div.top__list>div.top_six div.top__icon_surprise{
 				margin: 0px 0px 20px 0px;
 			}
 			
@@ -1532,53 +1532,53 @@
 		
 		@media all and (max-width: 600px){
 			
-			main div.box_main>div.bottom div.left h1.top{
+			main div.main_box>div.main_box__bottom div.main_box__left h1.main_box__top{
 				width: initial;
 				font-size: 22px;
 			}
-			main div.box_main>div.bottom div.left div.bottom h2{
+			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box h2{
 				font-size: 20px;
 			}
-			main div.box_main>div.bottom div.left div.bottom h2.name_company{
+			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box h2.main_box__name_company{
 				font-size: 52px;
 			}
-			main div.box_main>div.bottom div.right div{
+			main div.main_box>div.main_box__bottom div.main_box__right div{
 				font-size: 17px;
 			}
 			
-			main div.box_main>div.bottom div.left div.bottom div.ui_box{
+			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box div.main_box__about_company{
 				margin: 0px 0px 0px 50px;
 			}
 			
-			main div.box_main>div.bottom div.left div.bottom div.logo_dom_html{
+			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box div.main_box__logo{
 				left: -160px;
 			}
-			main div.box_main>div.bottom div.left div.bottom div.logo_dom_html div{
+			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box div.main_box__logo div{
 				width: 98px;
 				height: 98px;
 			}
 			
-			main section.form div.form div.left div.bottom{
+			main section.form div.form__box_form div.form__box_form_left div.form__controls{
 				flex-direction: column;
 			}
-			main section.form div.form div.left div.bottom>span{
+			main section.form div.form__box_form div.form__box_form_left div.form__controls>span{
 			    flex: 1;
 			}
 			
-			footer div.ui_box div.left>button#send{
+			footer div.ui_box div.contacts__left>button#send{
 				margin: 20px 0px 0px 0px;
 			}
 			
-			main section.services div.about_us{
+			main section.services div.services__about_us{
 				padding: 30px 25px;
 				border-radius: 90px;
 			}
-			main section.video_preview div.comment div.ui_box div.text{
+			main section.video_preview div.video_preview__comment div.ui_box div.video_preview__text{
 				padding: 70px 25px;
 				border-radius: 90px;
 			}
 			
-			main div.box_main{
+			main div.main_box{
 				min-height: 500px;
 			}
 			
@@ -1586,26 +1586,26 @@
 		
 		@media all and (max-width: 512px){
 			
-			main div.box_main{
+			main div.main_box{
 				min-height: 520px;
 			}
 		}
 		
 		@media all and (max-width: 500px){
 			
-			main section.video_preview div.video_module div.play{
+			main section.video_preview div.video_preview__module_video div.video_preview__play{
 				padding: 20px;
 			}
-			main section.video_preview div.video_module div.play div{
+			main section.video_preview div.video_preview__module_video div.video_preview__play div{
 				width: 50px;
 				height: 50px;
 			}
-			main section.video_preview div.video_module div.play div img{
+			main section.video_preview div.video_preview__module_video div.video_preview__play div img{
 				left: 2px;
 				position: relative;
 			}
 			
-			div.pop_up_box div.pop_up{
+			div.pop_up_box div.pop_up__window{
 				width: 100vw;
 				height: 100vh;
 				box-sizing: border-box;
@@ -1613,7 +1613,7 @@
 				justify-content: space-between;
 			    padding: 60px 20px;
 			}
-			div.pop_up_box div.pop_up span#desc{
+			div.pop_up_box div.pop_up__window span#desc{
 				width: auto;
 			}
 			
@@ -1645,42 +1645,42 @@
 			.font-size_10vw{
 				font-size: 10vw !important;
 			}
-			main section.cans div.ui_element div.gallery_module div.controls{
+			main section.cans div.ui_element div.cans__module_gallery div.controls{
 				width: 100%;
 				justify-content: center;
 				gap: 20px;
 			}
-			main section.cans div.ui_element div.gallery_module div.controls div.name_image{
+			main section.cans div.ui_element div.cans__module_gallery div.controls div.cans__image_name{
 				display: none;
 			}
 			
-			main section.services div.list_services{
+			main section.services div.services__list_services{
 				margin: 0px 0px 0px 0px;
 			}
 			
-			main section.services div.list_services div.box_compete div.left_box h3{
+			main section.services div.services__list_services div.services__box_compete div.services__box_left h3{
 				padding: 0px 0px 20px 0px;
 			    height: auto;
 			}
 			
-			main section.services div.about_us{
+			main section.services div.services__about_us{
 			    margin: 0px 0px 20px 0px;
 			}
 			
-			main section.services div.list_services div.box_compete div.left_box div.plb p{
+			main section.services div.services__list_services div.services__box_compete div.services__box_left div.services__services_name p{
 				padding: 20px 0px;
 				height: auto;
 			}
 			
-			main section.reviews div.ui_element div.list_reviews div.review div.head{
+			main section.reviews div.ui_element div.reviews__list div.reviews__review div.reviews__user_info{
 				flex-direction: column;
 				margin: 0px 0px 10px 0px;
 			}
-			main section.reviews div.ui_element div.list_reviews div.review div.head div.user_data{
+			main section.reviews div.ui_element div.reviews__list div.reviews__review div.reviews__user_info div.reviews__user_data{
 				margin: 0px 0px 5px 0px;
 			}
 			
-			main section.services div.list_services div.box_compete div.left_box{
+			main section.services div.services__list_services div.services__box_compete div.services__box_left{
 				height: auto;
 			}
 			
@@ -1688,31 +1688,31 @@
 		
 		@media all and (max-width: 380px){
 			
-			main div.box_main>div.bottom div.left h1.top{
+			main div.main_box>div.main_box__bottom div.main_box__left h1.main_box__top{
 		        font-size: 10vw;
 			}
-			main div.box_main>div.bottom div.left div.bottom h2{
+			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box h2{
 				font-size: 8vw;
 			}
-			main div.box_main>div.bottom div.left div.bottom h2.name_company{
+			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box h2.main_box__name_company{
 				font-size: 15vw;
 			}
 			
-			main div.box_main>div.bottom div.left div.bottom div.ui_box{
+			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box div.main_box__about_company{
 				margin: 0px;
 			}
-			main div.box_main>div.bottom div.left div.bottom div.logo_dom_html{
+			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box div.main_box__logo{
 				display: none;
 			}
 			
-			main section.form div.form div.left{
+			main section.form div.form__box_form div.form__box_form_left{
 				height: auto;
 			}
-			main section.form div.form div.left div.bottom div.ui_box{
+			main section.form div.form__box_form div.form__box_form_left div.form__controls div.form__buttons_control{
 				flex-direction: column;
 			}
 			
-			main div.box_main{
+			main div.main_box{
 				min-height: 670px;
 			}
 			
@@ -1720,7 +1720,7 @@
 		
 		@media all and (max-width: 350px){
 			
-			main div.box_main{
+			main div.main_box{
 				min-height: 720px;
 			}
 			
@@ -1728,15 +1728,15 @@
 		
 		@media all and (max-width: 330px){
 			
-			main section.services div.about_us{
+			main section.services div.services__about_us{
 				margin: 0px 0px 40px 0px;
 			}
 			
-			footer div.ui_box div.left>div>div>div:last-child>h4{
+			footer div.ui_box div.contacts__left>div>div>div:last-child>h4{
 			    font-size: 5vw;
 			}
-			footer div.ui_box div.left>div>div>div:last-child>a, 
-			footer div.ui_box div.left>div>div>div:last-child>p{
+			footer div.ui_box div.contacts__left>div>div>div:last-child>a, 
+			footer div.ui_box div.contacts__left>div>div>div:last-child>p{
 				font-size: 6vw;
 			}
 			
@@ -1748,7 +1748,7 @@
 				width: 100%;
 			}
 			
-			main section.form div.form div.left div.top div.head_form{
+			main section.form div.form__box_form div.form__box_form_left div.form__top div.form__form_desc{
 				flex-direction: column;
 				align-items: flex-start;
 			}
@@ -1757,47 +1757,47 @@
 		
 		@media all and (max-width: 270px){
 			
-			main section.services div.list_services div.box_compete div.left_box div.plb p{
+			main section.services div.services__list_services div.services__box_compete div.services__box_left div.services__services_name p{
 				font-size: 8vw;
 			}
-			main section.services div.about_us h3, main section.services div.about_us p{
+			main section.services div.services__about_us h3, main section.services div.services__about_us p{
 				font-size: 7vw;
 			}
 			
-			footer div.ui_box div.left>button#send, 
-			main section.services div.list_services a button, 
-			main section.cans div.ui_element div.button_all a button, header a#send{
+			footer div.ui_box div.contacts__left>button#send, 
+			main section.services div.services__list_services a button, 
+			main section.cans div.ui_element div.cans__button_show_all a button, header a#send{
 				font-size: 6vw;
 				width: 100%;
 				text-align: center;
 				padding: 21px 0px;
 			}
 			
-			main section.services div.list_services div.box_compete div.left_box div.plb p{
+			main section.services div.services__list_services div.services__box_compete div.services__box_left div.services__services_name p{
 				flex-direction: column;
 				align-items: flex-start;
 			}
 			
-			main section.video_preview div.video_module div.play{
+			main section.video_preview div.video_preview__module_video div.video_preview__play{
 				padding: 0px;
 			}
 			
-			main section.form div.form div.left div.bottom button#back, 
-			main section.form div.form div.left div.bottom button#next{
+			main section.form div.form__box_form div.form__box_form_left div.form__controls button#back, 
+			main section.form div.form__box_form div.form__box_form_left div.form__controls button#next{
 				width: 100%;
 				padding: 21px 0px;
 			}
 			
-			div.pop_up_box div.pop_up span#name{
+			div.pop_up_box div.pop_up__window span#name{
 				font-size: 12vw;
 			}
-			div.pop_up_box div.pop_up span#desc{
+			div.pop_up_box div.pop_up__window span#desc{
 				font-size: 6vw;
 			}
-			div.pop_up_box div.pop_up > div.box_success label span{
+			div.pop_up_box div.pop_up__window > div.pop_up__box_success label span{
 				font-size: 5vw;
 			}
-			div.pop_up_box div.pop_up > button{
+			div.pop_up_box div.pop_up__window > button{
 				font-size: 6vw;
 				width: 100%;
 				padding: 21px 10px;
@@ -1807,30 +1807,30 @@
 		
 		@media all and (max-width: 250px){
 			
-			main div.box_main>div.bottom div.right div div.ux{
+			main div.main_box>div.main_box__bottom div.main_box__right div div.main_box__image{
 				width: 35px;
 				height: 35px;
 			}
 			
-			footer div.ui_box div.left>div>div>div:first-child{
+			footer div.ui_box div.contacts__left>div>div>div:first-child{
 				width: 36px;
 				height: 36px;
 			}
 			
-			main section.reviews div.ui_element div.list_reviews div.review{
+			main section.reviews div.ui_element div.reviews__list div.reviews__review{
 				padding: 20px;
 			}
 			
-			main section.reviews div.ui_element div.list_reviews div.review div.head div.user_data span#faln, 
-			main section.top div.ui_element div.list_top div div.desc h3{
+			main section.reviews div.ui_element div.reviews__list div.reviews__review div.reviews__user_info div.reviews__user_data span#faln, 
+			main section.top div.ui_element div.top__list div div.top__desc h3{
 				font-size: 8vw;
 			}
-			main section.reviews div.ui_element div.list_reviews div.review div.head div.user_data span#date, 
-			main section.reviews div.ui_element div.list_reviews div.review div.desc{
+			main section.reviews div.ui_element div.reviews__list div.reviews__review div.reviews__user_info div.reviews__user_data span#date, 
+			main section.reviews div.ui_element div.reviews__list div.reviews__review div.reviews__description{
 				font-size: 7vw;
 			}
 			
-			main section.top div.ui_element div.list_top>div{
+			main section.top div.ui_element div.top__list>div{
 				padding: 20px;
 			}
 			
@@ -1839,14 +1839,14 @@
 		
 		@media all and (max-width: 210px){
 			
-			header div.contacts a{
+			header div.header__contacts a{
 				font-size: 7vw;
 			}
-			footer div.ui_box div.left>div>div>div:first-child{
+			footer div.ui_box div.contacts__left>div>div>div:first-child{
 				display: none;
 			}
 			
-			main section.video_preview div.comment div.ui_box div.text p{
+			main section.video_preview div.video_preview__comment div.ui_box div.video_preview__text p{
 				font-size: 8vw;
 			}
 			main section.cans div.ui_element div.desc_box div.right, 
@@ -1854,7 +1854,7 @@
 				font-size: 7vw;
 			}
 			
-			main section.video_preview div.comment div.ui_box div.author img{
+			main section.video_preview div.video_preview__comment div.ui_box div.video_preview__author img{
 				width: 100%;
 				height: 100%;
 			}
