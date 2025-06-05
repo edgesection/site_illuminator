@@ -1,4 +1,4 @@
-﻿
+
 <!-- EDGESECCTION -->
 
 <!DOCTYPE html>
@@ -10,52 +10,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="shortcut icon" href="src/logo.png">
+	
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
-	
-	<!--        -->
-	<!-- POP UP -->
-	<!--        -->
-	
-	<div class="pop_up_box">
-		<div class="pop_up">
-		
-			<div class="close"><img src="src/close.svg" alt="close button"></div>
-			
-			<span id="name">ОСТАВИТЬ ЗАЯВКУ</span>
-			<span id="desc">Оставьте свои контактные данные и наш менеджер вышлет вам прайс-лист на почту.</span>
-			
-			<div class="el_name">
-				<span>Имя</span>
-				<input type="text" placeholder="Например, Алексей">
-			</div>
-			
-			<div class="el_phone">
-				<span>Номер телефона</span>
-				<input type="tel" placeholder="+7 (900)-000-00-00">
-			</div>
-			
-			<div class="el_email">
-				<span>E-mail</span>
-				<input type="email" placeholder="Адрес электронной почты">
-			</div>
-			
-			<div class="box_success">
-				<label>
-					<input type="checkbox" id="success" name="success" />
-					<span>Я согласен с Политикой конфиденциальности</span>
-				</label>
-			</div>
-			
-			<button>Получить оптовый прайс-лист</button>
-			
-		</div>
-	</div>
-	<div class="sky_black"></div>
-	
-	<!--        -->
-	<!--        -->
-	<!--        -->
 	
 	<!--             -->
 	<!-- MOBILE MENU -->
@@ -158,7 +117,7 @@
 		
 		</div>
 		
-		<section class="services" id="services">
+		<section class="fix_box services" id="services">
 		
 			<div class="about_us scroll-item">
 				<div class="logo_dom_html scroll-item"><div></div><div></div></div>
@@ -168,9 +127,9 @@
 			
 			<div class="list_services">
 
-				<div class="box_compete">
+				<div class="box_compete div_devide flex-direction_column full-width">
 					<div class="left_box">
-						<h3>НАШИ УСЛУГИ</h3>
+						<h3 class="font-size_10vw">НАШИ УСЛУГИ</h3>
 						<div class="plb">
 							<p id="active" name="development_of_design_and_patterns"><span></span>Разработка дизайна и лекал</p>
 							<p name="sewing_samples"><span></span>Пошив образцов</p>
@@ -180,37 +139,40 @@
 						</div>
 					</div>
 					
-					<div class="right_box">
+					<div class="right_box full_width">
 						<img src="src/image/overlock.png" loading="lazy" alt="overlock image">
 					</div>
 				</div>
 				
-				<a href="#form"><button>Рассчитать стоимость</button></a>
+				<a href="#form"><button class="act_button">Рассчитать стоимость</button></a>
 			
 			</div>
 		
 		</section>
 		
-		<section class="cans" id="cans">
+		<section class="cans full_box right_image_box" id="cans">
 		
-			<div class="ui_element">
+			<div class="fix_box ui_element">
 			
-				<div class="desc_box">
-					<div class="left scroll-item">НАШИ ВОЗМОЖНОСТИ</div>
+				<div class="desc_box div_devide flex-direction_column full-width">
+					<div class="left scroll-item font-size_10vw">НАШИ ВОЗМОЖНОСТИ</div>
 					<div class="right scroll-item">Производственный процесс полностью автоматизирован. Мы подготовили примеры, чтобы вы могли увидеть с помощью какого оборудования создается изделие и какие возможности для вашей продукции откроются при выборе нашей компании. </div>
 				</div>
 				
 				<div class="gallery_module">
 				
 					<div class="images">
-						<img src="src/image/opportunities.png" loading="lazy" alt="opportunities image">
+						<div class="swiper-wrapper">
+							<img src="src/image/opportunities.png" alt="Футболка" class="swiper-slide" loading="lazy">
+							<img src="src/image/bluzki.jpg" alt="Блузка" class="swiper-slide" loading="lazy">
+						</div>
 					</div>
 					<div class="controls">
-						<div class="left">
+						<div class="left controls__button">
 							<img src="src/arrow.svg" alt="left button">
 						</div>
-						<div class="name_image">Футболка</div>
-						<div class="right">
+						<div class="name_image">Loading...</div>
+						<div class="right controls__button">
 							<img src="src/arrow.svg" alt="right button">
 						</div>
 					</div>
@@ -218,17 +180,17 @@
 				</div>
 				
 				<div class="button_all">
-					<a href=""><button>Смотреть все наши изделия</button></a>
+					<a href=""><button class="act_button">Смотреть все наши изделия</button></a>
 				</div>
 			
 			</div>
 		
 		</section>
 		
-		<section class="video_preview" id="video_preview">
+		<section class="fix_box video_preview right_image_box" id="video_preview">
 			
-			<div class="desc_box">
-				<div class="left scroll-item">Швейная фабрика MODELLINI</div>
+			<div class="desc_box div_devide flex-direction_column full-width">
+				<div class="left scroll-item font-size_10vw">Швейная фабрика MODELLINI</div>
 				<div class="right scroll-item">Одно из крупнейших трикотажных производств Ивановской области и России в целом. Огромный швейный комплекс с чистыми и светлыми цехами, с автоматизацией производственных процессов и программ.</div>
 			</div>
 			
@@ -257,12 +219,12 @@
 		
 		</section>
 		
-		<section class="top" id="top">
+		<section class="top full_box" id="top">
 		
-			<div class="ui_element">
+			<div class="fix_box ui_element">
 			
 				<div class="desc_box">
-					<div class="left">ТОП - 5 ПРИЧИН СОТРУДНИЧАТЬ С НАМИ</div>
+					<div class="left font-size_10vw">ТОП - 5 ПРИЧИН СОТРУДНИЧАТЬ С НАМИ</div>
 				</div>
 				
 				<div class="list_top">
@@ -329,14 +291,14 @@
 		
 		</section>
 		
-		<section class="form" id="form">
+		<section class="fix_box form right_image_box" id="form">
 			
-			<div class="desc_box">
-				<div class="left">ЗАПОЛНИТЕ ФОРМУ ДЛЯ РАСЧЕТА СРОКОВ И СТОИМОСТИ ПОШИВА</div>
+			<div class="desc_box flex-direction_column full-width">
+				<div class="left font-size_10vw">ЗАПОЛНИТЕ ФОРМУ ДЛЯ РАСЧЕТА СРОКОВ И СТОИМОСТИ ПОШИВА</div>
 				<div class="right">Ответьте на вопросы и мы рассчитаем стоимость и сроки пошива вашего заказа.</div>
 			</div>
 			
-			<div class="form">
+			<div class="form div_devide flex-direction_column full-width">
 				
 				<div class="left">
 					<div class="top">
@@ -360,24 +322,25 @@
 					<div class="bottom">
 						<span>Шаг <span id="change">1</span> из 4</span>
 						<div class="ui_box">
-							<button id="back">Назад</button>
-							<button id="next">Дальше</button>
+							<button id="back" class="act_button">Назад</button>
+							<button id="next" class="act_button">Дальше</button>
 						</div>
 					</div>
 				</div>
-				<div class="right"><img src="src/image/overlock2.png" loading="lazy" alt="photo overlock two"></div>
+				
+				<div class="right full_width"><img src="src/image/overlock2.png" loading="lazy" alt="photo overlock two"></div>
 			
 			</div>
 		
 		</section>
 		
-		<section class="reviews" id="reviews">
+		<section class="reviews full_box" id="reviews">
 		
-			<div class="ui_element">
+			<div class="fix_box ui_element">
 			
-				<div class="desc_box">
+				<div class="desc_box flex-direction_column full-width">
 					<div class="left scroll-item">
-						<h3>ОТЗЫВЫ</h3>
+						<h3 class="font-size_10vw">ОТЗЫВЫ</h3>
 						<p>Лучше всего о нас говорят отзывы наших покупателей:</p>
 					</div>
 					<div class="right scroll-item"><img src="src/image/rating.png" loading="lazy" alt="icon rating"></div>
@@ -385,55 +348,85 @@
 				
 				<div class="list_reviews">
 				
-					<div class="review scroll-item">
-					
-						<div class="content">
-					
-							<div class="head">
-								<div class="user_data">
-									<span id="faln">Елена С.</span>
-									<span id="date">16 декабря 2024</span>
+					<div class="swiper-wrapper">
+
+						<div class="review scroll-item swiper-slide">
+						
+							<div class="content">
+						
+								<div class="head">
+									<div class="user_data">
+										<span id="faln">Иван И.</span>
+										<span id="date">05 июня 2025</span>
+									</div>
+									<div class="stars">
+										<img src="src/star.svg" alt="icon start for rating">
+										<img src="src/star.svg" alt="icon start for rating">
+										<img src="src/star.svg" alt="icon start for rating">
+										<img src="src/star.svg" alt="icon start for rating">
+										<img src="src/star.svg" alt="icon start for rating">
+									</div>
 								</div>
-								<div class="stars">
-									<img src="src/star.svg" alt="icon start for rating">
-									<img src="src/star.svg" alt="icon start for rating">
-									<img src="src/star.svg" alt="icon start for rating">
-									<img src="src/star.svg" alt="icon start for rating">
-									<img src="src/star.svg" alt="icon start for rating">
-								</div>
-							</div>
+								
+								<div class="desc">Компания хорошая! Заказал костюм, очень понравился, завтра пойду в нём в ресторан ужинать. Спасибо</div>
 							
-							<div class="desc">Отличная компания, качество на высоте и модели модные, есть из чего выбрать, девочки менеджеры приятные, хочу выразить благодарность Наталье Цыбусовой, все рассказала, показала и посоветовала .Спасибо👍👍👍</div>
+							</div>
+						
+							<a href="" target="_blank">Смотреть оригинал</a>
 						
 						</div>
-					
-						<a href="" target="_blank">Смотреть оригинал</a>
-					
-					</div>
-					
-					<div class="review scroll-item">
-					
-						<div class="content">
-					
-							<div class="head">
-								<div class="user_data">
-									<span id="faln">Вероника</span>
-									<span id="date">13 декабря 2024</span>
+
+						<div class="review scroll-item swiper-slide">
+						
+							<div class="content">
+						
+								<div class="head">
+									<div class="user_data">
+										<span id="faln">Елена С.</span>
+										<span id="date">16 декабря 2024</span>
+									</div>
+									<div class="stars">
+										<img src="src/star.svg" alt="icon start for rating">
+										<img src="src/star.svg" alt="icon start for rating">
+										<img src="src/star.svg" alt="icon start for rating">
+										<img src="src/star.svg" alt="icon start for rating">
+										<img src="src/star.svg" alt="icon start for rating">
+									</div>
 								</div>
-								<div class="stars">
-									<img src="src/star.svg" alt="icon start for rating">
-									<img src="src/star.svg" alt="icon start for rating">
-									<img src="src/star.svg" alt="icon start for rating">
-									<img src="src/star.svg" alt="icon start for rating">
-									<img src="src/star.svg" alt="icon start for rating">
-								</div>
-							</div>
+								
+								<div class="desc">Отличная компания, качество на высоте и модели модные, есть из чего выбрать, девочки менеджеры приятные, хочу выразить благодарность Наталье Цыбусовой, все рассказала, показала и посоветовала .Спасибо👍👍👍</div>
 							
-							<div class="desc">Очень хороший поставщик. Качество всегда на высоте. Отдельно хочется поблагодарить менеджера Екатерину за чёткую работу! Помогла определиться с ассортиментом для моего магазина.</div>
+							</div>
+						
+							<a href="" target="_blank">Смотреть оригинал</a>
 						
 						</div>
-					
-						<a href="" target="_blank">Смотреть оригинал</a>
+						
+						<div class="review scroll-item swiper-slide">
+						
+							<div class="content">
+						
+								<div class="head">
+									<div class="user_data">
+										<span id="faln">Вероника</span>
+										<span id="date">13 декабря 2024</span>
+									</div>
+									<div class="stars">
+										<img src="src/star.svg" alt="icon start for rating">
+										<img src="src/star.svg" alt="icon start for rating">
+										<img src="src/star.svg" alt="icon start for rating">
+										<img src="src/star.svg" alt="icon start for rating">
+										<img src="src/star.svg" alt="icon start for rating">
+									</div>
+								</div>
+								
+								<div class="desc">Очень хороший поставщик. Качество всегда на высоте. Отдельно хочется поблагодарить менеджера Екатерину за чёткую работу! Помогла определиться с ассортиментом для моего магазина.</div>
+							
+							</div>
+						
+							<a href="" target="_blank">Смотреть оригинал</a>
+						
+						</div>
 					
 					</div>
 					
@@ -456,10 +449,10 @@
 	
 	<footer id="contacts">
 	
-		<div class="ui_box">
+		<div class="ui_box flex-direction_column full-width">
 	
 			<div class="left">
-				<h2>MODELLINI</h2>
+				<h2 class="font-size_10vw">MODELLINI</h2>
 				
 				<div class="ui_box_in_box">
 				
@@ -497,11 +490,11 @@
 				
 				</div>
 				
-				<button id="send">Отправить заявку</button>
+				<button id="send" class="act_button">Отправить заявку</button>
 				
 			</div>
 			
-			<div class="right">
+			<div class="right full_width">
 				<img src="src/image/map.png" loading="lazy" alt="image map">
 			</div>
 		
@@ -515,155 +508,51 @@
 		
 	</footer>
 	
-	<script>
+	<!--        -->
+	<!-- POP UP -->
+	<!--        -->
 	
-		window.onload = function(){
+	<div class="pop_up_box">
+		<div class="pop_up">
 		
-			document.querySelector("header a#send").addEventListener("click", (e) => {
+			<div class="close"><img src="src/close.svg" alt="close button"></div>
 			
-				document.querySelector("div.pop_up_box").style.display = "flex";
-				document.querySelector("div.sky_black").style.display = "initial";
+			<span id="name">ОСТАВИТЬ ЗАЯВКУ</span>
+			<span id="desc">Оставьте свои контактные данные и наш менеджер вышлет вам прайс-лист на почту.</span>
 			
-			});
+			<div class="el_name">
+				<span>Имя</span>
+				<input type="text" placeholder="Например, Алексей">
+			</div>
 			
-			document.querySelector("footer div.ui_box div.left>button#send").addEventListener("click", (e) => {
+			<div class="el_phone">
+				<span>Номер телефона</span>
+				<input type="tel" placeholder="+7 (900)-000-00-00">
+			</div>
 			
-				document.querySelector("div.pop_up_box").style.display = "flex";
-				document.querySelector("div.sky_black").style.display = "initial";
+			<div class="el_email">
+				<span>E-mail</span>
+				<input type="email" placeholder="Адрес электронной почты">
+			</div>
 			
-			});
+			<div class="box_success">
+				<label>
+					<input type="checkbox" id="success" name="success" />
+					<span>Я согласен с Политикой конфиденциальности</span>
+				</label>
+			</div>
 			
-			document.querySelector("div.pop_up_box div.pop_up div.close").addEventListener("click", (e) => {
+			<button>Получить оптовый прайс-лист</button>
 			
-				document.querySelector("div.pop_up_box").style.display = "none";
-				document.querySelector("div.sky_black").style.display = "none";
-			
-			});
-			
-			document.querySelector("header div.nav_box div.mobile_icon").addEventListener("click", (e) => {
-			
-				document.querySelector("div.mobile_menu").style.visibility = "visible";
-				document.querySelector("div.mobile_menu").style.left = "0px" ;
-			
-			});
-			
-			document.querySelector("div.mobile_menu div.header_section img").addEventListener("click", (e) => {
-			
-				document.querySelector("div.mobile_menu").style.visibility = "hidden";
-				document.querySelector("div.mobile_menu").style.left = "100vw" ;
-			
-			});
-			
-			document.querySelector("div.mobile_menu div.list").addEventListener("click", (e) => {
-			
-				document.querySelector("div.mobile_menu").style.visibility = "hidden";
-				document.querySelector("div.mobile_menu").style.left = "100vw" ;
-			
-			});
-			
-			//----------------
-			
-			const animatedElements = document.querySelectorAll('.scroll-item');
-			  const animationDelay = 200; // 0.2 секунды
-			  let lastAnimationTime = 0;
-			  let animationQueue = [];
-			  let scrollDirection = 'down';
-			  let lastScrollPosition = window.scrollY;
-
-			  // Определяем направление скролла
-			  window.addEventListener('scroll', function() {
-				scrollDirection = window.scrollY > lastScrollPosition ? 'down' : 'up';
-				lastScrollPosition = window.scrollY;
-			  });
-
-			  const observer = new IntersectionObserver(function(entries) {
-				entries.forEach(function(entry) {
-				  if (entry.isIntersecting) {
-					const elementIndex = Array.from(animatedElements).indexOf(entry.target);
-					if (elementIndex !== -1 && !animationQueue.includes(elementIndex)) {
-					  animationQueue.push(elementIndex);
-					  processAnimationQueue();
-					}
-				  }
-				});
-			  }, {
-				threshold: 0.1,
-				rootMargin: '50px 0px'
-			  });
-
-			  function checkVisibleElements() {
-				animatedElements.forEach(function(element, index) {
-				  const rect = element.getBoundingClientRect();
-				  const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
-				  
-				  if (isVisible && !element.classList.contains('active')) {
-					if (!animationQueue.includes(index)) {
-					  animationQueue.push(index);
-					}
-				  }
-				});
-				processAnimationQueue();
-			  }
-
-			  function processAnimationQueue() {
-				animationQueue.sort((a, b) => scrollDirection === 'down' ? a - b : b - a);
-				
-				if (animationQueue.length > 0) {
-				  const currentIndex = animationQueue[0];
-				  const currentElement = animatedElements[currentIndex];
-				  
-				  if (!currentElement.classList.contains('active')) {
-					const now = performance.now();
-					const delay = Math.max(0, lastAnimationTime - now + animationDelay);
-					
-					setTimeout(function() {
-					  currentElement.classList.add('active');
-					  lastAnimationTime = performance.now();
-					  animationQueue.shift();
-					  processAnimationQueue();
-					}, delay);
-				  } else {
-					animationQueue.shift();
-					processAnimationQueue();
-				  }
-				}
-			  }
-
-			  animatedElements.forEach(function(element) {
-				observer.observe(element);
-			  });
-
-			  checkVisibleElements();
-			  
-			  //---------------
-			
-			
-			let listServices = {
-				"development_of_design_and_patterns": "src/image/overlock.png",
-				"sewing_samples": "src/image/clothes.jpg",
-				"branding_printing_of_tags_with_your_logo_individual_packaging": "src/image/birki.jpg",
-				"application_of_embroidery_printing_appliques": "src/image/vishivka.jpg",
-				"delivery_by_any_transport_company_throughout_Russia_and_beyond": "src/image/dostavka.jpg"
-			};
-			
-			let buttons = document.querySelectorAll("main section.services div.list_services div.box_compete div.left_box div.plb p");
-			
-			buttons.forEach(button => {
-			  button.addEventListener('mouseenter', (e) => {
-			  
-				let getNeedIdName = e.target.getAttribute("name");
-				
-				document.querySelector("main section.services div.list_services div.box_compete div.left_box div.plb p#active").setAttribute("id", "");
-				e.target.setAttribute("id", "active");
-				
-				document.querySelector("main section.services div.list_services div.box_compete div.right_box img").setAttribute("src", listServices[getNeedIdName]);
-				
-			  });
-			});
-		
-		};
+		</div>
+	</div>
+	<div class="sky_black"></div>
 	
-	</script>
+	<!--        -->
+	<!--        -->
+	<!--        -->
+	
+	<script src="js/main.js"></script>
 	
 </body>
 </html>
