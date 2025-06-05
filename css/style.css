@@ -698,6 +698,7 @@
 			flex-direction: column;
 			justify-content: flex-end;
 			gap: 40px;
+			flex: 1;
 		}
 		main section.services div.services__list_services div.services__box_compete div.services__box_left div.services__services_name{
 			position: relative;
@@ -744,17 +745,18 @@
 		}
 		main section.services div.services__list_services div.services__box_compete div.services__box_right{
 			position: relative;
-			width: 610px;
+			width: 100%;
 			height: 630px;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			flex-direction: row;
 			box-sizing: border-box;
+			flex: 1;
 		}
 		main section.services div.services__list_services div.services__box_compete div.services__box_right img, main section.form div.form__box_form div.form__box_form_right img{
 			position: relative;
-			width: 610px;
+			width: 100%;
 			height: 100%;
 			object-fit: cover;	
 		}
@@ -775,6 +777,10 @@
 			align-items: flex-start;
 			justify-content: space-between;
 			margin: 0px 0px 40px 0px;
+			gap: 20px;
+		}
+		main section div.desc_box > div{
+			width: 50% !important;
 		}
 		main section div.desc_box div.left, 
 		main section.reviews div.ui_element div.desc_box div.left h3{
@@ -864,11 +870,16 @@
 			justify-content: center;
 			align-items: center;
 		}
+		main section.video_preview div.video_preview__module_video video{
+			position: relative;
+			width: 100%;
+		}
 		main section.video_preview div.video_preview__module_video div.video_preview__play{
 			position: absolute;
 			padding: 40px;
 			border: 1px solid #d0d0d0;
 			border-radius: 100%;
+			z-index: 1;
 		}
 		main section.video_preview div.video_preview__module_video div.video_preview__play div{
 			position: relative;
@@ -954,7 +965,7 @@
 			position: relative;
 			padding: 30px;
 			box-sizing: border-box;
-			width: 400px;
+			width: calc((100%/3) - (40px / 3));
 			border: 1px solid #d0d0d0;
 			min-height: 250px;
 			display: flex;
@@ -1040,6 +1051,7 @@
 			flex-direction: column;
 			flex-grow: 1;
 			justify-content: space-between;
+			flex: 1;
 		}
 		
 		main section.form div.form__box_form div.form__box_form_left div.form__top{
@@ -1108,6 +1120,11 @@
 		main section.reviews div.ui_element div.desc_box div.left p{
 			line-height: 150%;
 		}
+		main section.reviews div.ui_element div.desc_box div.right{
+		    position: relative;
+			display: flex;
+			justify-content: flex-end;
+		}
 		
 		main section.form div.form__box_form div.form__box_form_left div.form__top div.form__input_name_product input, 
 		main section.form div.form__box_form div.form__box_form_left div.form__top div.form__input_size input{
@@ -1121,6 +1138,9 @@
 		main section.form div.form__box_form div.form__box_form_left div.form__top div > input::placeholder{
 			font-size: 16px;
 			color: rgba(51, 51, 51, 0.55);
+		}
+		main section.form div.form__box_form div.form__box_form_right{
+			flex: 1;
 		}
 		
 		main section.reviews div.ui_element div.desc_box div.left{
@@ -1210,6 +1230,7 @@
 				hsla(243, 68%, 11%, 0.2),
 				transparent
 			  );
+			  width: 100vw;
 		}
 		footer div.ui_box{
 			position: relative;
@@ -1231,6 +1252,7 @@
 			flex-direction: column;
 			align-items: stretch;
 			justify-content: space-between;
+			flex: 1;
 		}
 		footer div.ui_box div.contacts__left>div>div{
 			position: relative;
@@ -1298,9 +1320,13 @@
 			justify-content: center;
 			align-items: center;
 			height: 636px;
+			flex: 1;
 		}
 		footer div.ui_box div.contacts__right img{
-			flex: 1;
+			    flex: 1;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
 		}
 		
 		footer div.contacts__links{
@@ -1317,9 +1343,544 @@
 			font-size: 16px;
 			text-decoration: none;
 			color: white;
+			text-align: center;
 		}
 		
-		@media all and (max-width: 1400px){
+		/*888888888888*/
+		/* BREAKPOINT */
+		/*888888888888*/
+		
+		.breakpoint{
+			width: 100% !important;
+			padding-left: 15px !important;
+			padding-right: 15px !important;
+			margin-right: auto !important;
+			margin-left: auto !important;
+			box-sizing: border-box !important;
+			left: 0 !important;
+		}
+		header.breakpoint{
+			left: 50% !important;
+			transform: translateX(-50%);
+		}
+		
+		/*@media (max-width: 575px) {
+			header div.header__nav_box div.header__mobile_icon{
+				display: flex;
+			}
+			header nav.header__menu{
+				display: none;
+			}
+			header div.header__nav_box{
+				flex-grow: 0;
+			}
+			
+			header div.header__nav_box{
+				order: 3;
+			}
+			header a#send{
+				order: 4;
+			}
+			
+			main div.main_box>div.main_box__bottom{
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 40px;
+			}
+			
+			main div.main_box{
+				  min-height: 900px;
+			 }
+			
+		}
+		
+		@media (min-width: 576px) {
+			.breakpoint {
+				max-width: 576px;
+			}
+			header div.header__nav_box div.header__mobile_icon{
+				display: flex;
+			}
+			header nav.header__menu{
+				display: none;
+			}
+			header div.header__nav_box{
+				flex-grow: 1;
+			}
+			
+			header div.header__contacts{
+				order: 1;
+			}
+			header div.header__nav_box{
+				order: 3;
+				flex-grow: 0;
+			}
+			header a#send{
+				order: 4;
+			}
+			header div.header__socialnetworks{
+				order: 2;
+			}
+			
+			main div.main_box>div.main_box__bottom{
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 40px;
+			}
+			
+			main div.main_box{
+				  min-height: 800px;
+			 }
+			 
+			 main section.services div.services__list_services div.services__box_compete{
+				 flex-direction: row;
+			 }
+			 main section.services div.services__list_services div.services__box_compete div.services__box_left div.services__services_name p{
+				 padding: 40px 0px;
+			 }
+			
+		}
+
+		@media (min-width: 768px) {
+			.breakpoint {
+				max-width: 720px;
+			}
+			header div.header__nav_box div.header__mobile_icon{
+				display: none;
+			}
+			header nav.header__menu{
+				display: flex;
+			}
+			header div.header__nav_box{
+				flex-grow: 1;
+				order: 3;
+			}
+			header div.header__socialnetworks{
+				order: 2;
+			}
+			header a#send{
+				order: 1;
+			}
+			
+			main div.main_box>div.main_box__bottom{
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 40px;
+			}
+			 
+			  main section.services div.services__list_services div.services__box_compete div.services__box_left div.services__services_name p{
+				 padding: 40px 0px;
+			 }
+			 
+			 main section.services div.services__list_services div.services__box_compete{
+				 flex-direction: column;
+			 }
+			 main section.services div.services__list_services div.services__box_compete div.services__box_right img{
+				height: 600px;
+			}
+			
+		}
+
+		@media (min-width: 992px) {
+			.breakpoint {
+				max-width: 960px;
+			}
+			
+			main div.main_box>div.main_box__bottom{
+				flex-direction: row;
+				align-items: flex-end;
+			}
+			
+			header div.header__contacts{
+				order: 1;
+			}
+			header div.header__nav_box{
+				order: 2;
+			}
+			header a#send{
+				order: 3;
+			}
+			header div.header__socialnetworks{
+				order: 4;
+			}
+			
+			 main section.services div.services__list_services div.services__box_compete{
+				 flex-direction: row;
+			 }
+			
+		}
+
+		@media (min-width: 1200px) {
+		  .breakpoint {
+			max-width: 1140px;
+		  }
+		}
+
+		@media (min-width: 1400px) {
+		  .breakpoint {
+			max-width: 1320px;
+		  }
+		}*/
+		
+		/* */
+
+		@media (max-width: 330px) {
+			footer div.ui_box div.contacts__left h2{
+				font-size: 30px;
+			}
+			footer div.ui_box div.contacts__left>div>div>div:first-child{
+				display: none;
+			}
+			main section.reviews div.ui_element div.desc_box div.right img{
+				width: 100%;
+			}
+		}
+
+		@media (max-width: 575px) {
+			
+			html::-webkit-scrollbar {
+				display: none;
+			}
+			
+			header div.header__nav_box{
+				flex-grow: 0;
+			}
+			header nav.header__menu{
+				display: none;
+			}
+			header div.header__nav_box div.header__mobile_icon{
+				display: flex;
+			}
+		  
+			header div.header__nav_box{
+				order: 3;
+			}
+			header a#send{
+				order: 4;
+			}
+		  
+			main div.main_box{
+				min-height: 900px;
+			}
+		  
+			main div.main_box>div.main_box__bottom{
+			    flex-direction: column;
+				align-items: flex-start;
+				gap: 40px;
+			}
+		  
+			main div.main_box>div.main_box__bottom div.main_box__left h1.main_box__top,
+			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box h2{
+				font-size: 5vw;
+			}
+			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box h2.main_box__name_company{
+				font-size: 16vw;
+			}
+			
+			main div.main_box>div.main_box__bottom div.main_box__left h1.main_box__top{
+				width: 100%;
+			}
+			main div.main_box>div.main_box__bottom div.main_box__left h1.main_box__top,
+			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box h2{
+				font-size: 20px;
+			}
+			
+			main div.main_box>div.main_box__bottom div.main_box__right div span,
+			main section.services div.services__list_services div.services__box_compete div.services__box_left div.services__services_name p{
+				font-size: 16px;
+			}
+			main section div.desc_box div.left,
+			main section.services div.services__list_services div.services__box_compete div.services__box_left h3{
+				font-size: 20px;
+			}
+			main section.right_image_box div.desc_box div.right{
+				/*font-size: 3vw;*/
+			}
+		  
+			main section.services div.services__about_us,
+			main section.video_preview div.video_preview__comment div.ui_box div.video_preview__text{
+				border-radius: 108px;
+				width: 100%;
+			}
+			main section.video_preview div.video_preview__comment div.ui_box div.video_preview__text{
+				padding: 50px;
+			}
+		  
+			main section.services div.services__list_services div.services__box_compete,
+			main section div.desc_box,
+			main section.video_preview div.video_preview__comment div.ui_box,
+			main section.top div.ui_element div.top__list,
+			main section.form div.form__box_form,
+			footer div.ui_box,
+			footer div.contacts__links,
+			main section.form div.form__box_form div.form__box_form_left div.form__controls div.form__buttons_control{
+				flex-direction: column;
+			}
+			main section.top div.ui_element div.top__list>div,
+			main section.cans div.ui_element div.cans__module_gallery div.controls{
+				width: 100%;
+			}
+			main section div.desc_box > div{
+				width: 100% !important;
+			}
+			main section.services div.services__list_services div.services__box_compete div.services__box_left div.services__services_name p{
+				padding: 40px 0px;
+			}
+			main section.form div.form__box_form div.form__box_form_left div.form__top div.form__form_desc,
+			main section.services div.services__list_services div.services__box_compete div.services__box_left div.services__services_name p{
+				flex-direction: column;
+				align-items: flex-start;
+			}
+			main section.reviews div.ui_element div.desc_box div.right{
+				justify-content: flex-start;
+			}
+			footer div.contacts__links,
+			main section.cans div.ui_element div.cans__module_gallery div.controls{
+				gap: 40px;
+			}
+			
+			main section.cans div.ui_element div.cans__module_gallery div.controls div.cans__image_name{
+				display: none;
+			}
+			main section.cans div.ui_element div.cans__module_gallery div.controls{
+				justify-content: center;
+			}
+			
+			main section.form div.form__box_form div.form__box_form_left div.form__controls{
+				flex-direction: column;
+			}
+			main section.form div.form__box_form div.form__box_form_left div.form__controls>span{
+				flex: 0;
+			}
+			
+			main section.video_preview div.video_preview__module_video div.video_preview__play{
+				padding: 20px;
+			}
+			main section.video_preview div.video_preview__module_video div.video_preview__play > div{
+				width: 50px;
+				height: 50px;
+			}
+		  
+		}
+		
+		@media (min-width: 576px) {
+			
+		  .breakpoint {
+			max-width: 576px;
+			/*background: blueviolet;*/
+		  }
+		  
+		  header div.header__nav_box{
+			  flex-grow: 0;
+		  }
+		  header nav.header__menu{
+			  display: none;
+		  }
+		  header div.header__nav_box div.header__mobile_icon{
+			  display: flex;
+		  }
+		  
+		  header div.header__nav_box{
+			  order: 3;
+		  }
+		  header a#send{
+			  order: 4;
+		  }
+		  
+		   main div.main_box{
+			  min-height: 900px;
+		  }
+		  
+		  main div.main_box>div.main_box__bottom{
+			    flex-direction: column;
+				align-items: flex-start;
+				gap: 40px;
+		  }
+		  
+		  /* */
+		  
+		  main section.services div.services__about_us{
+			width: 100%;
+			border-radius: 108px;
+		  }
+		  
+		 
+		  main section.services div.services__list_services div.services__box_compete div.services__box_left div.services__services_name p{
+			  padding: 40px 0px;
+		  }
+		  
+		  main section div.desc_box > div{
+			  width: 100% !important;
+		  }
+		  
+		  main section.video_preview div.video_preview__comment div.ui_box div.video_preview__text{
+			width: 100%;
+			padding: 60px 70px;
+		  }
+		  
+		  main section.top div.ui_element div.top__list>div{
+			  width: 100%;
+		  }
+		  main section.form div.form__box_form,
+		  footer div.ui_box,
+		  main section.video_preview div.video_preview__comment div.ui_box,
+		  main section.services div.services__list_services div.services__box_compete,
+		  main section div.desc_box{
+			  flex-direction: column;
+		  }
+		  
+		  main section.reviews div.ui_element div.desc_box div.right{
+			  justify-content: flex-start;
+		  }
+		  
+		  
+		}
+
+		@media (min-width: 768px) {
+			
+		  .breakpoint {
+			max-width: 720px;
+			/*background: crimson;*/
+		  }
+		  
+		   main div.main_box{
+			  min-height: 900px;
+		  }
+		  
+		  header div.header__nav_box{
+			  flex-grow: 1;
+		  }
+		  header nav.header__menu{
+			  display: flex;
+		  }
+		  header div.header__nav_box div.header__mobile_icon{
+			  display: none;
+		  }
+		  
+		  /* */
+		  
+		  main section.services div.services__list_services div.services__box_compete div.services__box_left div.services__services_name p{
+			  padding: 40px 0px;
+		  }
+		  
+		  main section div.desc_box > div{
+			  width: 100% !important;
+		  }
+		  
+		  main section.video_preview div.video_preview__comment div.ui_box div.video_preview__text{
+			    width: 100%;
+				border-radius: 100px;
+		  }
+		  
+		  main section.top div.ui_element div.top__list>div{
+		      width: calc((100% / 2) - (40px / 4));
+		  }
+		  
+		  main section.form div.form__box_form, 
+		  footer div.ui_box,
+		  main section.video_preview div.video_preview__comment div.ui_box,
+		  main section div.desc_box,
+		  main section.services div.services__list_services div.services__box_compete{
+			  flex-direction: column;
+		  }
+		  
+		  main section.reviews div.ui_element div.desc_box div.right{
+			  justify-content: flex-start;
+		  }
+		  
+		  header div.header__nav_box{
+			  order: 4;
+		  }
+		  header a#send{
+			  order: 3;
+		  }
+		  
+		}
+
+		@media (min-width: 992px) {
+			
+		  .breakpoint {
+			max-width: 960px;
+			/*background: steelblue;*/
+		  }
+		  
+		  main section.video_preview div.video_preview__comment div.ui_box{
+			  flex-direction: column;
+		  }
+		  
+		  /* */
+		  
+		   main section.services div.services__list_services div.services__box_compete div.services__box_left div.services__services_name p{
+			  padding: 0;
+		  }
+		  
+		  main section div.desc_box > div{
+			  width: 50% !important;
+		  }
+		  
+		  main section.video_preview div.video_preview__comment div.ui_box div.video_preview__text{
+			    width: 820px;
+				border-radius: 170px;
+		  }
+		  
+		  main section.top div.ui_element div.top__list>div{
+		      width: calc((100%/3) - (40px / 3));
+		  }
+		  
+		  main section.form div.form__box_form, 
+		  footer div.ui_box,
+		  main section div.desc_box,
+		  main section.services div.services__list_services div.services__box_compete{
+			  flex-direction: row;
+		  }
+		  
+		  main section.reviews div.ui_element div.desc_box div.right{
+			  justify-content: flex-end;
+		  }
+		  
+		  main div.main_box>div.main_box__bottom{
+			  flex-direction: row;
+			  align-items: flex-end;
+		  }
+		  
+		}
+
+		@media (min-width: 1200px) {
+		  .breakpoint {
+			max-width: 1140px;
+			/*background: chocolate;*/
+		  }
+		  
+		  main section.video_preview div.video_preview__comment div.ui_box{
+			 flex-direction: row;
+		  }
+		  
+		  header a#send{
+			  order: 3;
+		  }
+		  header div.header__nav_box{
+			  order: 4;
+		  }
+		  
+		}
+
+		@media (min-width: 1400px) {
+			
+		  .breakpoint {
+			max-width: 1320px;
+			/*background: steelblue;*/
+		  }
+		  
+		  header a#send{
+			  order: 4;
+		  }
+		  header div.header__nav_box{
+			  order: 3;
+		  }
+		  
+		}
+		
+		/*@media all and (max-width: 1400px){
 			
 			html::-webkit-scrollbar {
 				display: none;
@@ -1488,12 +2049,6 @@
 			main div.main_box{
 				min-height: 700px;
 			}
-			/*header div.nav_box{
-				order: 3;
-			}
-			header a#send{
-				order: 4;
-			}*/
 			
 		}
 		
@@ -1529,9 +2084,7 @@
 		
 		@media all and (max-width: 640px){
 			
-			header a#send{
-				/*display: none;*/
-			}
+			
 			
 		}
 		
@@ -1625,26 +2178,6 @@
 		
 		@media all and (max-width: 420px){
 			
-			/*main section.services div.about_us h3, main section.services div.list_services a button, main section.cans div.ui_element div.button_all a button{
-				font-size: 4vw;
-			}
-			main section.services div.about_us p, 
-			main div.box_main>div.bottom div.right div span, 
-			header div.contacts a, main section.cans div.ui_element div.desc_box div.right, 
-			main section.video_preview div.desc_box div.right, 
-			main section.video_preview div.comment div.ui_box div.text p,
-			main section.form div.desc_box div.right,
-			main section.form div.form div.left div.bottom button,
-			main section.reviews div.ui_element div.desc_box div.left p,
-			footer div.ui_box div.left>button#send{
-				font-size: 5vw !important;
-			}
-			main section.services div.list_services div.box_compete div.left_box div.plb p, main section.top div.ui_element div.list_top div div.desc p{
-				font-size: 6vw;
-			}
-			main section.top div.ui_element div.list_top div div.desc h3{
-				font-size: 8vw;
-			}*/
 			
 			.font-size_10vw{
 				font-size: 10vw !important;
@@ -1861,5 +2394,5 @@
 				height: 100%;
 			}
 			
-		}
+		}*/
 		
