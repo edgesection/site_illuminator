@@ -1364,164 +1364,6 @@
 			transform: translateX(-50%);
 		}
 		
-		/*@media (max-width: 575px) {
-			header div.header__nav_box div.header__mobile_icon{
-				display: flex;
-			}
-			header nav.header__menu{
-				display: none;
-			}
-			header div.header__nav_box{
-				flex-grow: 0;
-			}
-			
-			header div.header__nav_box{
-				order: 3;
-			}
-			header a#send{
-				order: 4;
-			}
-			
-			main div.main_box>div.main_box__bottom{
-				flex-direction: column;
-				align-items: flex-start;
-				gap: 40px;
-			}
-			
-			main div.main_box{
-				  min-height: 900px;
-			 }
-			
-		}
-		
-		@media (min-width: 576px) {
-			.breakpoint {
-				max-width: 576px;
-			}
-			header div.header__nav_box div.header__mobile_icon{
-				display: flex;
-			}
-			header nav.header__menu{
-				display: none;
-			}
-			header div.header__nav_box{
-				flex-grow: 1;
-			}
-			
-			header div.header__contacts{
-				order: 1;
-			}
-			header div.header__nav_box{
-				order: 3;
-				flex-grow: 0;
-			}
-			header a#send{
-				order: 4;
-			}
-			header div.header__socialnetworks{
-				order: 2;
-			}
-			
-			main div.main_box>div.main_box__bottom{
-				flex-direction: column;
-				align-items: flex-start;
-				gap: 40px;
-			}
-			
-			main div.main_box{
-				  min-height: 800px;
-			 }
-			 
-			 main section.services div.services__list_services div.services__box_compete{
-				 flex-direction: row;
-			 }
-			 main section.services div.services__list_services div.services__box_compete div.services__box_left div.services__services_name p{
-				 padding: 40px 0px;
-			 }
-			
-		}
-
-		@media (min-width: 768px) {
-			.breakpoint {
-				max-width: 720px;
-			}
-			header div.header__nav_box div.header__mobile_icon{
-				display: none;
-			}
-			header nav.header__menu{
-				display: flex;
-			}
-			header div.header__nav_box{
-				flex-grow: 1;
-				order: 3;
-			}
-			header div.header__socialnetworks{
-				order: 2;
-			}
-			header a#send{
-				order: 1;
-			}
-			
-			main div.main_box>div.main_box__bottom{
-				flex-direction: column;
-				align-items: flex-start;
-				gap: 40px;
-			}
-			 
-			  main section.services div.services__list_services div.services__box_compete div.services__box_left div.services__services_name p{
-				 padding: 40px 0px;
-			 }
-			 
-			 main section.services div.services__list_services div.services__box_compete{
-				 flex-direction: column;
-			 }
-			 main section.services div.services__list_services div.services__box_compete div.services__box_right img{
-				height: 600px;
-			}
-			
-		}
-
-		@media (min-width: 992px) {
-			.breakpoint {
-				max-width: 960px;
-			}
-			
-			main div.main_box>div.main_box__bottom{
-				flex-direction: row;
-				align-items: flex-end;
-			}
-			
-			header div.header__contacts{
-				order: 1;
-			}
-			header div.header__nav_box{
-				order: 2;
-			}
-			header a#send{
-				order: 3;
-			}
-			header div.header__socialnetworks{
-				order: 4;
-			}
-			
-			 main section.services div.services__list_services div.services__box_compete{
-				 flex-direction: row;
-			 }
-			
-		}
-
-		@media (min-width: 1200px) {
-		  .breakpoint {
-			max-width: 1140px;
-		  }
-		}
-
-		@media (min-width: 1400px) {
-		  .breakpoint {
-			max-width: 1320px;
-		  }
-		}*/
-		
 		/* */
 
 		@media (max-width: 330px) {
@@ -1606,15 +1448,9 @@
 				padding: 50px;
 			}
 		  
-			main section.services div.services__list_services div.services__box_compete,
-			main section div.desc_box,
-			main section.video_preview div.video_preview__comment div.ui_box,
-			main section.top div.ui_element div.top__list,
-			main section.form div.form__box_form,
-			footer div.ui_box,
-			footer div.contacts__links,
+			.flex-direction_column,
 			main section.form div.form__box_form div.form__box_form_left div.form__controls div.form__buttons_control{
-				flex-direction: column;
+				flex-direction: column !important;
 			}
 			main section.top div.ui_element div.top__list>div,
 			main section.cans div.ui_element div.cans__module_gallery div.controls{
@@ -1659,6 +1495,26 @@
 			main section.video_preview div.video_preview__module_video div.video_preview__play > div{
 				width: 50px;
 				height: 50px;
+			}
+			
+			main section.reviews div.ui_element div.reviews__list div.reviews__review div.reviews__user_info{
+				flex-direction: column;
+				margin: 0px 0px 20px 0px;
+			}
+			main section.reviews div.ui_element div.reviews__list div.reviews__review div.reviews__user_info div.reviews__user_data{
+				margin: 0px 0px 10px 0px;
+			}
+		  
+			div.pop_up_box div.pop_up__window{
+				width: 100vw;
+				height: 100vh;
+				box-sizing: border-box;
+				border-radius: 0px;
+				justify-content: space-between;
+			    padding: 60px 20px;
+			}
+			div.pop_up_box div.pop_up__window span#desc{
+				width: auto;
 			}
 		  
 		}
@@ -1721,12 +1577,8 @@
 		  main section.top div.ui_element div.top__list>div{
 			  width: 100%;
 		  }
-		  main section.form div.form__box_form,
-		  footer div.ui_box,
-		  main section.video_preview div.video_preview__comment div.ui_box,
-		  main section.services div.services__list_services div.services__box_compete,
-		  main section div.desc_box{
-			  flex-direction: column;
+		  .flex-direction_column{
+			  flex-direction: column !important;
 		  }
 		  
 		  main section.reviews div.ui_element div.desc_box div.right{
@@ -1776,12 +1628,11 @@
 		      width: calc((100% / 2) - (40px / 4));
 		  }
 		  
-		  main section.form div.form__box_form, 
-		  footer div.ui_box,
-		  main section.video_preview div.video_preview__comment div.ui_box,
-		  main section div.desc_box,
-		  main section.services div.services__list_services div.services__box_compete{
-			  flex-direction: column;
+		  .flex-direction_column{
+			  flex-direction: column !important;
+		  }
+		  main section.top div.ui_element div.top__list{
+			  flex-direction: row !important;
 		  }
 		  
 		  main section.reviews div.ui_element div.desc_box div.right{
@@ -1805,7 +1656,7 @@
 		  }
 		  
 		  main section.video_preview div.video_preview__comment div.ui_box{
-			  flex-direction: column;
+			  flex-direction: column !important;
 		  }
 		  
 		  /* */
@@ -1827,11 +1678,8 @@
 		      width: calc((100%/3) - (40px / 3));
 		  }
 		  
-		  main section.form div.form__box_form, 
-		  footer div.ui_box,
-		  main section div.desc_box,
-		  main section.services div.services__list_services div.services__box_compete{
-			  flex-direction: row;
+		  .flex-direction_column{
+			  flex-direction: row !important;
 		  }
 		  
 		  main section.reviews div.ui_element div.desc_box div.right{
@@ -1852,7 +1700,7 @@
 		  }
 		  
 		  main section.video_preview div.video_preview__comment div.ui_box{
-			 flex-direction: row;
+			 flex-direction: row !important;
 		  }
 		  
 		  header a#send{
