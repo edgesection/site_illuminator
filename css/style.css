@@ -118,6 +118,7 @@
 			border-radius: 40px;
 			display: flex;
 			flex-direction: column;
+			overflow-y: auto;
 			/* align-items: flex-start; */		
 		}
 		div.pop_up_box div.pop_up__window div.pop_up__close{
@@ -185,6 +186,7 @@
 			left: 100vw;
 			visibility: hidden;
 			transition: all 1s ease-in-out;
+			overflow-y: auto;
 		}
 		div.mobile_menu div.mobile_menu__header_section{
 			position: relative;
@@ -1483,6 +1485,9 @@
 		
 		@media all and (max-width: 700px){
 			
+			main div.main_box{
+				min-height: 700px;
+			}
 			/*header div.nav_box{
 				order: 3;
 			}
@@ -1579,16 +1584,15 @@
 			}
 			
 			main div.main_box{
-				min-height: 500px;
+				min-height: 600px;
 			}
 			
 		}
 		
 		@media all and (max-width: 512px){
 			
-			main div.main_box{
-				min-height: 520px;
-			}
+			
+			
 		}
 		
 		@media all and (max-width: 500px){
@@ -1713,16 +1717,14 @@
 			}
 			
 			main div.main_box{
-				min-height: 670px;
+				min-height: 800px;
 			}
 			
 		}
 		
 		@media all and (max-width: 350px){
 			
-			main div.main_box{
-				min-height: 720px;
-			}
+			
 			
 		}
 		
