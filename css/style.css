@@ -1624,6 +1624,9 @@
 			  justify-content: flex-start;
 		  }
 		  
+		  footer div.contacts__links{
+			  gap: 20px;
+		  }
 		  
 		}
 
@@ -1684,6 +1687,8 @@
 		  header a#send{
 			  order: 3;
 		  }
+		  
+		  
 		  
 		}
 
