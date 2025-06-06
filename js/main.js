@@ -319,13 +319,20 @@ window.onload = function(){
 			return;
 		}
 		
-		//if(element.scrollHeight > top_card_min_height) top_card_min_height = element.scrollHeight;
+		let h3 = element.querySelector("div.top__desc h3").scrollHeight;
+		let p = element.querySelector("div.top__desc p").scrollHeight;
+		
+		let realHeightBlock = h3+p+60+26+60+10+(10);
+		
+		if(realHeightBlock > top_card_min_height) top_card_min_height = realHeightBlock;
+		//console.log("height: ", top_card_min_height);
 		
 		element.addEventListener("mouseover", () => {
 
 			if(element.querySelector("div.top__desc p")){
-				element.querySelector("div.top__desc p").style.maxHeight = document.querySelector("main section.top div.ui_element div.top__list div div.top__desc p").scrollHeight+"px";
+				element.querySelector("div.top__desc p").style.maxHeight = element.querySelector("div.top__desc p").scrollHeight+"px";
 			}
+			
 		});
 		
 		element.addEventListener("mouseout", () => {
@@ -338,10 +345,10 @@ window.onload = function(){
 		
 	});
 	
-	/*top_card.forEach((element) => {
+	top_card.forEach((element) => {
 		
 		element.style.minHeight = top_card_min_height+"px";
 		
-	});*/
+	});
 
 };
