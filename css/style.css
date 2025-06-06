@@ -121,6 +121,9 @@
 			overflow-y: auto;
 			/* align-items: flex-start; */		
 		}
+		div.pop_up_box div.pop_up__window::-webkit-scrollbar {
+			display: none;
+		}
 		div.pop_up_box div.pop_up__window div.pop_up__close{
 			position: absolute;
 			display: flex;
@@ -1762,6 +1765,26 @@
 			  order: 3;
 		  }
 		  
+		}
+		
+		/******************/
+		/* --- HEIGHT --- */
+		/******************/
+		
+		@media all and (max-height: 720px){
+			
+			div.pop_up_box div.pop_up__window{
+				/*width: 100vw;*/
+				height: 100vh;
+				box-sizing: border-box;
+				/*border-radius: 0px;*/
+				justify-content: space-between;
+			    /*padding: 60px 20px;*/
+			}
+			div.pop_up_box div.pop_up__window span#desc{
+				width: auto;
+			}
+
 		}
 		
 		/*@media all and (max-width: 1400px){
