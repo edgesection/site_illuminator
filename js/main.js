@@ -310,6 +310,8 @@ window.onload = function(){
 	
 	startSliderReviews();
 	
+	//FUNCTION CARD
+	
 	let top_card = document.querySelectorAll("main section.top div.ui_element div.top__list > div");
 	let top_card_min_height = 200;
 	
@@ -331,6 +333,7 @@ window.onload = function(){
 
 			if(element.querySelector("div.top__desc p")){
 				element.querySelector("div.top__desc p").style.maxHeight = element.querySelector("div.top__desc p").scrollHeight+"px";
+				element.querySelector("div.top__desc p").style.padding = "15px 0px 0px 0px";
 			}
 			
 		});
@@ -339,6 +342,7 @@ window.onload = function(){
 			
 			if(element.querySelector("div.top__desc p")){
 				element.querySelector("div.top__desc p").style.maxHeight = "0px";
+				element.querySelector("div.top__desc p").style.padding = "0px";
 			}
 			
 		});
