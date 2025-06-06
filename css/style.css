@@ -1001,9 +1001,10 @@
 			font-weight: 600;
 			line-height: 115%;
 			transition: all 1s ease;
-		}
-		main section.top div.ui_element div.top__list div:first-child div.top__desc h3{
 			margin: 60px 0px 0px 0px;
+		}
+		main section.top div.ui_element div.top__list div:last-child div.top__desc h3{
+			margin: 0px 0px 0px 0px;
 		}
 		main section.top div.ui_element div.top__list div div.top__desc p{
 			font-size: 16px;
