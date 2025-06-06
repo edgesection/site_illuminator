@@ -45,9 +45,19 @@
 		/*@import url('https://fonts.cdnfonts.com/css/mont');*/
 
 		:root {
-		  --color_vinous: #C12754;
-		  --color_heading: #2B0514;
-		  --color_gray: #F3F2F0;
+			--color_vinous: #c12754;
+			--color_white: #fff;
+			--color_black-text: #333;
+			--color_gray: #f3f2f0;
+			--color_stroke-whiteback: #ddd;
+			--color_heading: #2b0514;
+			--color_stroke-grayback: #d0d0d0;
+		}
+		
+		:root {
+		  --font-family: "Mont", sans-serif;
+		  --second-family: "Inter", sans-serif;
+		  --third-family: "Yandex Sans Text", sans-serif;
 		}
 
 		html {
@@ -80,11 +90,12 @@
 		  opacity: 0;
 		  transform: translateY(30px);
 		  transition: opacity 0.6s ease, transform 0.6s ease;
+		  transition-property: initial !important;
 		}
 
 		.scroll-item.active {
 		  opacity: 1;
-		  transform: translateY(0);
+		  transform: translateY(0) !important;
 		}
 		
 		.swiper-wrapper{
@@ -92,10 +103,6 @@
 		}
 		.swiper-slide {
 		  height: auto !important;
-		}
-		/* Скрываем неактивные слайды */
-		img.swiper-slide:not(.swiper-slide-active) {
-		  height: 0 !important;
 		}
 		
 		div.pop_up_box{
@@ -463,8 +470,10 @@
 		main div.main_box>div.main_box__bottom{
 			position: relative;
 			z-index: 2;
-			width: 1240px;
-			left: calc((100% - 1240px) / 2);
+			/*width: 1240px;
+			left: calc((100% - 1240px) / 2);*/
+			width: 100%;
+			left: 0px;
 			margin: 0px 0px 62px 0px;
 			display: flex;
 			flex-direction: row;
@@ -473,7 +482,8 @@
 		}
 		main div.main_box>div.main_box__box_black{
 			position: absolute;
-			background: linear-gradient(360deg, #000000 7%,  rgba(0, 0, 0, 0.7) 42%,  rgba(0, 0, 0, 0) 66%,  rgba(0, 0, 0, 0) 82%,  rgba(0, 0, 0, 0.9) 100% );
+			/*background: linear-gradient(360deg, #000000 7%,  rgba(0, 0, 0, 0.7) 42%,  rgba(0, 0, 0, 0) 66%,  rgba(0, 0, 0, 0) 82%,  rgba(0, 0, 0, 0.9) 100% );*/
+			background: linear-gradient(360deg, rgba(0, 0, 0, 0.55) 7.35%, rgba(0, 0, 0, 0.55) 41.86%, rgba(0, 0, 0, 0.55) 66.24%, rgba(0, 0, 0, 0.55) 81.99%, rgba(0, 0, 0, 0.55) 100%), rgba(14, 8, 38, 0.4);
 			z-index: 1;
 			top: 0px;
 			left: 0px;
@@ -505,6 +515,9 @@
 			padding: 0px 0px 34px 0px;
 			border-bottom: 1px solid rgb(255 255 255 / 25%);
 			margin: 0px 0px 32px 0px;
+			letter-spacing: -0.01em;
+			text-transform: uppercase;
+			line-height: 130%;
 		}
 		main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box{
 			position: relative;
@@ -574,8 +587,10 @@
 		main .fix_box{
 			position: relative;
 			padding: 70px 0px;
-			width: 1240px;
-			left: calc((100% - 1240px) / 2);
+			/*width: 1240px;
+			left: calc((100% - 1240px) / 2);*/
+			width: 100%;
+			left: 0px;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -587,9 +602,9 @@
 			background: #F3F2F0;
 			border-radius: 158px;
 			width: 610px;
-			padding: 45px;
+			padding: 44px 67px;
 			align-items: center;
-			gap: 10px;
+			gap: 18px;
 			box-sizing: border-box;
 		}
 		main section.services div.services__about_us h3{
@@ -602,9 +617,11 @@
 			font-family: 'Mont', sans-serif;
 			font-size: 20px;
 			font-style: italic;
-			font-weight: normal;
+			font-weight: 700;
 			text-align: center;
 			line-height: 128%;
+			letter-spacing: -0.01em;
+			text-transform: uppercase;
 		}
 		div.logo{
 			position: relative;
@@ -668,6 +685,7 @@
 			text-decoration: none;
 		}
 		button.button_act{
+			font-family: var(--font-family);
 			padding: 21px 51px;
 			position: relative;
 			color: white;
@@ -678,6 +696,7 @@
 			font-size: 16px;
 			font-weight: 600;
 			cursor: pointer;
+			text-align: center;
 		}
 		button.button_act:hover, div.pop_up_box div.pop_up__window > button:hover{
 			color: var(--color_vinous) !important;
@@ -716,6 +735,8 @@
 			font-size: 45px;
 			font-family: 'Mont', sans-serif;
 			font-weight: 600;
+			letter-spacing: -0.01em;
+			text-transform: uppercase;
 		}
 		main section.services div.services__list_services div.services__box_compete div.services__box_left div.services__services_name p{
 			font-size: 21px;
@@ -737,6 +758,10 @@
 		}
 		main section.services div.services__list_services div.services__box_compete div.services__box_left div.services__services_name p#active{
 			color: var(--color_vinous);
+			font-family: var(--font-family);
+			font-weight: 600;
+			font-size: 21px;
+			letter-spacing: -0.01em;
 		}
 		main section.services div.services__list_services div.services__box_compete div.services__box_left div.services__services_name p#active span{
 			position: relative;
@@ -786,18 +811,27 @@
 		main section div.desc_box > div{
 			width: 50% !important;
 		}
+		main section.top div.fix_box div.desc_box{
+			flex-direction: column;
+		}
+		main section.top div.fix_box div.desc_box > div{
+			width: 100% !important;
+		}
 		main section div.desc_box div.left, 
 		main section.reviews div.ui_element div.desc_box div.left h3{
 			position: relative;
 			font-size: 45px;
 			font-weight: 600;
 			line-height: 107%;
+			letter-spacing: -0.01em;
+			text-transform: uppercase;
 		}
 		main section.right_image_box div.desc_box div.right{
 			position: relative;
 			width: 610px;
 			font-size: 16px;
 			line-height: 170%;
+			letter-spacing: -0.01em;
 		}
 		
 		main section.cans div.ui_element div.cans__module_gallery{
@@ -822,6 +856,7 @@
 			height: 100%;
 			aspect-ratio: 16 / 9;
 			object-fit: cover;
+			border-top: 1px solid #D0D0D0;
 		}
 		
 		main section.cans div.ui_element div.cans__module_gallery div.controls{
@@ -857,6 +892,7 @@
 			font-size: 21px;
 			font-weight: 600;
 			line-height: 133%;
+			letter-spacing: -0.01em;
 		}
 		
 		main section.cans div.ui_element div.cans__button_show_all{
@@ -879,6 +915,7 @@
 		main section.video_preview div.video_preview__module_video video{
 			position: relative;
 			width: 100%;
+			height: 100%;
 		}
 		main section.video_preview div.video_preview__module_video div.video_preview__play{
 			position: absolute;
@@ -931,6 +968,7 @@
 		main section.video_preview div.video_preview__comment div.ui_box div.video_preview__text p{
 			font-size: 17px;
 			line-height: 160%;
+			letter-spacing: -0.01em;
 		}
 		main section.video_preview div.video_preview__comment div.ui_box div.video_preview__text div.video_preview__icon_quat_bottom{
 			position: relative;
@@ -995,6 +1033,9 @@
 			/*gap: 15px;*/
 			flex-direction: column;
 		}
+		main section.top div.ui_element div.top__list div.top_six div.top__desc{
+			gap: 15px;
+		}
 		main section.top div.ui_element div.top__list div div.w{
 			z-index: 2;
 			color: white;
@@ -1005,6 +1046,7 @@
 			line-height: 115%;
 			transition: all 1s ease;
 			margin: 60px 0px 0px 0px;
+			letter-spacing: -0.01em;
 		}
 		main section.top div.ui_element div.top__list div:last-child div.top__desc h3{
 			margin: 0px 0px 0px 0px;
@@ -1012,13 +1054,15 @@
 		main section.top div.ui_element div.top__list div div.top__desc p{
 			font-size: 16px;
 			line-height: 150%;
-			padding: 15px 0px 0px 0px;
+			padding: 0px 0px 0px 0px;
 			
 			overflow: hidden;
 			
 			opacity: 0;
 			transition: all 1s ease;
 			max-height: 0px;
+			
+			letter-spacing: -0.01em;
 		}
 		main section.top div.ui_element div.top__list>div:hover div.top__desc p{
 			opacity: 1;
@@ -1054,7 +1098,7 @@
 		main section.top div.ui_element div.top__list>div.top_six{
 		    background: var(--color_vinous);
 			align-items: center;
-			justify-content: space-around;
+			justify-content: center;
 		}
 		main section.top div.ui_element div.top__list>div.top_six div.top__icon_surprise{
 			position: relative;
@@ -1118,6 +1162,8 @@
 			border-radius: 0px 100px 100px 0%;
 			font-weight: 600;
 			font-size: 21px;
+			line-height: 133%;
+			letter-spacing: -0.01em;
 		}
 		
 		main section.form div.form__box_form div.form__box_form_left div.form__controls{
@@ -1134,6 +1180,8 @@
 		main section.form div.form__box_form div.form__box_form_left div.form__controls>span{
 			font-size: 17px;
 			flex: 1 1 110px;
+			line-height: 133%;
+			letter-spacing: -0.01em;
 		}
 		main section.form div.form__box_form div.form__box_form_left div.form__controls div.form__buttons_control{
 			position: relative;
@@ -1158,6 +1206,9 @@
 		}
 		main section.reviews div.ui_element div.desc_box div.left p{
 			line-height: 150%;
+			line-height: 170%;
+			letter-spacing: -0.01em;
+			font-weight: 400;
 		}
 		main section.reviews div.ui_element div.desc_box div.right{
 		    position: relative;
@@ -1167,6 +1218,7 @@
 		
 		main section.form div.form__box_form div.form__box_form_left div.form__top div.form__input_name_product input, 
 		main section.form div.form__box_form div.form__box_form_left div.form__top div.form__input_size input{
+			font-family: var(--font-family);
 			padding: 22px 26px;
 			border: 1px solid #dddddd;
 			font-size: 16px;
@@ -1228,19 +1280,29 @@
 			font-size: 21px;
 			font-weight: 600;
 			line-height: 120%;
+			letter-spacing: -0.01em;
 		}
 		main section.reviews div.ui_element div.reviews__list div.reviews__review div.reviews__user_info div.reviews__user_data span#date{
 			font-size: 16px;
-			color: #999999;
+			letter-spacing: -0.01em;
+			color: #999;
 		}
 		
 		main section.reviews div.ui_element div.reviews__list div.reviews__review div.reviews__description{
+			font-size: 16px;
 			line-height: 160%;
+			letter-spacing: -0.01em;
 		}
 		main section.reviews div.ui_element div.reviews__list div.reviews__review > a{
 			font-size: 15px;
 			color: #2B0514;
 			font-weight: 600;
+			line-height: 160%;
+			letter-spacing: -0.01em;
+			text-decoration-skip-ink: none;
+		}
+		main section.reviews div.ui_element div.reviews__list div.reviews__review > a:hover{
+			color: #C12754;
 		}
 		
 		main section.reviews div.ui_element div.controls{
@@ -1274,8 +1336,10 @@
 		footer div.ui_box{
 			position: relative;
 			padding: 70px 0px;
-			width: 1240px;
-			left: calc((100% - 1240px) / 2);
+			/*width: 1240px;
+			left: calc((100% - 1240px) / 2);*/
+			width: 100%;
+			left: 0px;
 			display: flex;
 			flex-direction: row;
 			align-items: center;
@@ -1370,8 +1434,10 @@
 		
 		footer div.contacts__links{
 			position: relative;
-			width: 1240px;
-			left: calc((100% - 1240px) / 2);
+			/*width: 1240px;
+			left: calc((100% - 1240px) / 2);*/
+			width: 100%;
+			left: 0px;
 			display: flex;
 			flex-direction: row;
 			align-items: center;
@@ -1389,17 +1455,19 @@
 		/* BREAKPOINT */
 		/*888888888888*/
 		
-		.breakpoint{
+		body .breakpoint,
+		footer div.ui_box.breakpoint,
+		footer div.contacts__links.breakpoint{
 			width: 100% !important;
-			padding-left: 15px !important;
-			padding-right: 15px !important;
+			padding-left: 15px ;
+			padding-right: 15px ;
 			margin-right: auto !important;
 			margin-left: auto !important;
 			box-sizing: border-box !important;
-			left: 0 !important;
+			left: 0;
 		}
 		header.breakpoint{
-			left: 50% !important;
+			left: 50%;
 			transform: translateX(-50%);
 		}
 		
@@ -1455,7 +1523,8 @@
 				font-size: 5vw;
 			}
 			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box h2.main_box__name_company{
-				font-size: 16vw;
+				font-size: 15vw;
+				margin: 2.8vw 0px 0px 0px;
 			}
 			
 			main div.main_box>div.main_box__bottom div.main_box__left h1.main_box__top{
@@ -1475,7 +1544,7 @@
 				font-size: 20px;
 			}
 			main section.right_image_box div.desc_box div.right{
-				/*font-size: 3vw;*/
+				font-size: 15px;
 			}
 		  
 			main section.services div.services__about_us,
@@ -1483,8 +1552,18 @@
 				border-radius: 108px;
 				width: 100%;
 			}
+			main section.services div.services__about_us{
+				border-radius: 70px;
+			}
+			main section.services div.services__about_us h3{
+				font-size: 16px;
+			}
 			main section.video_preview div.video_preview__comment div.ui_box div.video_preview__text{
 				padding: 50px;
+				border-radius: 70px;
+			}
+			main section.video_preview div.video_preview__comment div.ui_box div.video_preview__text p{
+				font-size: 15px;
 			}
 		  
 			.flex-direction_column,
@@ -1499,17 +1578,19 @@
 				width: 100% !important;
 			}
 			main section.services div.services__list_services div.services__box_compete div.services__box_left div.services__services_name p{
-				padding: 40px 0px;
+				padding: 25px 0px;
 			}
-			main section.form div.form__box_form div.form__box_form_left div.form__top div.form__form_desc,
-			main section.services div.services__list_services div.services__box_compete div.services__box_left div.services__services_name p{
+			main section.form div.form__box_form div.form__box_form_left div.form__top div.form__form_desc{
 				flex-direction: column;
 				align-items: flex-start;
 			}
 			main section.reviews div.ui_element div.desc_box div.right{
 				justify-content: flex-start;
 			}
-			footer div.contacts__links,
+			
+			footer div.contacts__links{
+				gap: 20px;
+			}
 			main section.cans div.ui_element div.cans__module_gallery div.controls{
 				gap: 40px;
 			}
@@ -1556,7 +1637,37 @@
 				width: auto;
 			}
 		  
+			main section.top div.ui_element div.top__list div div.top__desc p{
+				font-size: 19px;
+			}
+			main section.top div.ui_element div.top__list div.top_six div.top__desc p{
+				font-size: 15px;
+			}
+			
+			main div.main_box>div.main_box__bottom div.main_box__left{
+				width: 100%;
+			}
+			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box div.main_box__logo{
+				left: -18vw;
+			}
+			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box div.main_box__logo div:last-child{
+				width: 22vw;
+				height: 22vw;
+			}
+			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box div.main_box__logo div:first-child{
+				display: none;
+			}
+			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box div.main_box__about_company{
+				position: relative;
+				width: calc(100% - 8vw);
+				left: 8vw;
+			}
+		  
 		}
+		
+		/*------------------*/
+		/* START BREAKPOINT */
+		/*------------------*/
 		
 		@media (min-width: 576px) {
 			
@@ -1611,6 +1722,7 @@
 		  main section.video_preview div.video_preview__comment div.ui_box div.video_preview__text{
 			width: 100%;
 			padding: 60px 70px;
+			border-radius: 100px;
 		  }
 		  
 		  main section.top div.ui_element div.top__list>div{
@@ -1626,6 +1738,10 @@
 		  
 		  footer div.contacts__links{
 			  gap: 20px;
+		  }
+		  
+		  main section.form div.form__box_form div.form__box_form_left div.form__top div.form__form_desc span#last{
+			  font-size: 19px;
 		  }
 		  
 		}
@@ -1661,11 +1777,6 @@
 			  width: 100% !important;
 		  }
 		  
-		  main section.video_preview div.video_preview__comment div.ui_box div.video_preview__text{
-			    width: 100%;
-				border-radius: 100px;
-		  }
-		  
 		  main section.top div.ui_element div.top__list>div{
 		      width: calc((100% / 2) - (40px / 4));
 		  }
@@ -1688,7 +1799,10 @@
 			  order: 3;
 		  }
 		  
-		  
+		  main section.services div.services__about_us{
+			  width: 610px;
+			  border-radius: 158px;
+		  }
 		  
 		}
 
@@ -1718,10 +1832,6 @@
 				border-radius: 170px;
 		  }
 		  
-		  main section.top div.ui_element div.top__list>div{
-		      width: calc((100%/3) - (40px / 3));
-		  }
-		  
 		  .flex-direction_column{
 			  flex-direction: row !important;
 		  }
@@ -1733,6 +1843,10 @@
 		  main div.main_box>div.main_box__bottom{
 			  flex-direction: row;
 			  align-items: flex-end;
+		  }
+		  
+		  main section.video_preview div.video_preview__comment div.ui_box div.video_preview__text{
+			  padding: 72px 105px;
 		  }
 		  
 		}
@@ -1754,20 +1868,51 @@
 			  order: 4;
 		  }
 		  
+		  main section.services div.services__list_services div.services__box_compete div.services__box_left h3{
+			  font-size: 40px;
+		  }
+		  
+		  
 		}
 
 		@media (min-width: 1400px) {
 			
-		  .breakpoint {
-			max-width: 1320px;
+		  body .breakpoint,
+		  footer div.ui_box.breakpoint,
+		  footer div.contacts__links.breakpoint{
+			/*max-width: 1320px;*/
+			max-width: initial;
+			padding: 70px 75px;
 			/*background: steelblue;*/
 		  }
 		  
-		  header a#send{
+		  header.breakpoint{
+			  padding: 0px 75px;
+		  }
+		  footer div.contacts__links{
+			  padding: 0px 75px 40px 75px;
+		  }
+		  
+		  main div.main_box>div.main_box__bottom{
+			  margin: 0px;
+		  }
+		  
+		  header div.header__socialnetworks{
 			  order: 4;
 		  }
-		  header div.header__nav_box{
+		  header a#send{
 			  order: 3;
+		  }
+		  header div.header__nav_box{
+			  order: 2;
+		  }
+		  
+		  main section.top div.ui_element div.top__list>div{
+		      width: calc((100%/3) - (40px / 3));
+		  }
+		  
+		  main section.form div.form__box_form div.form__box_form_left div.form__top div.form__form_desc span#last{
+			  font-size: 21px;
 		  }
 		  
 		}
@@ -1791,520 +1936,4 @@
 			}
 
 		}
-		
-		/*@media all and (max-width: 1400px){
-			
-			html::-webkit-scrollbar {
-				display: none;
-			}
-			
-			header{
-				width: 100vw;
-				left: 0px;
-				gap: 10px;
-				justify-content: space-around;
-				padding: 0px 20px;
-				box-sizing: border-box;
-			}
-			
-			main div.main_box>div.main_box__bottom{
-				width: 100%;
-				left: 0px;
-				padding: 0px 20px;	
-			}			
-			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box div.main_box__about_company{
-				margin: 0px 0px 0px 60px;
-			}
-			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box div.main_box__logo{
-				left: -220px;
-			}
-			
-			main .fix_box, footer div.ui_box{
-				width: 100%;
-				left: 0px;
-				padding: 70px 20px;
-				box-sizing: border-box;
-			}
-			footer div.contacts__links{
-				width: 100%;
-				left: 0px;
-				box-sizing: border-box;
-				padding: 0px 20px 40px 20px;
-			}
-			
-			main section.right_image_box div.desc_box{
-				gap: 20px;
-			}
-			main section div.div_devide > div, 
-			footer div.ui_box > div{
-				width: 50% !important;
-			}
-			div.full_width > img{
-				width: 100% !important;
-			}
-			footer div.ui_box div.contacts__right img{
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
-			}
-			
-			main section.video_preview div.video_preview__module_video video{
-				width: 100%;
-			}
-			
-			main section.top div.ui_element div.top__list>div{
-				flex: 1 1 calc(100%/4);
-			}
-			main section.form div.desc_box div.right{
-				width: calc(100% / 2);
-			}
-			main section.form div.form__box_form div.form__box_form_right img{
-				height: 534px;
-			}
-			
-		}
-		
-		@media all and (max-width: 1230px){
-			
-			main div.main_box{
-				min-height: 560px;
-			}
-			
-		}
-		
-		@media all and (max-width: 1080px){
-			
-			main section.video_preview div.video_preview__comment div.ui_box{
-				flex-direction: column;
-			}
-			
-		}
-		
-		@media all and (max-width: 900px){
-			
-			header{
-				justify-content: space-between;
-			}
-			header div.header__nav_box{
-				order: 3;
-				flex-grow: 0;
-			}
-			header a#send{
-				order: 4;
-			}
-			header div.header__nav_box div.header__mobile_icon{
-				display: flex;
-			}
-			header nav.header__menu{
-				display: none;
-			}
-			
-			main div.main_box>div.main_box__bottom{
-				flex-direction: column;
-				align-items: flex-start;
-				margin: 0px 0px 30px 0px;
-				gap: 30px;
-				box-sizing: border-box;
-			}
-			
-			main div.main_box>div.main_box__bottom div.main_box__right{
-				gap: 15px;
-			}
-			
-			div.flex-direction_column{
-				flex-direction: column !important;
-			}
-			
-			main section.services div.services__list_services div.services__box_compete > div, 
-			main section.cans div.ui_element div.desc_box > div, 
-			main section.video_preview div.desc_box > div, 
-			main section.video_preview div.video_preview__comment div.ui_box div.video_preview__text, 
-			main section.top div.ui_element div.top__desc div.left, 
-			main section.form div.desc_box > div, 
-			main section.form div.form__box_form > div, 
-			footer div.ui_box > div, 
-			main section.services div.services__about_us, 
-			main section.reviews div.ui_element div.desc_box > div{
-				width: 100% !important;
-			}
-			
-			main section.services div.services__list_services div.services__box_compete div.services__box_left div.services__services_name p{
-				padding: 30px 0px;
-			}
-			
-			main section.top div.ui_element div.top__list>div{
-				flex: 1 1 calc(100% / 3);
-			}
-			
-			main section.reviews div.ui_element div.desc_box > div.right{
-				margin: 20px 0px 0px 0px;
-			}
-			
-			footer div.contacts__links{
-				flex-direction: column;
-				gap: 20px;
-				text-align: center;
-			}
-			
-			main div.main_box{
-				min-height: 600px;
-			}
-			
-			main section.reviews div.ui_element div.reviews__list div.reviews__review{
-				width: 100%;
-			}
-			
-		}
-		
-		@media all and (max-width: 700px){
-			
-			main div.main_box{
-				min-height: 700px;
-			}
-			
-		}
-		
-		@media all and (max-width: 660px){
-			
-			main section.top div.ui_element div.top__list>div{
-		        flex: 1 1 100%;
-			}
-			main section.top div.ui_element div.top__list>div img#back{
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
-			}
-			main section.top div.ui_element div.top__list>div{
-				flex: 1 1 100%;
-				height: auto;
-			}
-			main section.top div.ui_element div.top__list>div{
-				flex: 1 1 100%;
-				height: auto;
-			}
-			main section.top div.ui_element div.top__list>div div.logo{
-				padding: 0px 0px 80px 0px;
-			}
-			main section.top div.ui_element div.top__list>div:first-child div.logo{
-				padding: 0px 0px 20px 0px;
-			}
-			main section.top div.ui_element div.top__list>div.top_six div.top__icon_surprise{
-				margin: 0px 0px 20px 0px;
-			}
-			
-		}
-		
-		@media all and (max-width: 640px){
-			
-			
-			
-		}
-		
-		@media all and (max-width: 600px){
-			
-			main div.main_box>div.main_box__bottom div.main_box__left h1.main_box__top{
-				width: initial;
-				font-size: 22px;
-			}
-			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box h2{
-				font-size: 20px;
-			}
-			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box h2.main_box__name_company{
-				font-size: 52px;
-			}
-			main div.main_box>div.main_box__bottom div.main_box__right div{
-				font-size: 17px;
-			}
-			
-			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box div.main_box__about_company{
-				margin: 0px 0px 0px 50px;
-			}
-			
-			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box div.main_box__logo{
-				left: -160px;
-			}
-			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box div.main_box__logo div{
-				width: 98px;
-				height: 98px;
-			}
-			
-			main section.form div.form__box_form div.form__box_form_left div.form__controls{
-				flex-direction: column;
-			}
-			main section.form div.form__box_form div.form__box_form_left div.form__controls>span{
-			    flex: 1;
-			}
-			
-			footer div.ui_box div.contacts__left>button#send{
-				margin: 20px 0px 0px 0px;
-			}
-			
-			main section.services div.services__about_us{
-				padding: 30px 25px;
-				border-radius: 90px;
-			}
-			main section.video_preview div.video_preview__comment div.ui_box div.video_preview__text{
-				padding: 70px 25px;
-				border-radius: 90px;
-			}
-			
-			main div.main_box{
-				min-height: 600px;
-			}
-			
-		}
-		
-		@media all and (max-width: 512px){
-			
-			
-			
-		}
-		
-		@media all and (max-width: 500px){
-			
-			main section.video_preview div.video_preview__module_video div.video_preview__play{
-				padding: 20px;
-			}
-			main section.video_preview div.video_preview__module_video div.video_preview__play div{
-				width: 50px;
-				height: 50px;
-			}
-			main section.video_preview div.video_preview__module_video div.video_preview__play div img{
-				left: 2px;
-				position: relative;
-			}
-			
-			div.pop_up_box div.pop_up__window{
-				width: 100vw;
-				height: 100vh;
-				box-sizing: border-box;
-				border-radius: 0px;
-				justify-content: space-between;
-			    padding: 60px 20px;
-			}
-			div.pop_up_box div.pop_up__window span#desc{
-				width: auto;
-			}
-			
-		}
-		
-		@media all and (max-width: 420px){
-			
-			
-			.font-size_10vw{
-				font-size: 10vw !important;
-			}
-			main section.cans div.ui_element div.cans__module_gallery div.controls{
-				width: 100%;
-				justify-content: center;
-				gap: 20px;
-			}
-			main section.cans div.ui_element div.cans__module_gallery div.controls div.cans__image_name{
-				display: none;
-			}
-			
-			main section.services div.services__list_services{
-				margin: 0px 0px 0px 0px;
-			}
-			
-			main section.services div.services__list_services div.services__box_compete div.services__box_left h3{
-				padding: 0px 0px 20px 0px;
-			    height: auto;
-			}
-			
-			main section.services div.services__about_us{
-			    margin: 0px 0px 20px 0px;
-			}
-			
-			main section.services div.services__list_services div.services__box_compete div.services__box_left div.services__services_name p{
-				padding: 20px 0px;
-				height: auto;
-			}
-			
-			main section.reviews div.ui_element div.reviews__list div.reviews__review div.reviews__user_info{
-				flex-direction: column;
-				margin: 0px 0px 10px 0px;
-			}
-			main section.reviews div.ui_element div.reviews__list div.reviews__review div.reviews__user_info div.reviews__user_data{
-				margin: 0px 0px 5px 0px;
-			}
-			
-			main section.services div.services__list_services div.services__box_compete div.services__box_left{
-				height: auto;
-			}
-			
-		}
-		
-		@media all and (max-width: 380px){
-			
-			main div.main_box>div.main_box__bottom div.main_box__left h1.main_box__top{
-		        font-size: 10vw;
-			}
-			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box h2{
-				font-size: 8vw;
-			}
-			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box h2.main_box__name_company{
-				font-size: 15vw;
-			}
-			
-			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box div.main_box__about_company{
-				margin: 0px;
-			}
-			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box div.main_box__logo{
-				display: none;
-			}
-			
-			main section.form div.form__box_form div.form__box_form_left{
-				height: auto;
-			}
-			main section.form div.form__box_form div.form__box_form_left div.form__controls div.form__buttons_control{
-				flex-direction: column;
-			}
-			
-			main div.main_box{
-				min-height: 800px;
-			}
-			
-		}
-		
-		@media all and (max-width: 350px){
-			
-			
-			
-		}
-		
-		@media all and (max-width: 330px){
-			
-			main section.services div.services__about_us{
-				margin: 0px 0px 40px 0px;
-			}
-			
-			footer div.ui_box div.contacts__left>div>div>div:last-child>h4{
-			    font-size: 5vw;
-			}
-			footer div.ui_box div.contacts__left>div>div>div:last-child>a, 
-			footer div.ui_box div.contacts__left>div>div>div:last-child>p{
-				font-size: 6vw;
-			}
-			
-		}
-		
-		@media all and (max-width: 300px){
-			
-			main section.reviews div.ui_element div.desc_box > div.right img{
-				width: 100%;
-			}
-			
-			main section.form div.form__box_form div.form__box_form_left div.form__top div.form__form_desc{
-				flex-direction: column;
-				align-items: flex-start;
-			}
-			
-		}
-		
-		@media all and (max-width: 270px){
-			
-			main section.services div.services__list_services div.services__box_compete div.services__box_left div.services__services_name p{
-				font-size: 8vw;
-			}
-			main section.services div.services__about_us h3, main section.services div.services__about_us p{
-				font-size: 7vw;
-			}
-			
-			footer div.ui_box div.contacts__left>button#send, 
-			main section.services div.services__list_services a button, 
-			main section.cans div.ui_element div.cans__button_show_all a button, header a#send{
-				font-size: 6vw;
-				width: 100%;
-				text-align: center;
-				padding: 21px 0px;
-			}
-			
-			main section.services div.services__list_services div.services__box_compete div.services__box_left div.services__services_name p{
-				flex-direction: column;
-				align-items: flex-start;
-			}
-			
-			main section.video_preview div.video_preview__module_video div.video_preview__play{
-				padding: 0px;
-			}
-			
-			main section.form div.form__box_form div.form__box_form_left div.form__controls button#back, 
-			main section.form div.form__box_form div.form__box_form_left div.form__controls button#next{
-				width: 100%;
-				padding: 21px 0px;
-			}
-			
-			div.pop_up_box div.pop_up__window span#name{
-				font-size: 12vw;
-			}
-			div.pop_up_box div.pop_up__window span#desc{
-				font-size: 6vw;
-			}
-			div.pop_up_box div.pop_up__window > div.pop_up__box_success label span{
-				font-size: 5vw;
-			}
-			div.pop_up_box div.pop_up__window > button{
-				font-size: 6vw;
-				width: 100%;
-				padding: 21px 10px;
-			}
-			
-		}
-		
-		@media all and (max-width: 250px){
-			
-			main div.main_box>div.main_box__bottom div.main_box__right div div.main_box__image{
-				width: 35px;
-				height: 35px;
-			}
-			
-			footer div.ui_box div.contacts__left>div>div>div:first-child{
-				width: 36px;
-				height: 36px;
-			}
-			
-			main section.reviews div.ui_element div.reviews__list div.reviews__review{
-				padding: 20px;
-			}
-			
-			main section.reviews div.ui_element div.reviews__list div.reviews__review div.reviews__user_info div.reviews__user_data span#faln, 
-			main section.top div.ui_element div.top__list div div.top__desc h3{
-				font-size: 8vw;
-			}
-			main section.reviews div.ui_element div.reviews__list div.reviews__review div.reviews__user_info div.reviews__user_data span#date, 
-			main section.reviews div.ui_element div.reviews__list div.reviews__review div.reviews__description{
-				font-size: 7vw;
-			}
-			
-			main section.top div.ui_element div.top__list>div{
-				padding: 20px;
-			}
-			
-		}
-		
-		
-		@media all and (max-width: 210px){
-			
-			header div.header__contacts a{
-				font-size: 7vw;
-			}
-			footer div.ui_box div.contacts__left>div>div>div:first-child{
-				display: none;
-			}
-			
-			main section.video_preview div.video_preview__comment div.ui_box div.video_preview__text p{
-				font-size: 8vw;
-			}
-			main section.cans div.ui_element div.desc_box div.right, 
-			main section.video_preview div.desc_box div.right{
-				font-size: 7vw;
-			}
-			
-			main section.video_preview div.video_preview__comment div.ui_box div.video_preview__author img{
-				width: 100%;
-				height: 100%;
-			}
-			
-		}*/
 		
