@@ -629,6 +629,7 @@
 		}
 		div.ldh_white div{
 			background: #F3F2F0 !important;
+			transition: all 1s ease;
 		}
 		
 		main section.services div.services__list_services{
@@ -816,6 +817,8 @@
 			position: relative;
 			width: 100%;
 			height: 100%;
+			aspect-ratio: 16 / 9;
+			object-fit: cover;
 		}
 		
 		main section.cans div.ui_element div.cans__module_gallery div.controls{
@@ -972,6 +975,7 @@
 			flex-direction: column;
 			justify-content: space-between;
 			overflow: hidden;
+			cursor: pointer;
 		}
 		main section.top div.ui_element div.top__list>div img#back{
 			position: absolute;
@@ -980,11 +984,12 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+			transition: all 1s ease;
 		}
 		main section.top div.ui_element div.top__list div div.top__desc{
 			position: relative;
 			display: flex;
-			gap: 15px;
+			/*gap: 15px;*/
 			flex-direction: column;
 		}
 		main section.top div.ui_element div.top__list div div.w{
@@ -995,13 +1000,39 @@
 			font-size: 21px;
 			font-weight: 600;
 			line-height: 115%;
+			transition: all 1s ease;
 		}
 		main section.top div.ui_element div.top__list div:first-child div.top__desc h3{
-			margin: 40px 0px 0px 0px;
+			margin: 60px 0px 0px 0px;
 		}
 		main section.top div.ui_element div.top__list div div.top__desc p{
 			font-size: 16px;
 			line-height: 150%;
+			padding: 15px 0px 0px 0px;
+			
+			overflow: hidden;
+			
+			opacity: 0;
+			transition: all 1s ease;
+			max-height: 0px;
+		}
+		main section.top div.ui_element div.top__list>div:hover div.top__desc p{
+			opacity: 1;
+		}
+		main section.top div.ui_element div.top__list > div:hover > div.ldh_white > div{
+			background: var(--color_vinous) !important;
+		}
+		main section.top div.ui_element div.top__list > div:hover > div.top__box_black{
+			opacity: 0;
+		}
+		main section.top div.ui_element div.top__list > div:hover > img#back{
+			opacity: 0;
+		}
+		main section.top div.ui_element div.top__list > div:hover > div.top__desc h3{
+			color: #2B0514;
+		}
+		main section.top div.ui_element div.top__list > div:hover > div.top__desc p{
+			color: #333333;
 		}
 		
 		main section.top div.ui_element div.top__list div div.top__box_black{
@@ -1012,6 +1043,8 @@
 			width: 100%;
 			height: 100%;
 			z-index: 1;
+			cursor: pointer;
+			transition: all 1s ease;
 		}
 		
 		main section.top div.ui_element div.top__list>div.top_six{
@@ -1038,6 +1071,8 @@
 		main section.top div.ui_element div.top__list div.top_six div.top__desc h3, 
 		main section.top div.ui_element div.top__list div.top_six div.top__desc p{
 			color: white !important;
+			max-height: initial;
+			opacity: 1;
 		}
 		main section.form div.desc_box>div{
 			width: calc(100%/2);
