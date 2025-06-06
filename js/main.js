@@ -238,6 +238,8 @@ window.onload = function(){
 		
 	});
 	
+	//-------------
+	//-------------
 	//REVIEWS SLIDER
 	
 	let reviews_slider = document.querySelectorAll("main section.reviews div.ui_element div.reviews__list div div.reviews__review");
@@ -246,12 +248,12 @@ window.onload = function(){
 		
 		//img_slider[0].classList.add("swiper-slide-active");
 		
-		let spaceBetweenOfWidth = 20;
+		/*let spaceBetweenOfWidth = 20;
 		let slidesPerViewOfWidth = 2;
 		
 		if(windowInnerWidth <= 900){
 			slidesPerViewOfWidth = 1;
-		}
+		}*/
 		
 		if(reviews_slider.length == 2 && windowInnerWidth > 900){
 			document.querySelector("main section.reviews div.ui_element div.controls > div.left").style.display = "none";
@@ -262,9 +264,9 @@ window.onload = function(){
 			document.querySelector("main section.reviews div.ui_element div.controls > div.left").style.display = "none";
 			document.querySelector("main section.reviews div.ui_element div.controls > div.right").style.display = "none";
 			
-			reviews_slider[0].style.width = "100%";
+			/*reviews_slider[0].style.width = "100%";
 			spaceBetweenOfWidth = 0;
-			slidesPerViewOfWidth = 1;
+			slidesPerViewOfWidth = 1;*/
 		}
 		
 		
@@ -285,8 +287,18 @@ window.onload = function(){
 			  resizeObserver: false, // Отключаем отслеживание изменений
 			  width: null, // Явное отключение ширины
 			  
-			  slidesPerView: slidesPerViewOfWidth,
-			  spaceBetween: spaceBetweenOfWidth // Аналог gap
+			  slidesPerView: 1,
+			  spaceBetween: 0, // Аналог gap
+			  
+			  breakpoints: {
+				  
+				  901: {
+					  slidesPerView: 2,
+					  spaceBetween: 20
+				  }
+				  
+			  }
+			  
 			});
 		
 		}else{
@@ -297,5 +309,39 @@ window.onload = function(){
 	};
 	
 	startSliderReviews();
+	
+	let top_card = document.querySelectorAll("main section.top div.ui_element div.top__list > div");
+	let top_card_min_height = 200;
+	
+	top_card.forEach((element) => {
+		
+		if(element.classList[0] == "top_six"){
+			return;
+		}
+		
+		//if(element.scrollHeight > top_card_min_height) top_card_min_height = element.scrollHeight;
+		
+		element.addEventListener("mouseover", () => {
+
+			if(element.querySelector("div.top__desc p")){
+				element.querySelector("div.top__desc p").style.maxHeight = document.querySelector("main section.top div.ui_element div.top__list div div.top__desc p").scrollHeight+"px";
+			}
+		});
+		
+		element.addEventListener("mouseout", () => {
+			
+			if(element.querySelector("div.top__desc p")){
+				element.querySelector("div.top__desc p").style.maxHeight = "0px";
+			}
+			
+		});
+		
+	});
+	
+	/*top_card.forEach((element) => {
+		
+		element.style.minHeight = top_card_min_height+"px";
+		
+	});*/
 
 };
