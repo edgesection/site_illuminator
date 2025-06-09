@@ -483,15 +483,16 @@
 		main div.main_box>div.main_box__box_black{
 			position: absolute;
 			/*background: linear-gradient(360deg, #000000 7%,  rgba(0, 0, 0, 0.7) 42%,  rgba(0, 0, 0, 0) 66%,  rgba(0, 0, 0, 0) 82%,  rgba(0, 0, 0, 0.9) 100% );*/
-			background: linear-gradient(360deg, rgba(0, 0, 0, 0.55) 7.35%, rgba(0, 0, 0, 0.55) 41.86%, rgba(0, 0, 0, 0.55) 66.24%, rgba(0, 0, 0, 0.55) 81.99%, rgba(0, 0, 0, 0.55) 100%), rgba(14, 8, 38, 0.4);
+			/*background: linear-gradient(360deg, rgba(0, 0, 0, 0.55) 7.35%, rgba(0, 0, 0, 0.55) 41.86%, rgba(0, 0, 0, 0.55) 66.24%, rgba(0, 0, 0, 0.55) 81.99%, rgba(0, 0, 0, 0.55) 100%), rgba(14, 8, 38, 0.4);*/
 			z-index: 1;
 			top: 0px;
 			left: 0px;
 			width: 100vw;
 			height: 100%;
-			background-color: rgba(14, 8, 38, 1);
-			opacity: 0.5;
+			/*background-color: rgba(14, 8, 38, 1);*/
+			opacity: 1;
 			min-height: 500px;
+			    background: linear-gradient(rgba(14, 8, 38, 40%), rgba(14, 8, 38, 40%)), linear-gradient(-0.721deg, rgba(0, 0, 0, 55%) 7%, rgba(0, 0, 0, 39%) 42%, rgba(0, 0, 0, 0%) 66%, rgba(0, 0, 0, 0%) 82%, rgba(0, 0, 0, 49%) 100%);
 		}
 		main div.main_box>img{
 			position: absolute;
@@ -521,11 +522,13 @@
 		}
 		main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box{
 			position: relative;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
 		}
 		main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box div.main_box__logo{
 			position: absolute;
-			bottom: 0px;
-			left: -280px;
+			left: -100px;
 			height: auto;
 		}
 		main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box div.main_box__logo div{
@@ -628,10 +631,11 @@
 			height: 26px;
 			display: flex;
 			flex-direction: row;
-			margin: 0px 0px 10px 0px;
+			margin: 0px 0px 0px 0px;
 		}
 		div.ldh_white{
 			z-index: 2;
+			flex-shrink: 0;
 		}
 		div.logo div:first-child{
 			position: relative;
@@ -775,13 +779,16 @@
 		main section.services div.services__list_services div.services__box_compete div.services__box_right{
 			position: relative;
 			width: 100%;
-			height: 630px;
+			/*height: 630px;*/
+			height: auto;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			flex-direction: row;
 			box-sizing: border-box;
 			flex: 1;
+			aspect-ratio: 1/1;
+			overflow: hidden;
 		}
 		main section.services div.services__list_services div.services__box_compete div.services__box_right img, main section.form div.form__box_form div.form__box_form_right img{
 			position: relative;
@@ -825,6 +832,9 @@
 			line-height: 107%;
 			letter-spacing: -0.01em;
 			text-transform: uppercase;
+		}
+		main section div.desc_box div.left{
+			text-transform: initial;
 		}
 		main section.right_image_box div.desc_box div.right{
 			position: relative;
@@ -936,6 +946,10 @@
 			cursor: pointer;
 			z-index: 2;
 		}
+		main section.video_preview div.video_preview__module_video div.video_preview__play > div > img{
+			margin: 0px 0px 0px 3px;
+			position: relative;
+		}
 		
 		main section.video_preview div.video_preview__comment{
 			position: relative;
@@ -1017,6 +1031,7 @@
 			justify-content: space-between;
 			overflow: hidden;
 			cursor: pointer;
+			aspect-ratio: 1;
 		}
 		main section.top div.ui_element div.top__list>div img#back{
 			position: absolute;
@@ -1203,6 +1218,9 @@
 		main section.form div.form__box_form div.form__box_form_left div.form__top div > span,
 		main section.reviews div.ui_element div.desc_box div.left p{
 			font-size: 16px;
+		}
+		main section.form div.form__box_form div.form__box_form_left div.form__top div > span{
+			font-weight: 600;
 		}
 		main section.reviews div.ui_element div.desc_box div.left p{
 			line-height: 150%;
@@ -1411,7 +1429,7 @@
 			color: #2B0514;
 			background: white;
 			width: fit-content;
-			margin: 0px;
+			margin: 20px 0px 0px 0px;
 		}
 		footer div.ui_box div.contacts__left>button#send:hover{
 			background: initial;
@@ -1422,7 +1440,7 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			height: 636px;
+			height: auto;
 			flex: 1;
 		}
 		footer div.ui_box div.contacts__right img{
@@ -1442,7 +1460,7 @@
 			flex-direction: row;
 			align-items: center;
 			justify-content: space-between;
-			padding: 0px 0px 40px 0px;
+			padding: 0px 0px 25px 0px;
 		}
 		footer div.contacts__links a{
 			font-size: 16px;
@@ -1473,6 +1491,14 @@
 		
 		/* */
 
+		@media all and (max-width: 260px) {
+			
+			html body main div.main_box{
+				min-height: 900px;
+			}
+			
+		}
+
 		@media (max-width: 330px) {
 			footer div.ui_box div.contacts__left h2{
 				font-size: 30px;
@@ -1483,6 +1509,14 @@
 			main section.reviews div.ui_element div.desc_box div.right img{
 				width: 100%;
 			}
+		}
+		
+		@media (max-width: 360px) {
+			
+			body main div.main_box{
+				min-height: 800px;
+			}
+			
 		}
 
 		@media (max-width: 575px) {
@@ -1509,7 +1543,7 @@
 			}
 		  
 			main div.main_box{
-				min-height: 900px;
+				min-height: 700px;
 			}
 		  
 			main div.main_box>div.main_box__bottom{
@@ -1518,13 +1552,25 @@
 				gap: 40px;
 			}
 		  
+			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box{
+				position: relative;
+				display: flex;
+				flex-direction: row-reverse;
+				align-items: center;
+				justify-content: flex-end;
+				left: -15px;
+				gap: 20px;
+			}
 			main div.main_box>div.main_box__bottom div.main_box__left h1.main_box__top,
 			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box h2{
 				font-size: 5vw;
 			}
 			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box h2.main_box__name_company{
-				font-size: 15vw;
-				margin: 2.8vw 0px 0px 0px;
+				display: block;
+				width: 100%;
+				/* font-size: xxx-large; */
+				font-size: calc(100vw / 9 * 1);
+				margin: 10px 0px 0px 0px;
 			}
 			
 			main div.main_box>div.main_box__bottom div.main_box__left h1.main_box__top{
@@ -1533,6 +1579,9 @@
 			main div.main_box>div.main_box__bottom div.main_box__left h1.main_box__top,
 			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box h2{
 				font-size: 20px;
+			}
+			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box h2{
+				font-size: 30px;
 			}
 			
 			main div.main_box>div.main_box__bottom div.main_box__right div span,
@@ -1577,12 +1626,13 @@
 			main section div.desc_box > div{
 				width: 100% !important;
 			}
-			main section.services div.services__list_services div.services__box_compete div.services__box_left div.services__services_name p{
+			main section.services div.services__list_services div.services__box_compete div.services__box_left div.services__services_name :is(p, p#active){
 				padding: 25px 0px;
+				font-size: 19px;
 			}
 			main section.form div.form__box_form div.form__box_form_left div.form__top div.form__form_desc{
-				flex-direction: column;
-				align-items: flex-start;
+				flex-direction: row;
+				align-items: center;
 			}
 			main section.reviews div.ui_element div.desc_box div.right{
 				justify-content: flex-start;
@@ -1648,7 +1698,14 @@
 				width: 100%;
 			}
 			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box div.main_box__logo{
-				left: -18vw;
+				left: 0px;
+				width: auto;
+				height: 100%;
+				position: relative;
+			}
+			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box div.main_box__logo svg{
+				height: 100%;
+				width: 44px;
 			}
 			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box div.main_box__logo div:last-child{
 				width: 22vw;
@@ -1659,9 +1716,22 @@
 			}
 			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box div.main_box__about_company{
 				position: relative;
-				width: calc(100% - 8vw);
-				left: 8vw;
+				/*width: calc(100% - 15vw);
+				left: 15vw;*/
+				/* background: red; */
 			}
+			
+			main section.form div.form__box_form div.form__box_form_left div.form__top div.form__form_desc span:is(#first, #last){
+			  font-size: 19px;
+			}
+			
+			footer div.ui_box{
+			  gap: 60px;
+		  }
+		  
+		   main section.services div.services__about_us p br{
+			  display: none;
+		  }
 		  
 		}
 		
@@ -1694,7 +1764,7 @@
 		  }
 		  
 		   main div.main_box{
-			  min-height: 900px;
+			  min-height: 800px;
 		  }
 		  
 		  main div.main_box>div.main_box__bottom{
@@ -1707,12 +1777,13 @@
 		  
 		  main section.services div.services__about_us{
 			width: 100%;
-			border-radius: 108px;
+			border-radius: 158px;
 		  }
 		  
 		 
-		  main section.services div.services__list_services div.services__box_compete div.services__box_left div.services__services_name p{
+		  main section.services div.services__list_services div.services__box_compete div.services__box_left div.services__services_name :is(p, p#active){
 			  padding: 40px 0px;
+			  font-size: 19px;
 		  }
 		  
 		  main section div.desc_box > div{
@@ -1740,8 +1811,16 @@
 			  gap: 20px;
 		  }
 		  
-		  main section.form div.form__box_form div.form__box_form_left div.form__top div.form__form_desc span#last{
+		  main section.form div.form__box_form div.form__box_form_left div.form__top div.form__form_desc span:is(#first, #last){
 			  font-size: 19px;
+		  }
+		  
+		  footer div.ui_box{
+			  gap: 60px;
+		  }
+		  
+		  main section.services div.services__about_us p br{
+			  display: none;
 		  }
 		  
 		}
@@ -1751,10 +1830,6 @@
 		  .breakpoint {
 			max-width: 720px;
 			/*background: crimson;*/
-		  }
-		  
-		   main div.main_box{
-			  min-height: 900px;
 		  }
 		  
 		  header div.header__nav_box{
@@ -1801,7 +1876,10 @@
 		  
 		  main section.services div.services__about_us{
 			  width: 610px;
-			  border-radius: 158px;
+		  }
+		  
+		  main section.services div.services__about_us p br{
+			  display: initial;
 		  }
 		  
 		}
@@ -1811,6 +1889,10 @@
 		  .breakpoint {
 			max-width: 960px;
 			/*background: steelblue;*/
+		  }
+		  
+		  main div.main_box{
+			  min-height: 600px;
 		  }
 		  
 		  main section.video_preview div.video_preview__comment div.ui_box{
@@ -1849,6 +1931,10 @@
 			  padding: 72px 105px;
 		  }
 		  
+		  footer div.ui_box{
+			  gap: 20px;
+		  }
+		  
 		}
 
 		@media (min-width: 1200px) {
@@ -1872,6 +1958,9 @@
 			  font-size: 40px;
 		  }
 		  
+		  main section.form div.form__box_form div.form__box_form_left div.form__top div.form__form_desc span:is(#first, #last){
+			  font-size: 21px;
+		  }
 		  
 		}
 
@@ -1882,8 +1971,14 @@
 		  footer div.contacts__links.breakpoint{
 			/*max-width: 1320px;*/
 			max-width: initial;
-			padding: 70px 75px;
+			padding: 35px 100px;
 			/*background: steelblue;*/
+		  }
+		  footer div.ui_box.breakpoint{
+			  padding: 85px 100px 35px 100px;
+		  }
+		  footer div.contacts__links.breakpoint{
+			  padding: 25px 100px;
 		  }
 		  
 		  header.breakpoint{
@@ -1911,8 +2006,12 @@
 		      width: calc((100%/3) - (40px / 3));
 		  }
 		  
-		  main section.form div.form__box_form div.form__box_form_left div.form__top div.form__form_desc span#last{
+		  main section.services div.services__list_services div.services__box_compete div.services__box_left div.services__services_name :is(p, p#active){
 			  font-size: 21px;
+		  }
+		  
+		  footer div.ui_box div.contacts__right{
+			  height: 636px;
 		  }
 		  
 		}
