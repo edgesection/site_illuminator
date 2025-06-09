@@ -292,7 +292,7 @@ window.onload = function(){
 			  
 			  breakpoints: {
 				  
-				  901: {
+				  992: {
 					  slidesPerView: 2,
 					  spaceBetween: 20
 				  }
@@ -332,6 +332,7 @@ window.onload = function(){
 		element.addEventListener("mouseover", () => {
 
 			if(element.querySelector("div.top__desc p")){
+				element.style.aspectRatio = "auto";
 				element.querySelector("div.top__desc p").style.maxHeight = element.querySelector("div.top__desc p").scrollHeight+"px";
 				element.querySelector("div.top__desc p").style.padding = "15px 0px 0px 0px";
 			}
@@ -341,6 +342,7 @@ window.onload = function(){
 		element.addEventListener("mouseout", () => {
 			
 			if(element.querySelector("div.top__desc p")){
+				element.style.aspectRatio = "1";
 				element.querySelector("div.top__desc p").style.maxHeight = "0px";
 				element.querySelector("div.top__desc p").style.padding = "0px";
 			}
