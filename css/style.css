@@ -2004,7 +2004,8 @@
 		  }
 		  
 		  header.breakpoint{
-			  padding: 0px 75px;
+			  /*padding: 0px 75px;*/
+			  padding: 0px 100px;
 		  }
 		  footer div.contacts__links{
 			  padding: 0px 75px 40px 75px;
