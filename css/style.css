@@ -814,6 +814,7 @@
 			justify-content: space-between;
 			margin: 0px 0px 40px 0px;
 			gap: 20px;
+			width: 100%;
 		}
 		main section div.desc_box > div{
 			width: 50% !important;
@@ -1589,10 +1590,12 @@
 				font-size: 16px;
 			}
 			main section div.desc_box div.left,
-			main section.services div.services__list_services div.services__box_compete div.services__box_left h3{
-				font-size: 20px;
+			main section.services div.services__list_services div.services__box_compete div.services__box_left h3,
+			main section.reviews div.ui_element div.desc_box div.left h3{
+				font-size: 30px;
 			}
-			main section.right_image_box div.desc_box div.right{
+			main section.right_image_box div.desc_box div.right,
+			main section.reviews div.ui_element div.desc_box div.left p{
 				font-size: 15px;
 			}
 		  
@@ -1602,7 +1605,7 @@
 				width: 100%;
 			}
 			main section.services div.services__about_us{
-				border-radius: 70px;
+				border-radius: 150px;
 			}
 			main section.services div.services__about_us h3{
 				font-size: 16px;
@@ -1823,6 +1826,12 @@
 			  display: none;
 		  }
 		  
+		  main section.services div.services__list_services div.services__box_compete div.services__box_left h3,
+		  main section div.desc_box div.left,
+		  main section.reviews div.ui_element div.desc_box div.left h3{
+			  font-size: 40px;
+		  }
+		  
 		}
 
 		@media (min-width: 768px) {
@@ -1895,9 +1904,9 @@
 			  min-height: 600px;
 		  }
 		  
-		  main section.video_preview div.video_preview__comment div.ui_box{
+		  /*main section.video_preview div.video_preview__comment div.ui_box{
 			  flex-direction: column !important;
-		  }
+		  }*/
 		  
 		  /* */
 		  
@@ -1910,7 +1919,7 @@
 		  }
 		  
 		  main section.video_preview div.video_preview__comment div.ui_box div.video_preview__text{
-			    width: 820px;
+			    width: 720px;
 				border-radius: 170px;
 		  }
 		  
@@ -1954,12 +1963,24 @@
 			  order: 4;
 		  }
 		  
-		  main section.services div.services__list_services div.services__box_compete div.services__box_left h3{
-			  font-size: 40px;
-		  }
 		  
 		  main section.form div.form__box_form div.form__box_form_left div.form__top div.form__form_desc span:is(#first, #last){
 			  font-size: 21px;
+		  }
+		  
+		  main section.services div.services__list_services div.services__box_compete div.services__box_left div.services__services_name :is(p, p#active){
+			  font-size: 21px;
+		  }
+		  
+		  main section.services div.services__list_services div.services__box_compete div.services__box_left h3,
+		  main section div.desc_box div.left,
+		  main section.reviews div.ui_element div.desc_box div.left h3{
+			  font-size: 45px;
+		  }
+		  
+		  main section.video_preview div.video_preview__comment div.ui_box div.video_preview__text{
+			    width: 820px;
+				border-radius: 170px;
 		  }
 		  
 		}
@@ -1971,7 +1992,8 @@
 		  footer div.contacts__links.breakpoint{
 			/*max-width: 1320px;*/
 			max-width: initial;
-			padding: 35px 100px;
+			/*padding: 35px 100px;*/
+			padding: 70px 100px;
 			/*background: steelblue;*/
 		  }
 		  footer div.ui_box.breakpoint{
@@ -2024,7 +2046,7 @@
 			
 			div.pop_up_box div.pop_up__window{
 				/*width: 100vw;*/
-				height: 100vh;
+				height: calc(100vh - 40px);
 				box-sizing: border-box;
 				/*border-radius: 0px;*/
 				justify-content: space-between;
