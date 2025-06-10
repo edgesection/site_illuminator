@@ -327,14 +327,17 @@ window.onload = function(){
 		let realHeightBlock = h3+p+60+26+60+10+(10);
 		
 		if(realHeightBlock > top_card_min_height) top_card_min_height = realHeightBlock;
-		//console.log("height: ", top_card_min_height);
+		if(element.scrollHeight > top_card_min_height) top_card_min_height = element.scrollHeight;
+		console.log("height ", element," : ", realHeightBlock);
 		
-		element.addEventListener("mouseover", () => {
+		element.addEventListener("mouseover", (e) => {
 
 			if(element.querySelector("div.top__desc p")){
+
 				element.style.aspectRatio = "auto";
 				element.querySelector("div.top__desc p").style.maxHeight = element.querySelector("div.top__desc p").scrollHeight+"px";
 				element.querySelector("div.top__desc p").style.padding = "15px 0px 0px 0px";
+				
 			}
 			
 		});
