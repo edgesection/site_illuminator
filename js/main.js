@@ -345,7 +345,7 @@ window.onload = function(){
 		element.addEventListener("mouseout", () => {
 			
 			if(element.querySelector("div.top__desc p")){
-				element.style.aspectRatio = "1";
+				element.style.aspectRatio = "16/10";
 				element.querySelector("div.top__desc p").style.maxHeight = "0px";
 				element.querySelector("div.top__desc p").style.padding = "0px";
 			}
