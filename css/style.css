@@ -205,7 +205,7 @@
 			align-items: center;
 		}
 		div.mobile_menu div.mobile_menu__header_section span{
-			font-size: 37px;
+			font-size: 32px;
 			font-weight: 600;
 			line-height: 110%;
 			text-align: center;
@@ -291,6 +291,7 @@
 			margin: 0px auto;
 			cursor: pointer;
 			border: 1px solid transparent;
+			font-family: 'Mont', sans-serif;
 		}
 		div.pop_up_box div.pop_up__window > div > span:first-child{
 			font-size: 15px;
@@ -303,6 +304,9 @@
 			padding: 0px 25px;
 			border: 1px solid #dddddd;
 			font-size: 16px;
+		}
+		div.pop_up_box div.pop_up__window > div > input:focus{
+			border: 1px solid var(--color_vinous);
 		}
 		
 		div.sky_black{
@@ -395,7 +399,11 @@
 			box-sizing: border-box;
 			flex-grow: 1;
 		}
-		header a#send:hover, header div.header__nav_box div.header__mobile_icon:hover{
+		header a#send:hover{
+			background: var(--color_vinous);
+			border: 1px solid transparent;
+		}
+		header div.header__nav_box div.header__mobile_icon:hover{
 			background: var(--color_vinous);
 		}
 		header div.header__contacts{
@@ -1032,7 +1040,8 @@
 			justify-content: space-between;
 			overflow: hidden;
 			cursor: pointer;
-			aspect-ratio: 1;
+			/*aspect-ratio: 1;*/
+			aspect-ratio: 16/10;
 		}
 		main section.top div.ui_element div.top__list>div img#back{
 			position: absolute;
@@ -1061,6 +1070,7 @@
 			font-weight: 600;
 			line-height: 115%;
 			transition: all 1s ease;
+			/*margin: 60px 0px 0px 0px;*/
 			margin: 60px 0px 0px 0px;
 			letter-spacing: -0.01em;
 		}
@@ -1560,7 +1570,11 @@
 				align-items: center;
 				justify-content: flex-end;
 				left: -15px;
-				gap: 20px;
+				/*gap: 20px;*/
+				
+				/*NEW*/
+				gap: 15px;
+				width: 100vw;
 			}
 			main div.main_box>div.main_box__bottom div.main_box__left h1.main_box__top,
 			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box h2{
@@ -1570,8 +1584,12 @@
 				display: block;
 				width: 100%;
 				/* font-size: xxx-large; */
-				font-size: calc(100vw / 9 * 1);
-				margin: 10px 0px 0px 0px;
+				font-size: calc(100vw / 9 * 1.2);
+				/*margin: 10px 0px 0px 0px;*/
+				
+				/*NEW*/
+				line-height: 0.8;
+				margin: 15px 0px 0px 0px;
 			}
 			
 			main div.main_box>div.main_box__bottom div.main_box__left h1.main_box__top{
@@ -1582,7 +1600,7 @@
 				font-size: 20px;
 			}
 			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box h2{
-				font-size: 30px;
+				font-size: 20px;
 			}
 			
 			main div.main_box>div.main_box__bottom div.main_box__right div span,
@@ -1631,7 +1649,7 @@
 			}
 			main section.services div.services__list_services div.services__box_compete div.services__box_left div.services__services_name :is(p, p#active){
 				padding: 25px 0px;
-				font-size: 19px;
+				font-size: 18px;
 			}
 			main section.form div.form__box_form div.form__box_form_left div.form__top div.form__form_desc{
 				flex-direction: row;
@@ -1679,12 +1697,18 @@
 			}
 		  
 			div.pop_up_box div.pop_up__window{
-				width: 100vw;
+				/*width: 100vw;
 				height: 100vh;
 				box-sizing: border-box;
 				border-radius: 0px;
 				justify-content: space-between;
-			    padding: 60px 20px;
+			    padding: 60px 20px;*/
+				/* width: 100vw; */
+				max-height: calc(100vh - 40px);
+				box-sizing: border-box;
+				/* border-radius: 0px; */
+				justify-content: space-between;
+				/* padding: 60px 20px; */
 			}
 			div.pop_up_box div.pop_up__window span#desc{
 				width: auto;
@@ -1703,12 +1727,21 @@
 			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box div.main_box__logo{
 				left: 0px;
 				width: auto;
-				height: 100%;
+				/*height: 100%;*/
 				position: relative;
+				
+				/*NEW*/
+				height: auto;
+				flex-shrink: 0;
 			}
 			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box div.main_box__logo svg{
-				height: 100%;
-				width: 44px;
+				/*height: 100%;
+				width: 44px;*/
+				
+				/*NEW*/
+				height: calc(100vw / 9 * 1.6);
+				width: 100%;
+				min-height: 73px;
 			}
 			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box div.main_box__logo div:last-child{
 				width: 22vw;
@@ -1734,6 +1767,35 @@
 		  
 		   main section.services div.services__about_us p br{
 			  display: none;
+		  }
+		  
+		  button.button_act{
+		      font-size: 15px;
+		  }
+		  
+		  div.mobile_menu div.mobile_menu__header_section{
+			justify-content: space-around;
+		  }
+		  div.mobile_menu div.mobile_menu__header_section span{
+			  font-size: 30px;
+		  }
+		  
+		  main section.video_preview div.video_preview__module_video div.video_preview__play > div > img{
+			  margin: 0px 0px 0px 5px;
+		  }
+		  
+		  main section.reviews div.ui_element div.reviews__list div.reviews__review div.reviews__user_info div.reviews__user_data span#faln{
+			  font-size: 18px;
+		  }
+		  
+		  main section.reviews div.ui_element div.reviews__list div.reviews__review div.reviews__user_info div.reviews__user_data span#date,
+		  main section.reviews div.ui_element div.reviews__list div.reviews__review div.reviews__description,
+		  main section.reviews div.ui_element div.reviews__list div.reviews__review > a{
+			  font-size: 14px;
+		  }
+		  
+		  main section.reviews div.ui_element div.reviews__list div.reviews__review div.reviews__user_info div.reviews__user_data{
+			  gap: 3px;
 		  }
 		  
 		}
@@ -1785,8 +1847,8 @@
 		  
 		 
 		  main section.services div.services__list_services div.services__box_compete div.services__box_left div.services__services_name :is(p, p#active){
-			  padding: 40px 0px;
-			  font-size: 19px;
+			  padding: 27px 0px;
+			  font-size: 18px;
 		  }
 		  
 		  main section div.desc_box > div{
@@ -1830,6 +1892,13 @@
 		  main section div.desc_box div.left,
 		  main section.reviews div.ui_element div.desc_box div.left h3{
 			  font-size: 40px;
+		  }
+		  
+		  button.button_act,
+		  main section.right_image_box div.desc_box div.right,
+		  main section.reviews div.ui_element div.desc_box div.left p,
+		  main section.video_preview div.video_preview__comment div.ui_box div.video_preview__text p{
+		      font-size: 15px;
 		  }
 		  
 		}
@@ -1970,6 +2039,7 @@
 		  
 		  main section.services div.services__list_services div.services__box_compete div.services__box_left div.services__services_name :is(p, p#active){
 			  font-size: 21px;
+			  padding: 40px 0px;
 		  }
 		  
 		  main section.services div.services__list_services div.services__box_compete div.services__box_left h3,
@@ -1981,6 +2051,16 @@
 		  main section.video_preview div.video_preview__comment div.ui_box div.video_preview__text{
 			    width: 820px;
 				border-radius: 170px;
+		  }
+		  
+		  button.button_act,
+		  main section.right_image_box div.desc_box div.right,
+		  main section.reviews div.ui_element div.desc_box div.left p{
+		      font-size: 16px;
+		  }
+		  
+		  main section.video_preview div.video_preview__comment div.ui_box div.video_preview__text p{
+			  font-size: 17px;
 		  }
 		  
 		}
@@ -2053,9 +2133,9 @@
 				justify-content: space-between;
 			    /*padding: 60px 20px;*/
 			}
-			div.pop_up_box div.pop_up__window span#desc{
+			/*div.pop_up_box div.pop_up__window span#desc{
 				width: auto;
-			}
+			}*/
 
 		}
 		
