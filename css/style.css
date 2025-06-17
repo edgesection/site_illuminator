@@ -121,7 +121,7 @@
 		div.pop_up_box div.pop_up__window{
 			position: relative;
 			background: white;
-			padding: 60px 50px;
+			padding: 60px 50px 50px 50px;
 			border-radius: 40px;
 			display: flex;
 			flex-direction: column;
@@ -164,7 +164,10 @@
 			gap: 10px;
 			margin: 0px 0px 25px 0px;		
 		}
-		div.pop_up_box div.pop_up__window > div.el_email{
+		div.pop_up_box div.pop_up__window > div:is(.pop_up__input_name, .pop_up__input_phone){
+			margin: 0px 0px 22px 0px;
+		}
+		div.pop_up_box div.pop_up__window > div.pop_up__input_email{
 		    margin: 0px 0px 17px 0px;
 		}
 		div.pop_up_box div.pop_up__window > div.pop_up__box_success{
@@ -304,6 +307,7 @@
 			padding: 0px 25px;
 			border: 1px solid #dddddd;
 			font-size: 16px;
+			font-family: 'Mont', sans-serif;
 		}
 		div.pop_up_box div.pop_up__window > div > input:focus{
 			border: 1px solid var(--color_vinous);
@@ -536,7 +540,8 @@
 		}
 		main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box div.main_box__logo{
 			position: absolute;
-			left: -100px;
+			/*left: -100px;*/
+			left: -163px;
 			height: auto;
 		}
 		main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box div.main_box__logo div{
@@ -1479,6 +1484,9 @@
 			color: white;
 			text-align: center;
 		}
+		footer div.contacts__links a:hover{
+			text-decoration: underline;
+		}
 		
 		/*888888888888*/
 		/* BREAKPOINT */
@@ -1564,17 +1572,21 @@
 			}
 		  
 			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box{
-				position: relative;
+				/*position: relative;
 				display: flex;
 				flex-direction: row-reverse;
 				align-items: center;
 				justify-content: flex-end;
 				left: -15px;
-				/*gap: 20px;*/
 				
-				/*NEW*/
 				gap: 15px;
-				width: 100vw;
+				width: 100vw;*/
+				
+				display: flex;
+				flex-direction: row-reverse;
+				align-items: center;
+				justify-content: flex-end;
+				gap: 0px;
 			}
 			main div.main_box>div.main_box__bottom div.main_box__left h1.main_box__top,
 			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box h2{
@@ -1708,11 +1720,19 @@
 				box-sizing: border-box;
 				/* border-radius: 0px; */
 				justify-content: space-between;
-				/* padding: 60px 20px; */
+				padding: 45px 35px;
+			}
+			div.pop_up_box div.pop_up__window span#name{
+				font-size: 34px;
 			}
 			div.pop_up_box div.pop_up__window span#desc{
 				width: auto;
+				font-size: 15px;
 			}
+			div.pop_up_box div.pop_up__window > button{
+				font-size: 14px;
+			}
+			
 		  
 			main section.top div.ui_element div.top__list div div.top__desc p{
 				font-size: 19px;
@@ -1725,14 +1745,15 @@
 				width: 100%;
 			}
 			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box div.main_box__logo{
-				left: 0px;
+				/*left: 0px;*/
 				width: auto;
-				/*height: 100%;*/
 				position: relative;
 				
-				/*NEW*/
 				height: auto;
 				flex-shrink: 0;
+				
+				left: -63px;
+
 			}
 			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box div.main_box__logo svg{
 				/*height: 100%;
@@ -1752,6 +1773,7 @@
 			}
 			main div.main_box>div.main_box__bottom div.main_box__left div.main_box__info_box div.main_box__about_company{
 				position: relative;
+				left: -50px;
 				/*width: calc(100% - 15vw);
 				left: 15vw;*/
 				/* background: red; */
@@ -1774,7 +1796,7 @@
 		  }
 		  
 		  div.mobile_menu div.mobile_menu__header_section{
-			justify-content: space-around;
+			/*justify-content: space-around;*/
 		  }
 		  div.mobile_menu div.mobile_menu__header_section span{
 			  font-size: 30px;
@@ -2127,6 +2149,7 @@
 			
 			div.pop_up_box div.pop_up__window{
 				/*width: 100vw;*/
+				height: calc(100dvh - 40px);
 				height: calc(100vh - 40px);
 				box-sizing: border-box;
 				/*border-radius: 0px;*/
