@@ -324,7 +324,12 @@ window.onload = function(){
 		let h3 = element.querySelector("div.top__desc h3").scrollHeight;
 		let p = element.querySelector("div.top__desc p").scrollHeight;
 		
-		let realHeightBlock = h3+p+60+26+60+10+(10);
+		let height_added = 0;
+		if(windowInnerWidth >= 1400){
+			height_added = 50;
+		}
+		
+		let realHeightBlock = h3+p+60+26+60+10+(10)+height_added;
 		
 		if(realHeightBlock > top_card_min_height) top_card_min_height = realHeightBlock;
 		if(element.scrollHeight > top_card_min_height) top_card_min_height = element.scrollHeight;
@@ -359,5 +364,11 @@ window.onload = function(){
 		element.style.minHeight = top_card_min_height+"px";
 		
 	});
+	
+	if(windowInnerWidth <= 760){
+		
+		document.querySelector("main div.main_box>img").setAttribute("src", "src/image/background_photoorvideo.jpg");
+		
+	}
 
 };
