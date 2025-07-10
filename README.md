@@ -1,1 +1,1 @@
-Посмотреть сайт в живую [MADELLINI](https://edgesection.ru/module/test/mod/).
+Посмотреть сайт в живую [MODELLINI](https://edgesection.ru/module/test/mod/).
